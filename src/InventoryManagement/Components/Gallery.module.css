@@ -1,0 +1,126 @@
+
+/* @font-face{
+    font-family:aquatico;
+    font-style:normal;
+    font-weight:400;
+    src:local('Aquatico'),
+    url('../assets/Aquatico-Regular.woff') format('woff')
+} */
+.container{
+    display: flex;
+    flex: 1;
+    flex-direction: row;
+    /* width: 100%; */
+    height: 400px;
+    padding-left: 50px;
+    padding-top: 60px;
+    /* background-color: #171717; */
+    /* background-color: #24292edc;*/
+} 
+
+
+
+.product_cont{
+    /* width: 30%; */
+    margin-left: 30px;
+    flex:0.3;
+    height: 390px;
+    border: 1px solid #303030;
+    border-radius: 10px;
+    background-color: #242a30dc;
+    box-shadow: inset 17.12px 17.12px 17px #1A1E23, inset -17.12px -17.12px 17px #2E363D;
+}
+
+.product_cont:hover{
+    -webkit-box-shadow: 40px 2px 68px -45px rgba(57,66,77,0.55);
+    -moz-box-shadow: 40px 2px 68px -45px rgba(57,66,77,0.55);
+    box-shadow: 40px 2px 68px -45px rgba(57,66,77,0.55);
+    transform: translateY(-3px);
+    transition: transform 0.5s ease-in-out;
+    box-shadow: inset 17.12px 17.12px 17px #1A1E23, inset -17.12px -17.12px 17px #2E363D;
+}
+
+
+.product_logo{
+    height: 100px;
+    width: 100px;
+    margin: 19px;
+    border-radius: 10px;
+}
+.product{
+    display: flex;
+    flex-direction: row;
+}
+.product_details{
+    color: aliceblue;
+    padding-top: 19px;
+    padding-bottom: 19px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+}
+.text_1{
+    font-size: large;
+    font-weight: bolder;
+}
+.text_2{
+    font-size: medium;
+}
+.get_btn{
+    margin-left: 70px;
+    border-radius: 5px;
+    background-color: white;
+    color: black;
+    width: 40px;
+    height: 16px;
+    font-size: x-small;
+}
+.get_btn:hover{
+    cursor: pointer;
+    background-color: black;
+    color: antiquewhite;
+}
+.product_img{
+    margin-left: 10px;
+    margin-right: 10px;
+    margin-top: 20px;
+    width: 95%;
+    height: 220px;
+    border-radius: 10px;
+}
+
+.doc_cont{
+    /* width: 70%; */
+    display: grid;
+    grid-template-columns: auto auto auto;
+    /* display: flex; */
+    margin-left: 30px;
+    flex: 0.7;
+    height: 390px;
+    /* border: 2px solid white; */
+}
+.doc{
+    background-image: url('https://q5n8c8q9.rocketcdn.me/wp-content/uploads/2019/09/YouTube-thumbnail-size-guide-best-practices-top-examples.png.webp');
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: 20%;
+    background-color: #242a30dc;
+    width:90%;
+    height: 190px;
+    border: 1px solid #303030;
+    /* margin-top: 10px; */
+    margin-bottom: 10px;
+    /* margin-left: 30px;
+    margin-right: 30px; */
+    border-radius: 10px;
+    box-shadow: inset 17.12px 17.12px 17px #1A1E23, inset -17.12px -17.12px 17px #2E363D;
+}
+
+.doc:hover{
+    -webkit-box-shadow: 40px 2px 68px -45px rgba(57,66,77,0.55);
+    -moz-box-shadow: 40px 2px 68px -45px rgba(57,66,77,0.55);
+    box-shadow: 40px 2px 68px -45px rgba(57,66,77,0.55);
+    /* transform: scale(0.95); */
+    transform: translateY(-3px);
+    transition: transform 0.2s ease-in ;
+}

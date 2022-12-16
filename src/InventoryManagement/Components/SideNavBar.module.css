@@ -1,0 +1,200 @@
+.container{
+
+    background-color: #000000;
+
+    position: fixed;
+
+    height: 100%;
+
+    width: 70px;
+
+    /* border: 1px solid #2F363D; */
+
+    display: flex;
+
+    flex-direction: column;
+
+    justify-content: space-between;
+
+    z-index: 10;
+
+}
+
+
+
+.icon{
+
+    color: white;
+
+    width: 20px;
+
+    height: 20px;
+
+    margin-left: 9px;
+
+    margin-right: 9px;
+
+    margin-top: 3px;
+
+}
+
+
+
+.icon_cont{
+
+   margin: 5px;
+
+   height: 55px;
+
+   padding: 10px;
+
+   color: white;
+
+   border-radius: 5px;
+
+}
+
+.text_2{
+
+    font-size: x-small;
+
+    /* margin-top: 4px; */
+
+    /* width: 30px; */
+
+    text-align: center;
+
+}
+
+.icon_cont:hover{
+
+    background-color: rgba(190, 187, 187, 0.114);
+
+    /* background-color: rgba(120, 116, 116, 0.666); */
+
+    border: 10px solid transparent;
+
+    border-image: url('../Assets/border.png') 60 stretch;
+
+    padding: 0px;
+
+}
+
+
+
+.icon_cont_active{
+
+    margin: 5px;
+
+   height: 55px;
+
+   padding: 10px;
+
+   color: white;
+
+   border-radius: 5px;
+
+    background-color: rgba(190, 187, 187, 0.114);
+
+    /* background-color: rgba(120, 116, 116, 0.666); */
+
+    border: 10px solid transparent;
+
+    border-image: url('../Assets/border.png') 60 stretch;
+
+    padding: 0px;
+
+}
+
+
+
+
+.top_cont{
+
+    margin-top: 50px;
+
+}
+
+
+
+.bottom_cont{
+
+    margin-bottom: 20px;
+
+   
+
+}
+
+
+
+
+.header_cont{
+
+    display: flex;
+
+    z-index: 11;
+
+    width: 100%;
+
+    height:50px ;
+
+    background-color: #000000;
+
+    position: fixed;
+
+    /* border: 1px solid #2F363D; */
+
+    justify-content: space-between;
+
+}
+
+.header_Light_cont{
+
+    display: flex;
+
+    z-index: 11;
+
+    width: 100%;
+
+    height:50px ;
+
+    background-color: #000000;
+
+    position: fixed;
+
+    /* border: 1px solid #2F363D; */
+
+    justify-content: space-between;
+
+}
+
+
+.profile{
+
+    width: 35px;
+
+    height: 35px;
+
+    color: white;
+
+    padding-top: 5px;
+
+    padding-left: 6px;
+
+    margin: 7px;
+
+    /* border: 1px solid white; */
+
+    background-color: rgba(190, 187, 187, 0.114);
+
+    border-radius: 50px;
+
+}
+
+.LordIcon{
+    color: white;
+    width:23px;
+    height:23px;
+    margin-left: 7px;
+}
+
