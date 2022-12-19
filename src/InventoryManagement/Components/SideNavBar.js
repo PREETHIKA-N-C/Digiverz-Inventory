@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from 'react'
 import Style from './SideNavBar.module.css'
-import { FiHome,FiGrid,FiCompass,FiHelpCircle,FiSettings,FiSearch,FiMoon } from "react-icons/fi";
+import { FiHome,FiGrid,FiCompass,FiHelpCircle,FiSettings,FiSearch,FiMoon,FiSun } from "react-icons/fi";
 import logo1 from '../Assets/Digiverz.png'
 import logo2 from '../Assets/Digiverz_B.png'
 import lottie from 'lottie-web';
@@ -34,7 +34,7 @@ function SideNavBar() {
        
         <div className='flex space-x-8'>
         <div className={theme === 'Light' ? Style.profile_icon_Light : Style.profile_icon} onClick={()=>{dispatch(Toggle())}}>
-        <FiMoon className={theme === 'Light' ? Style.icon_Light : Style.icon} />
+        {theme === 'Light' ? <FiMoon className={theme === 'Light' ? Style.icon_Light : Style.icon} /> : <FiSun className={theme === 'Light' ? Style.icon_Light : Style.icon} /> }
         </div>
         <div className={theme === 'Light' ? Style.profile_Light : Style.profile} >
             <h6>HK</h6>
