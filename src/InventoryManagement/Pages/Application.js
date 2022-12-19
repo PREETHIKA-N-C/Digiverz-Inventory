@@ -9,7 +9,7 @@ function Application() {
     setLoad(true)
   },3000)
   return (
-    <div class="grid grid-cols-3 grid-flow-row  pl-28 pt-20 pb-20">
+    <div class="grid grid-cols-3 grid-flow-row  pl-24 pt-20 pb-20">
 
       <NavLink to='Product'>
       {load?<ProductCard name="Expense Claim App" desc="Accelerator | Data science" logo="https://upload.wikimedia.org/wikipedia/commons/0/0c/Clash_app_logo.png" img={Banner1} />: <ProductCardLoader/>}

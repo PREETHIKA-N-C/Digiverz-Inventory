@@ -19,19 +19,23 @@
     flex-direction: column;
     width: 370px;
     height: 390px;
-    border: 1px solid #303030;
-    border-radius: 10px;
-    background-color: #242a30dc;
-    box-shadow: inset 17.12px 17.12px 17px #1A1E23, inset -17.12px -17.12px 17px #2E363D;
+    border: 1px solid #bb57ed;
+    border-radius: 20px;
+    background-color: #CB8AFF;
+    box-shadow: inset 17.12px 17.12px 17px #bb57ed, inset -17.12px -17.12px 17px #bb57ed;
+    /* background: linear-gradient(145deg, #cacaca, #f0f0f0);
+    box-shadow:  20px 20px 60px #bebebe,
+             -20px -20px 60px #ffffff; */
 }
 
 .product_cont:hover{
-    -webkit-box-shadow: 40px 2px 68px -45px rgba(57,66,77,0.55);
-    -moz-box-shadow: 40px 2px 68px -45px rgba(57,66,77,0.55);
-    box-shadow: 40px 2px 68px -45px rgba(57,66,77,0.55);
+    /* -webkit-box-shadow: 40px 2px 68px -45px #bb57ed;
+    -moz-box-shadow: 40px 2px 68px -45px #bb57ed;
+    box-shadow: 40px 2px 68px -45px #bb57ed; */
+    /* background-color: #CB8AFF; */
     transform: translateY(-3px);
     transition: transform 0.5s ease-in-out;
-    box-shadow: inset 17.12px 17.12px 17px #1A1E23, inset -17.12px -17.12px 17px #2E363D;
+    box-shadow: inset 17.12px 17.12px 17px #bb57ed, inset -17.12px -17.12px 17px #bb57ed;
 }
 
 
@@ -39,7 +43,7 @@
     height: 100px;
     width: 100px;
     margin: 19px;
-    border-radius: 10px;
+    border-radius: 20px;
 }
 .product{
     display: flex;
@@ -62,7 +66,7 @@
 }
 .get_btn{
     margin-left: 70px;
-    border-radius: 5px;
+    border-radius: 20px;
     background-color: white;
     color: black;
     width: 40px;
@@ -80,5 +84,5 @@
     margin-top: 20px;
     width: 95%;
     height: 220px;
-    border-radius: 10px;
+    border-radius: 20px;
 }
