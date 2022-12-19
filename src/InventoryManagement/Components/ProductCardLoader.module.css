@@ -5,12 +5,12 @@
     flex-direction: column;
     height: 390px;
     width: 370px;
-    border: 1px solid #bb57ed;
+    border: 1px solid #303030;
     border-radius: 20px;
     /* background-color: #FFF; */
     /* background-color: #242a30dc; */
-    box-shadow: inset 17.12px 17.12px 17px #bb57ed, inset -17.12px -17.12px 17px #bb57ed;
-    background-color: #CB8AFF;
+    box-shadow: inset 17.12px 17.12px 17px #1A1E23, inset -17.12px -17.12px 17px #2E363D;
+    background-color: #242a30dc;
 }
 
 .product_cont_Light{
@@ -51,8 +51,8 @@
     border-radius: 20px;
     /* background-color: #e2e5e7; */
 	/* background-image: -webkit-repeating-linear-gradient( 90deg,transparent, transparent 35px,rgb(255, 255, 255), rgb(255, 255, 255) ); */
-	background: #b95ce4;
-    background-image: linear-gradient(to right, #b95ce4 0%, #cb75f3 20%, #b95ce4 40%, #b95ce4 100%);
+	background: #50535a;
+    background-image: linear-gradient(to right, #50535a 0%, #656871 20%, #50535a 40%, #50535a 100%);
     background-size: 40px 100%; 
 	background-repeat: no-repeat; 
 	background-position: left -40px top 0; 
@@ -105,8 +105,8 @@
     font-weight: bolder;
     /* background-color: #e2e5e7;
 	background-image: -webkit-repeating-linear-gradient( 90deg,transparent, transparent 35px,rgb(255, 255, 255), rgb(255, 255, 255) ); */
-	background: #b95ce4;
-    background-image: linear-gradient(to right, #b95ce4 0%, #cb75f3 20%, #b95ce4 40%, #b95ce4 100%);
+	background: #50535a;
+    background-image: linear-gradient(to right, #50535a 0%, #656871 20%, #50535a 40%, #50535a 100%);
     background-size: 40px 100%; 
 	background-repeat: no-repeat; 
 	background-position: left -40px top 0; 
@@ -119,8 +119,8 @@
     font-size: medium;
     /* background-color: #e2e5e7;
 	background-image: -webkit-repeating-linear-gradient( 90deg,transparent, transparent 35px,rgb(255, 255, 255), rgb(255, 255, 255) ); */
-	background: #b95ce4;
-    background-image: linear-gradient(to right, #b95ce4 0%, #cb75f3 20%, #b95ce4 40%, #b95ce4 100%);
+	background: #50535a;
+    background-image: linear-gradient(to right, #50535a 0%, #656871 20%, #50535a 40%, #50535a 100%);
     background-size: 40px 100%; 
 	background-repeat: no-repeat; 
 	background-position: left -40px top 0; 
@@ -196,8 +196,8 @@
     font-size: x-small;
     /* background-color: #e2e5e7;
 	background-image: -webkit-repeating-linear-gradient( 90deg,transparent, transparent 35px,rgb(255, 255, 255), rgb(255, 255, 255) ); */
-	background: #b95ce4;
-    background-image: linear-gradient(to right, #b95ce4 0%, #cb75f3 20%, #b95ce4 40%, #b95ce4 100%);
+	background: #50535a;
+    background-image: linear-gradient(to right, #50535a 0%, #656871 20%, #50535a 40%, #50535a 100%);
     background-size: 40px 100%; 
 	background-repeat: no-repeat; 
 	background-position: left -40px top 0; 
@@ -248,8 +248,8 @@
     height: 15px;
     /* background-color: #e2e5e7;
 	background-image: -webkit-repeating-linear-gradient( 90deg,transparent, transparent 35px,rgb(255, 255, 255), rgb(255, 255, 255) ); */
-	background: #b95ce4;
-    background-image: linear-gradient(to right, #b95ce4 0%, #cb75f3 20%, #b95ce4 40%, #b95ce4 100%);
+	background: #50535a;
+    background-image: linear-gradient(to right, #50535a 0%, #656871 20%, #50535a 40%, #50535a 100%);
     background-size: 40px 100%; 
 	background-repeat: no-repeat; 
 	background-position: left -40px top 0; 
@@ -265,8 +265,8 @@
     border-radius: 20px;
     /* background-color: #e2e5e7;
 	background-image: -webkit-repeating-linear-gradient( 90deg,transparent, transparent 35px,rgb(255, 255, 255), rgb(255, 255, 255) ); */
-	background: #b95ce4;
-    background-image: linear-gradient(to right, #b95ce4 0%, #cb75f3 20%, #b95ce4 40%, #b95ce4 100%);
+	background: #50535a;
+    background-image: linear-gradient(to right, #50535a 0%, #656871 20%, #50535a 40%, #50535a 100%);
     background-size: 40px 100%; 
 	background-repeat: no-repeat; 
 	background-position: left -40px top 0; 
