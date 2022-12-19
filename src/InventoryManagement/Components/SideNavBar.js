@@ -17,7 +17,7 @@ function SideNavBar() {
     defineElement(lottie.loadAnimation);
 
     const LightColor = "primary:#ffffff"
-    const DarkColor = "primary:#5C038C"
+    const DarkColor = "primary:#000000"
     const GrayColor ="#EEEEEE"
       return (
         <div>

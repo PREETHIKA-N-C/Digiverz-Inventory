@@ -62,7 +62,7 @@
 
 .icon_Light{
 
-    color: #5C038C;
+    color: #000000;
 
     width: 20px;
 
@@ -144,7 +144,7 @@
 
     text-align: center;
 
-    color: #5C038C;
+    color: #000000;
 
 }
 
@@ -349,7 +349,7 @@ box-shadow: 0px 15px 5px -6px rgba(0,0,0,0.16);
 
     height: 35px;
 
-    color: #5C038C;
+    color: #000000;
 
     background-color: #EEEEEE;
 
@@ -435,7 +435,7 @@ box-shadow: 0px 15px 5px -6px rgba(0,0,0,0.16);
 }
 
 .input_cont_Light{
-    border: 1px solid #5C038C;
+    border: 1px solid #000000;
     border-radius: 10px;
     background-color: #EEEEEE;
     width: 600px;
@@ -447,7 +447,7 @@ box-shadow: 0px 15px 5px -6px rgba(0,0,0,0.16);
 }
 
 .input_search{
-    font-family:'Oxygen', sans-serif ;
+    /* font-family:'Oxygen', sans-serif ; */
     outline: "none";
     height: 100%;
     width: 100%;
@@ -461,13 +461,13 @@ box-shadow: 0px 15px 5px -6px rgba(0,0,0,0.16);
 }
 
 .input_search_Light{
-    font-family:'Oxygen', sans-serif ;
+    /* font-family:'Oxygen', sans-serif ; */
     outline: "none";
     height: 100%;
     width: 100%;
     margin-left: 8px;
     background-color: #EEEEEE;
-    color: #5C038C;
+    color: #000000;
     font-size: 20px;
     line-height: 28px;
     outline: 2px solid transparent;

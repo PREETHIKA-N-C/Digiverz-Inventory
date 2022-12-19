@@ -23,13 +23,13 @@
 
     height: 390px;
 
-    border: 1px solid #bb57ed;
+    border: 1px solid #84d3d1;
 
     border-radius: 20px;
 
-    background-color: #CB8AFF;
+    background-color: #abe6e3;
 
-    box-shadow: inset 17.12px 17.12px 17px #bb57ed, inset -17.12px -17.12px 17px #bb57ed;
+    box-shadow: inset 17.12px 17.12px 17px #84d3d1, inset -17.12px -17.12px 17px #84d3d1;
 
     /* background: linear-gradient(145deg, #cacaca, #f0f0f0);
 
@@ -54,7 +54,7 @@
 
     transition: transform 0.5s ease-in-out;
 
-    box-shadow: inset 17.12px 17.12px 17px #bb57ed, inset -17.12px -17.12px 17px #bb57ed;
+    box-shadow: inset 17.12px 17.12px 17px #84d3d1, inset -17.12px -17.12px 17px #84d3d1;
 }
 
 
@@ -76,6 +76,14 @@
     flex-direction: column;
     justify-content: space-around;
 }
+.product_details_Light{
+    color: #000000;
+    padding-top: 19px;
+    padding-bottom: 19px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+}
 .text_1{
     font-size: large;
     font-weight: bolder;
@@ -86,8 +94,8 @@
 .get_btn{
     margin-left: 70px;
     border-radius: 20px;
-    background-color: white;
-    color: black;
+    background-color: #000000;
+    color: #ffffff;
     width: 40px;
     height: 16px;
     font-size: x-small;
