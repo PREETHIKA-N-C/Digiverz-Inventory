@@ -1,17 +1,3 @@
-.container{
-    display: flex;
-    flex: 1;
-    flex-direction: row;
-    /* width: 100%; */
-    height: 400px;
-    padding-left: 50px;
-    padding-top: 60px;
-    /* background-color: #171717; */
-    /* background-color: #24292edc;*/
-} 
-
-
-
 .product_cont{
     /* width: 30%; */
     /* margin-left: 80px; */
@@ -25,6 +11,30 @@
     box-shadow: inset 17.12px 17.12px 17px #1A1E23, inset -17.12px -17.12px 17px #2E363D;
 }
 
+.product_cont_Light{
+    display: flex;
+
+    flex-direction: column;
+
+    width: 370px;
+
+    height: 390px;
+
+    border: 1px solid #bb57ed;
+
+    border-radius: 20px;
+
+    background-color: #CB8AFF;
+
+    box-shadow: inset 17.12px 17.12px 17px #bb57ed, inset -17.12px -17.12px 17px #bb57ed;
+
+    /* background: linear-gradient(145deg, #cacaca, #f0f0f0);
+
+    box-shadow:  20px 20px 60px #bebebe,
+
+             -20px -20px 60px #ffffff; */
+}
+
 .product_cont:hover{
     -webkit-box-shadow: 40px 2px 68px -45px rgba(57,66,77,0.55);
     -moz-box-shadow: 40px 2px 68px -45px rgba(57,66,77,0.55);
@@ -32,6 +42,15 @@
     transform: translateY(-3px);
     transition: transform 0.5s ease-in-out;
     box-shadow: inset 17.12px 17.12px 17px #1A1E23, inset -17.12px -17.12px 17px #2E363D;
+}
+
+.product_cont_Light:hover{
+
+    transform: translateY(-3px);
+
+    transition: transform 0.5s ease-in-out;
+
+    box-shadow: inset 17.12px 17.12px 17px #bb57ed, inset -17.12px -17.12px 17px #bb57ed;
 }
 
 

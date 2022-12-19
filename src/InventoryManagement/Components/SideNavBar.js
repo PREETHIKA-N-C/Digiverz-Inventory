@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from 'react'
 import Style from './SideNavBar.module.css'
-import { FiHome,FiGrid,FiCompass,FiHelpCircle,FiSettings,FiSearch } from "react-icons/fi";
+import { FiHome,FiGrid,FiCompass,FiHelpCircle,FiSettings,FiSearch,FiMoon } from "react-icons/fi";
+import logo1 from '../Assets/Digiverz.png'
 import logo2 from '../Assets/Digiverz_B.png'
 import lottie from 'lottie-web';
 import { defineElement} from 'lord-icon-element';
@@ -14,25 +15,35 @@ function SideNavBar() {
     const theme = useSelector(ThemeState)
     const dispatch = useDispatch()
     defineElement(lottie.loadAnimation);
+
+    const LightColor = "primary:#ffffff"
+    const DarkColor = "primary:#5C038C"
+    const GrayColor ="#EEEEEE"
       return (
         <div>
-        <div className={theme === 'Light' ? Style.header_Light_cont : Style.header_cont}>
-        <img src={logo2} alt="logo" width={150} height={50}/>
-        <div className='border-[1px] rounded-[10px] bg-[#121212] border-[#2F363D] w-[600px] h-[40px] mt-[4px] flex px-4'> 
+        <div className={theme === 'Light' ? Style.header_cont_Light : Style.header_cont}>
+        <img src={theme === 'Light' ? logo1 : logo2} alt="logo" width={150} height={50}/>
+        <div className={theme === 'Light' ? Style.input_cont_Light : Style.input_cont}> 
         <div className='pt-[3px]'>
         {/* <FiSearch  className={Style.icon}/>  */}
-        <lord-icon src="https://cdn.lordicon.com/xfftupfv.json" colors="primary:#ffffff" trigger="morph"></lord-icon>
+        <lord-icon src="https://cdn.lordicon.com/xfftupfv.json" colors={theme === 'Light' ? DarkColor : LightColor} trigger="morph"></lord-icon>
        
         </div>  
-        <input placeholder='Search...' style={{fontFamily:"'Oxygen', sans-serif"}} className='outline-none h-[100%] w-[100%] bg-[#121212] ml-2 text-white text-xl'/> </div>
-        <div className={Style.profile} >
+        <input placeholder='Search...' className={theme === 'Light' ? Style.input_search_Light :  Style.input_search} /> </div>
+       
+       
+        <div className='flex space-x-8'>
+        <div className={theme === 'Light' ? Style.profile_icon_Light : Style.profile_icon} onClick={()=>{dispatch(Toggle())}}>
+        <FiMoon className={theme === 'Light' ? Style.icon_Light : Style.icon} />
+        </div>
+        <div className={theme === 'Light' ? Style.profile_Light : Style.profile} >
             <h6>HK</h6>
         </div>
-        {/* <div className={Style.profile}>
-          <button className={Style.profile} onClick={()=>{dispatch(Toggle())}}> {theme} </button>
-        </div> */}
         </div>
-        <div className={Style.container}>
+    
+
+        </div>
+        <div className={theme === 'Light' ? Style.container_Light :  Style.container}>
         <div className={Style.top_cont}>
           <NavLink to="/"  className={(state) => state.isActive ? setLinkState("Home"):""}> 
         <div className={linkState ==="Home"? Style.icon_cont_active :Style.icon_cont } >
@@ -40,9 +51,9 @@ function SideNavBar() {
         <lord-icon
         src="https://cdn.lordicon.com/osuxyevn.json"
         trigger="hover"
-        colors="primary:#ffffff" style={{width:"23px",height:"23px",marginLeft:"7px"}}>
+        colors={theme === 'Light' ? DarkColor : LightColor} style={{width:"23px",height:"23px",marginLeft:"7px"}}>
     </lord-icon>
-        <h6 className={Style.text_2}>Home</h6>
+        <h6 className={theme === 'Light' ? Style.text_2_Light : Style.text_2}>Home</h6>
         </div>
         </NavLink>
         <NavLink to="/Application" className={(state) => state.isActive ? setLinkState("Application"):""}>
@@ -58,8 +69,8 @@ function SideNavBar() {
           <lord-icon
         src="https://cdn.lordicon.com/ynwbvguu.json"
         trigger="hover"
-        colors="primary:#ffffff" style={{width:"23px",height:"23px",marginLeft:"7px"}}></lord-icon>
-        <h6 className={Style.text_2}>App</h6>
+        colors={theme === 'Light' ? DarkColor : LightColor} style={{width:"23px",height:"23px",marginLeft:"7px"}}></lord-icon>
+        <h6 className={theme === 'Light' ? Style.text_2_Light : Style.text_2}>App</h6>
         </div>
         </NavLink>
     
@@ -90,8 +101,8 @@ function SideNavBar() {
           <lord-icon
         src="https://cdn.lordicon.com/icxqolmx.json"
         trigger="hover"
-        colors="primary:#ffffff" style={{width:"23px",height:"23px",marginLeft:"7px"}}></lord-icon>
-        <h6 className={Style.text_2}>Market</h6>
+        colors={theme === 'Light' ? DarkColor : LightColor} style={{width:"23px",height:"23px",marginLeft:"7px"}}></lord-icon>
+        <h6 className={theme === 'Light' ? Style.text_2_Light : Style.text_2}>Market</h6>
         </div>
         </NavLink>
        
@@ -102,16 +113,16 @@ function SideNavBar() {
         <lord-icon
         src="https://cdn.lordicon.com/enzmygww.json"
         trigger="hover"
-        colors="primary:#ffffff" style={{width:"23px",height:"23px",marginLeft:"7px"}}></lord-icon>
-        <h6 className={Style.text_2}>Help</h6>
+        colors={theme === 'Light' ? DarkColor : LightColor} style={{width:"23px",height:"23px",marginLeft:"7px"}}></lord-icon>
+        <h6 className={theme === 'Light' ? Style.text_2_Light : Style.text_2}>Help</h6>
         </div>
         <div className={Style.icon_cont}>
         {/* <FiSettings className={Style.icon} /> */}
         <lord-icon
         src="https://cdn.lordicon.com/hwuyodym.json"
         trigger="hover"
-        colors="primary:#ffffff" style={{width:"23px",height:"23px",marginLeft:"7px"}}></lord-icon>
-        <h6 className={Style.text_2}>Manage</h6>
+        colors={theme === 'Light' ? DarkColor : LightColor} style={{width:"23px",height:"23px",marginLeft:"7px"}}></lord-icon>
+        <h6 className={theme === 'Light' ? Style.text_2_Light : Style.text_2}>Manage</h6>
         </div>
         </div>
         </div>
