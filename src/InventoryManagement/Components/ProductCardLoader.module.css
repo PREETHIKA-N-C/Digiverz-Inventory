@@ -13,6 +13,28 @@
     background-color: #CB8AFF;
 }
 
+.product_cont_Light{
+    display: flex;
+
+    flex-direction: column;
+
+    height: 390px;
+
+    width: 370px;
+
+    border: 1px solid #bb57ed;
+
+    border-radius: 20px;
+
+    /* background-color: #FFF; */
+
+    /* background-color: #242a30dc; */
+
+    box-shadow: inset 17.12px 17.12px 17px #bb57ed, inset -17.12px -17.12px 17px #bb57ed;
+
+    background-color: #CB8AFF;
+}
+
 /* .product_cont:hover{
     -webkit-box-shadow: 40px 2px 68px -45px rgba(57,66,77,0.55);
     -moz-box-shadow: 40px 2px 68px -45px rgba(57,66,77,0.55);
@@ -35,6 +57,33 @@
 	background-repeat: no-repeat; 
 	background-position: left -40px top 0; 
 	animation: shine 1s ease infinite;
+}
+.product_logo_Light{
+
+    height: 100px;
+
+    width: 100px;
+
+    margin: 19px;
+
+    border-radius: 20px;
+
+    /* background-color: #e2e5e7; */
+
+    /* background-image: -webkit-repeating-linear-gradient( 90deg,transparent, transparent 35px,rgb(255, 255, 255), rgb(255, 255, 255) ); */
+
+    background: #b95ce4;
+
+    background-image: linear-gradient(to right, #b95ce4 0%, #cb75f3 20%, #b95ce4 40%, #b95ce4 100%);
+
+    background-size: 40px 100%;
+
+    background-repeat: no-repeat;
+
+    background-position: left -40px top 0;
+
+    animation: shine 1s ease infinite;
+
 }
 .product{
     display: flex;
@@ -78,6 +127,65 @@
 	animation: shine 1s ease infinite;
     border-radius: 20px;
 }
+
+.text_1_Light{
+
+    width:70px;
+
+    height: 28px;
+
+    font-size: large;
+
+    font-weight: bolder;
+
+    /* background-color: #e2e5e7;
+
+    background-image: -webkit-repeating-linear-gradient( 90deg,transparent, transparent 35px,rgb(255, 255, 255), rgb(255, 255, 255) ); */
+
+    background: #b95ce4;
+
+    background-image: linear-gradient(to right, #b95ce4 0%, #cb75f3 20%, #b95ce4 40%, #b95ce4 100%);
+
+    background-size: 40px 100%;
+
+    background-repeat: no-repeat;
+
+    background-position: left -40px top 0;
+
+    animation: shine 1s ease infinite;
+
+    border-radius: 20px;
+
+}
+
+.text_2_Light{
+
+    width:120px;
+
+    height: 28px;
+
+    font-size: medium;
+
+    /* background-color: #e2e5e7;
+
+    background-image: -webkit-repeating-linear-gradient( 90deg,transparent, transparent 35px,rgb(255, 255, 255), rgb(255, 255, 255) ); */
+
+    background: #b95ce4;
+
+    background-image: linear-gradient(to right, #b95ce4 0%, #cb75f3 20%, #b95ce4 40%, #b95ce4 100%);
+
+    background-size: 40px 100%;
+
+    background-repeat: no-repeat;
+
+    background-position: left -40px top 0;
+
+    animation: shine 1s ease infinite;
+
+    border-radius: 20px;
+
+}
+
 .get_btn{
     margin-left: 100px;
     border-radius: 20px;
@@ -94,6 +202,40 @@
 	background-repeat: no-repeat; 
 	background-position: left -40px top 0; 
 	animation: shine 1s ease infinite;
+}
+
+.get_btn_Light{
+
+    margin-left: 100px;
+
+    border-radius: 20px;
+
+    background-color: white;
+
+    color: black;
+
+    width: 40px;
+
+    height: 16px;
+
+    font-size: x-small;
+
+    /* background-color: #e2e5e7;
+
+    background-image: -webkit-repeating-linear-gradient( 90deg,transparent, transparent 35px,rgb(255, 255, 255), rgb(255, 255, 255) ); */
+
+    background: #b95ce4;
+
+    background-image: linear-gradient(to right, #b95ce4 0%, #cb75f3 20%, #b95ce4 40%, #b95ce4 100%);
+
+    background-size: 40px 100%;
+
+    background-repeat: no-repeat;
+
+    background-position: left -40px top 0;
+
+    animation: shine 1s ease infinite;
+
 }
 /* .get_btn:hover{
     cursor: pointer;
@@ -129,6 +271,66 @@
 	background-repeat: no-repeat; 
 	background-position: left -40px top 0; 
 	animation: shine 1s ease infinite;
+}
+
+.product_star_Light{
+
+    display: flex;
+
+    width: 60px;
+
+    height: 15px;
+
+    /* background-color: #e2e5e7;
+
+    background-image: -webkit-repeating-linear-gradient( 90deg,transparent, transparent 35px,rgb(255, 255, 255), rgb(255, 255, 255) ); */
+
+    background: #b95ce4;
+
+    background-image: linear-gradient(to right, #b95ce4 0%, #cb75f3 20%, #b95ce4 40%, #b95ce4 100%);
+
+    background-size: 40px 100%;
+
+    background-repeat: no-repeat;
+
+    background-position: left -40px top 0;
+
+    animation: shine 1s ease infinite;
+
+    border-radius: 20px;
+
+}
+
+.product_img_Light{
+
+    margin-left: 10px;
+
+    margin-right: 10px;
+
+    margin-top: 20px;
+
+    width: 95%;
+
+    height: 220px;
+
+    border-radius: 20px;
+
+    /* background-color: #e2e5e7;
+
+    background-image: -webkit-repeating-linear-gradient( 90deg,transparent, transparent 35px,rgb(255, 255, 255), rgb(255, 255, 255) ); */
+
+    background: #b95ce4;
+
+    background-image: linear-gradient(to right, #b95ce4 0%, #cb75f3 20%, #b95ce4 40%, #b95ce4 100%);
+
+    background-size: 40px 100%;
+
+    background-repeat: no-repeat;
+
+    background-position: left -40px top 0;
+
+    animation: shine 1s ease infinite;
+
 }
 
 

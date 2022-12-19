@@ -1,9 +1,13 @@
 import React from 'react'
 import Style from './ProductCard.module.css'
+import { useSelector, useDispatch } from 'react-redux'
+import { Light, Dark , Toggle, ThemeState } from '../Redux/ThemeSlice'
 function ProductCard({name="Adobe Photo",desc="Accelerator | Productivity",logo="https://yt3.ggpht.com/ytc/AMLnZu_i0kljAsakXn2qz5sjtj7Tab-bmDtwDtBvM5t2aQ=s900-c-k-c0x00ffffff-no-rj",img="https://www.adobe.com/content/dam/www/us/en/max/2021/MAX2021-RegOpen-bnr-social-share-nodate-1200X630.jpg"}) {
-  return (
+  const theme = useSelector(ThemeState)
+  const dispatch = useDispatch()  
+return (
     <>
-      <div className={Style.product_cont}>  
+      <div className={theme === 'Light' ? Style.product_cont_Light : Style.product_cont}>  
        <div className={Style.product}>
          <img className={Style.product_logo} src={logo}/>
          <div className={Style.product_details}>

@@ -3,7 +3,17 @@ import ProductCard from '../Components/ProductCard.js'
 import ProductCardLoader from '../Components/ProductCardLoader.js'
 import Banner1 from '../Assets/Banner.png'
 import {NavLink} from 'react-router-dom'
+import { useSelector, useDispatch } from 'react-redux'
+import { Light, Dark , Toggle, ThemeState } from '../Redux/ThemeSlice'
 function Application() {
+
+  const theme = useSelector(ThemeState)
+  const dispatch = useDispatch()
+  if(theme === "Light"){
+    document.body.style.background = "#fefeff";
+  }else{
+    document.body.style.background = "#121212";
+  }
   const [load,setLoad] = useState(false);
   setTimeout(()=>{
     setLoad(true)
