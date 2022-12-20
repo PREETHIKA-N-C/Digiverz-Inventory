@@ -64,7 +64,7 @@ function SideNavBar() {
 
         </div>
 
-        <div className="flex space-x-8">
+        {/* <div className="flex space-x-8">
           <div
             className={
               theme === "Light" ? Style.profile_icon_Light : Style.profile_icon
@@ -88,7 +88,7 @@ function SideNavBar() {
           >
             <h6>HK</h6>
           </div>
-        </div>
+        </div> */}
       </div>
       <div
         className={theme === "Light" ? Style.container_Light : Style.container}

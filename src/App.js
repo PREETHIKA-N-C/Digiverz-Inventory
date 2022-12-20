@@ -8,6 +8,7 @@ import Product from "./InventoryManagement/Pages/Product";
 import store from "./store";
 import { Provider } from "react-redux";
 import VizHome from "./Dataviz/Pages/VizHome";
+import Login from "./InventoryManagement/Pages/Login"
 function App() {
 // const [isAuth, setIsAuth] = useState(localStorage.getItem("isAuth"));
 
@@ -30,6 +31,7 @@ function App() {
           </Routes>
         </BrowserRouter>
       </Provider>
-
-
+</>
+)
+}
 export default App;
