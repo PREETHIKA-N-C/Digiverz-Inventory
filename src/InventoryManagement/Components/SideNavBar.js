@@ -10,7 +10,7 @@ import compass from '../Assets/compass.json'
 import {NavLink} from 'react-router-dom'
 import { useSelector, useDispatch } from 'react-redux'
 import { Light, Dark , Toggle, ThemeState } from '../Redux/ThemeSlice'
-import LoginCard from './LoginCard.js'
+
 function SideNavBar() {
     const [linkState,setLinkState] = useState("")
     const theme = useSelector(ThemeState)
