@@ -111,7 +111,7 @@ function SliderThumbnail() {
         
         <div className='slider_cont '>
           <div ref={sliderRef} className="keen-slider-cont ">
-            <div className="keen-slider__slide number-slide1">1</div>
+            <div className="keen-slider__slide number-slide1">Expense Claim App</div>
             <div className="keen-slider__slide number-slide2">2</div>
             <div className="keen-slider__slide number-slide3">3</div>
             <div className="keen-slider__slide number-slide4">4</div>
@@ -120,7 +120,7 @@ function SliderThumbnail() {
           </div>
     
           <div ref={thumbnailRef} className="thumbnail thumbnail-cont">
-            <div className="keen-slider__slide number-slide1">1</div>
+            <div className="keen-slider__slide number-slide1">Expense Claim App</div>
             <div className="keen-slider__slide number-slide2">2</div>
             <div className="keen-slider__slide number-slide3">3</div>
             <div className="keen-slider__slide number-slide4">4</div>
