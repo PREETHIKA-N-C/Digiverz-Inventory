@@ -1,3 +1,4 @@
+
 import React, { useEffect, useState } from "react";
 import Style from "./SideNavBar.module.css";
 import {
@@ -19,47 +20,48 @@ import compass from "../Assets/compass.json";
 import { NavLink } from "react-router-dom";
 import { useSelector, useDispatch } from "react-redux";
 import { Light, Dark, Toggle, ThemeState } from "../Redux/ThemeSlice";
+
+
 function SideNavBar() {
   const [linkState, setLinkState] = useState("");
   const theme = useSelector(ThemeState);
   const dispatch = useDispatch();
   defineElement(lottie.loadAnimation);
+ 
+    const LightColor = "primary:#ffffff"
+    const DarkColor = "primary:#000000"
+    const GrayColor ="#EEEEEE"
 
-  const LightColor = "primary:#ffffff";
-  const DarkColor = "primary:#000000";
-  const GrayColor = "#EEEEEE";
-  return (
-    <div>
-      <div
-        className={
-          theme === "Light" ? Style.header_cont_Light : Style.header_cont
-        }
-      >
-        <img
-          src={theme === "Light" ? logo1 : logo2}
-          alt="logo"
-          width={150}
-          height={50}
-        />
-        <div
-          className={
-            theme === "Light" ? Style.input_cont_Light : Style.input_cont
-          }
-        >
-          <div className="pt-[3px]">
-            {/* <FiSearch  className={Style.icon}/>  */}
-            <lord-icon
-              src="https://cdn.lordicon.com/xfftupfv.json"
-              colors={theme === "Light" ? DarkColor : LightColor}
-              trigger="morph"
-            ></lord-icon>
-          </div>
-          <input
-            placeholder="Search..."
-            className={
-              theme === "Light" ? Style.input_search_Light : Style.input_search
-            }
-          />{" "}
+    // const [hideSideNavBar, sethideSideNavBar] = React.useState(true)
+    // const onClick = () => sethideSideNavBar(false)
+
+      return (
+        <div>
+        <div className={theme === 'Light' ? Style.header_cont_Light : Style.header_cont}>
+        <img src={theme === 'Light' ? logo1 : logo2} alt="logo" width={150} height={50}/>
+        <div className={theme === 'Light' ? Style.input_cont_Light : Style.input_cont}> 
+        <div className='pt-[3px]'>
+        {/* <FiSearch  className={Style.icon}/>  */}
+        <lord-icon src="https://cdn.lordicon.com/xfftupfv.json" colors={theme === 'Light' ? DarkColor : LightColor} trigger="morph"></lord-icon>
+       
+        </div>  
+        <input placeholder='Search...' className={theme === 'Light' ? Style.input_search_Light :  Style.input_search} /> </div>
+       
+       
+        <div className='flex space-x-8'>
+        <div className={theme === 'Light' ? Style.profile_icon_Light : Style.profile_icon} onClick={()=>{dispatch(Toggle())}}>
+        {theme === 'Light' ? <FiMoon className={theme === 'Light' ? Style.icon_Light : Style.icon} /> : <FiSun className={theme === 'Light' ? Style.icon_Light : Style.icon} /> }
+        </div>
+        {/* <div className={theme === 'Light' ? Style.profile_Light : Style.profile} >
+            <h6>HK</h6>
+        </div> */}
+        <div>
+        <a className={Style.signIn}  href="Login" 
+        // onClick={onClick}
+        >Sign In</a>
+        {/* { hideSideNavBar ? <SideNavBar/> : true } */}
+        </div>
+
         </div>
 
         <div className="flex space-x-8">
@@ -272,4 +274,7 @@ function SideNavBar() {
   );
 }
 
+
 export default SideNavBar;
+
+
