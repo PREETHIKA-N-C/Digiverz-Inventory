@@ -1,0 +1,133 @@
+body {
+  background: linear-gradient(140deg, #58e0dc, #70dad6, #abe6e3 );
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  /* font-family: "Open Sans", sans-serif;
+  color: #333333; */
+}
+
+.boxform {
+  margin: 0 auto;
+  width: 80%;
+  height: 500px;
+  margin-top: 60px;
+  background: #FFFFFF;
+  border-radius: 10px;
+  overflow: hidden;
+  display: flex;
+  flex: 1 1 100%;
+  align-items: stretch;
+  justify-content: space-between;
+  box-shadow: 0 0 20px 6px #090b6f85;
+  /* box-shadow: inset 17.12px 17.12px 17px #84d3d1, inset -17.12px -17.12px 17px #84d3d1; */
+}
+@media (max-width: 980px) {
+  .boxform {
+    flex-flow: wrap;
+    text-align: center;
+    align-content: center;
+    align-items: center;
+  }
+}
+.boxform div {
+  height: auto;
+}
+.boxform .left {
+  color: #FFFFFF;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-image: url("https://i.pinimg.com/736x/5d/73/ea/5d73eaabb25e3805de1f8cdea7df4a42--tumblr-backgrounds-iphone-phone-wallpapers-iphone-wallaper-tumblr.jpg");
+  overflow: hidden;
+}
+.boxform .left .overlay {
+  padding: 30px;
+  width: 100%;
+  height: 100%;
+  background: #abe6e3ad;
+  overflow: hidden;
+  box-sizing: border-box;
+}
+.boxform .left .overlay h1 {
+  font-size: 7vmax;
+  text-align:center;
+  line-height: 1;
+  font-weight: 900;
+  margin-top: 100px;
+  /* margin-bottom: 20px; */
+  color: #000000;
+}
+.boxform .right {
+  padding: 40px;
+  overflow: hidden;
+}
+@media (max-width: 980px) {
+  .boxform .right {
+    width: 100%;
+  }
+}
+.boxform .right h5 {
+  font-size: 5vmax;
+  margin-top: 40px;
+  margin-left: 100px;
+  line-height: 1;
+  font-weight: 700;
+  color: #000000;
+}
+.boxform .right p {
+  font-size: 14px;
+  color: #ffffff;
+  padding-top: 5px;
+}
+.boxform .right .inputs {
+  overflow: hidden;
+}
+.boxform .right input {
+  width: 100%;
+  padding: 10px;
+  /* margin-top: 10px; */
+  font-size: 16px;
+  border: none;
+  outline: none;
+  border-bottom: 2px solid #B0B3B9;
+}
+.username{
+  margin-bottom: 30px;
+
+}
+
+.boxform .right .remember-me {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding-top: 40px;
+}
+.boxform .right .remember-me input {
+  margin: 0;
+  margin-right: 7px;
+  width: auto;
+}
+
+
+.signIn{
+  display: flex;
+  flex-direction: column;
+  line-height: normal;
+  width: 90px;
+  height: 40px;
+  margin-top: 6px;
+  margin-left: 145px;
+  padding-top: 7px;
+  padding-right: 17px;
+  padding-bottom: 7px;
+  padding-left: 17px;
+  border: 1px solid #84d3d1;
+  border-radius: 5px;
+  background-color: #abe6e3;
+  box-shadow: inset 17.12px 17.12px 17px #84d3d1, inset -17.12px -17.12px 17px #84d3d1;
+}
+.signIn:hover{
+  transform: translateX(1px);
+  transition: transform 0.5s ease-in-out;
+  font-weight:600;
+}
