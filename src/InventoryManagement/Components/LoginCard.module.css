@@ -1,11 +1,11 @@
-/* body {
-  background-image: linear-gradient(135deg, #FAB2FF 10%, #1904E5 100%);
+body {
+  background: linear-gradient(140deg, #58e0dc, #70dad6, #abe6e3 );
   background-size: cover;
   background-repeat: no-repeat;
   background-attachment: fixed;
-  font-family: "Open Sans", sans-serif;
-  color: #333333;
-} */
+  /* font-family: "Open Sans", sans-serif;
+  color: #333333; */
+}
 
 .boxform {
   margin: 0 auto;

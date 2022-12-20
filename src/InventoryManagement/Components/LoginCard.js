@@ -32,7 +32,7 @@ function LoginCard() {
       </div>
 		</div>
     	<br></br>
-			<a className={Style.signIn}  href="Login" 
+			<a className={Style.signIn}  href="/" 
         // onClick={onClick}
         >Sign In</a>
 		
