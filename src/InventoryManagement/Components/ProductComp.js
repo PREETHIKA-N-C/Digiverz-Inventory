@@ -3,6 +3,7 @@ import LightBoxSlider from './LightBoxSlider';
 import { FiCodesandbox,FiCalendar,FiBookmark,FiFileText } from "react-icons/fi";
 import { useSelector, useDispatch } from 'react-redux'
 import { Light, Dark , ThemeState } from '../Redux/ThemeSlice'
+import Style from './ProductComp.module.css'
 function ProductComp({bgColor,borderColor,textColor,iconColor,iconColor2,contactColor,buttonColor}) {
      const theme = useSelector(ThemeState)
      const dispatch = useDispatch()
