@@ -34,8 +34,8 @@ const VizHome = () => {
                 <ProductCard
                   name={item.name}
                   desc={item.desc}
-                  img={Banner1}
-                  logo={item.img}
+                  img={item.img}
+                  logo={item.logo}
                 />
               ) : (
                 <ProductCardLoader />
