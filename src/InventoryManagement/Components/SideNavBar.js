@@ -10,6 +10,7 @@ import compass from '../Assets/compass.json'
 import {NavLink} from 'react-router-dom'
 import { useSelector, useDispatch } from 'react-redux'
 import { Light, Dark , Toggle, ThemeState } from '../Redux/ThemeSlice'
+import LoginCard from './LoginCard.js'
 function SideNavBar() {
     const [linkState,setLinkState] = useState("")
     const theme = useSelector(ThemeState)
@@ -19,6 +20,10 @@ function SideNavBar() {
     const LightColor = "primary:#ffffff"
     const DarkColor = "primary:#000000"
     const GrayColor ="#EEEEEE"
+
+    // const [hideSideNavBar, sethideSideNavBar] = React.useState(true)
+    // const onClick = () => sethideSideNavBar(false)
+
       return (
         <div>
         <div className={theme === 'Light' ? Style.header_cont_Light : Style.header_cont}>
@@ -36,8 +41,14 @@ function SideNavBar() {
         <div className={theme === 'Light' ? Style.profile_icon_Light : Style.profile_icon} onClick={()=>{dispatch(Toggle())}}>
         {theme === 'Light' ? <FiMoon className={theme === 'Light' ? Style.icon_Light : Style.icon} /> : <FiSun className={theme === 'Light' ? Style.icon_Light : Style.icon} /> }
         </div>
-        <div className={theme === 'Light' ? Style.profile_Light : Style.profile} >
+        {/* <div className={theme === 'Light' ? Style.profile_Light : Style.profile} >
             <h6>HK</h6>
+        </div> */}
+        <div>
+        <a className={Style.signIn}  href="Login" 
+        // onClick={onClick}
+        >Sign In</a>
+        {/* { hideSideNavBar ? <SideNavBar/> : true } */}
         </div>
         </div>
     
@@ -131,3 +142,4 @@ function SideNavBar() {
 }
 
 export default SideNavBar
+
