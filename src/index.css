@@ -9,7 +9,7 @@ body {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   background-color: #ffffff;
-  overflow: hidden;
+  /* overflow: hidden; */
   /* background-color: #121212; */
   /* background-color: #fefeff; */
 }
@@ -27,6 +27,14 @@ body::-webkit-scrollbar {
 .skull-Load{
   background: #50535a;
   background-image: linear-gradient(to right, #50535a 0%, #656871 20%, #50535a 40%, #50535a 100%);
+    background-size: 40px 100%; 
+	background-repeat: no-repeat; 
+	background-position: left -40px top 0; 
+	animation: shine 1s ease infinite;
+}
+.skull-Load-Light{
+  background: #84d3d1;
+    background-image: linear-gradient(to right, #84d3d1 0%, #abe6e3 20%, #84d3d1 40%, #84d3d1 100%);
     background-size: 40px 100%; 
 	background-repeat: no-repeat; 
 	background-position: left -40px top 0; 

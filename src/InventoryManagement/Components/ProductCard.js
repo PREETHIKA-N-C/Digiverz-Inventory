@@ -30,3 +30,4 @@ return (
 }
 
 export default ProductCard
+
