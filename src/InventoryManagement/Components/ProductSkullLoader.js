@@ -1,11 +1,15 @@
 import React from 'react'
-
-function ProductSkullLoader({bgColor,borderColor,loadAnimation}) {
-
+import Style from './ProductSkullLoader.module.css'
+import { useSelector, useDispatch } from 'react-redux'
+import { Light, Dark , ThemeState } from '../Redux/ThemeSlice'
+function ProductSkullLoader() {
+     const theme = useSelector(ThemeState)
+     const dispatch = useDispatch()
+     const loadAnimation = theme === 'Light' ? "skull-Load-Light" : "skull-Load";
   return (
-    <div className='flex pl-[90px] pt-[70px] pr-[20px] pb-[20px] space-x-2  h-[615px] overflow-hidden' >
+    <div className={Style.container}  >
         
-        <div className={`flex flex-[0.3] border-[1px] border-[${borderColor}] rounded-[10px] bg-[${bgColor}] flex-col items-center`}>
+        <div className={theme === 'Light' ? Style.section1_Light : Style.section1_Dark}>
         <div className={`w-[130px] h-[130px] rounded-[10px] mt-16 ${loadAnimation}`}> </div>
         <p className={`text-white text-[30px] font-bold mt-8 rounded-[10px] w-[220px] h-[50px] ${loadAnimation}`}></p>
         <p className={`text-blue-300 text-base mt-2 rounded-[10px] w-[80px] h-[20px] ${loadAnimation}`}></p>
@@ -31,7 +35,7 @@ function ProductSkullLoader({bgColor,borderColor,loadAnimation}) {
            
            
 
-        <div className={`h-[350px] border-[1px] border-[${borderColor}] bg-[${bgColor}] rounded-[10px]`}>
+        <div className={theme === 'Light' ? Style.inner_section1_Light : Style.inner_section1_Dark}>
               <div className='h-[50px] border-b-[1px] border-[#a6a5a586] pl-6 pt-[12px]'><p className={`text-lg font-semibold text-white  h-[25px] w-[120px] ${loadAnimation} rounded-[5px]`}></p></div>
             <div className='flex p-6 space-x-6 overflow-x-scroll scroll-hide'>
             <div className={`w-[450px] h-[250px] rounded-[5px] hover:border-[2px] hover:border-[#ffffff3a] hover:opacity-25 ${loadAnimation}`}> </div>
@@ -42,7 +46,7 @@ function ProductSkullLoader({bgColor,borderColor,loadAnimation}) {
 
 
 
-           <div className={`pb-10 border-[1px] border-[${borderColor}] bg-[${bgColor}] rounded-[10px]`}>
+           <div className={theme === 'Light' ? Style.inner_section2_Light : Style.inner_section2_Dark}>
            <div className='h-[50px] border-b-[1px] border-[#a6a5a586]  pl-6 pt-[12px]'><p className={`text-lg font-semibold text-white h-[25px] w-[200px] ${loadAnimation} rounded-[5px]`}></p></div>
            <div className='grid grid-cols-3 gap-9 pt-10 pb-10 pl-6'>
 
@@ -123,7 +127,7 @@ function ProductSkullLoader({bgColor,borderColor,loadAnimation}) {
 
 
 
-           <div className={`border-[1px] border-[${borderColor}] bg-[${bgColor}] rounded-[10px]`}>
+           <div className={theme === 'Light' ? Style.inner_section3_Light : Style.inner_section3_Dark}>
            <div className='h-[50px] border-b-[1px] border-[#a6a5a586]'><p className='text-lg font-semibold text-white pl-6 pt-[12px]'>Description</p></div>
            <div className='p-6 text-white text-sm '>
            <p className={`${loadAnimation} rounded-[5px] w-[100%] h-[200px]`}>
