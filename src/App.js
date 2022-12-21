@@ -7,6 +7,7 @@ import Product from "./InventoryManagement/Pages/Product";
 import store from "./store";
 import { Provider } from "react-redux";
 import VizHome from "./Dataviz/Pages/VizHome";
+import VizProduct from "./Dataviz/Pages/VizProduct";
 function App() {
   return (
     <>
@@ -18,6 +19,7 @@ function App() {
             <Route path="Application" element={<Application />} />
             <Route path="Application/Product" element={<Product />} />
             <Route path="VizHome" element={<VizHome />} />
+            <Route path="VizHome/Product/:id" element={<VizProduct />} />
           </Routes>
         </BrowserRouter>
       </Provider>

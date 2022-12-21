@@ -29,7 +29,7 @@ const VizHome = () => {
       {data.map((item) => {
         return (
           <div style={{ margin: "20px" }}>
-            <NavLink to="Product">
+            <NavLink to={`./Product/${item.id}`}>
               {load ? (
                 <ProductCard
                   name={item.name}
