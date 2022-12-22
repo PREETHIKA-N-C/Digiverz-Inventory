@@ -60,7 +60,7 @@ const VizHome = () => {
                     position: "relative",
                     top: "70px",
                   }}
-                  className="bg-slate-700"
+                  className="bg-slate-700 text-lg"
                 >
                   {item.group}
                 </h2>
