@@ -7,7 +7,7 @@ function LoginCard() {
     <div className={Style.boxform}>
 	<div className={Style.left}>
 		<div className={Style.overlay}>
-		<h1>Digiverz Store</h1>
+		<h1>Digiverz Inventory</h1>
 		{/* <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.
 		Curabitur et est sed felis aliquet sollicitudin</p> */}
 		{/* <span> */}
