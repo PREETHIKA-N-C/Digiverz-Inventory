@@ -20,7 +20,7 @@ function Product() {
   },3000)
   return (
      <>
-    {load ? (theme=== 'Light' ?<ProductComp bgColor="#abe6e3" contactColor="[#2B3467]" buttonColor="[#46C2CB]" borderColor="" iconColor="black" iconColor2="#000000" textColor="black"/>:<ProductComp buttonColor="blue-300" contactColor="blue-300" iconColor="white" iconColor2="#A6A5A5" bgColor="#2c36395f" textColor="white" borderColor="#303030" />) :(theme === 'Light') ? <ProductSkullLoader bgColor="#abe6e3" borderColor="" loadAnimation="skull-Load-Light"/> : <ProductSkullLoader bgColor="#2c36395f" loadAnimation="skull-Load" borderColor="#303030"/>}
+    {load ? (theme=== 'Light' ?<ProductComp />:<ProductComp/>) :(theme === 'Light') ? <ProductSkullLoader /> : <ProductSkullLoader/>}
     </>
   )
 }

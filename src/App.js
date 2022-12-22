@@ -9,6 +9,7 @@ import Login from "./InventoryManagement/Pages/Login";
 import { Provider } from "react-redux";
 import VizHome from "./Dataviz/Pages/VizHome";
 import VizProduct from "./Dataviz/Pages/VizProduct";
+
 function App() {
   // const [isAuth, setIsAuth] = useState(localStorage.getItem("isAuth"));
 
@@ -20,6 +21,7 @@ function App() {
     <Provider store={store}>
       <BrowserRouter>
         {window.location.pathname !== "/Login" ? <SideNavBar /> : ""}
+
 
         <Routes>
           <Route path="/" element={<Home />} />
@@ -33,5 +35,6 @@ function App() {
     </Provider>
   );
 }
+
 
 export default App;
