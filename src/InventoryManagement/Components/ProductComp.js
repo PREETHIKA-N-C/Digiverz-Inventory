@@ -7,7 +7,7 @@ import Style from './ProductComp.module.css'
 function ProductComp() {
      const theme = useSelector(ThemeState)
      const dispatch = useDispatch()
-
+     
      const IconColor = theme === 'Light' ? "#000000" : "#A6A5A5"
   return (
    <div className={Style.container} >

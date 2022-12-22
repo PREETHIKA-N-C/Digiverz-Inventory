@@ -1,0 +1,52 @@
+const data = [
+    {
+        id:"1",
+        name:"lawatlas-emergency-declarations",
+        imgUrl:"https://www.mckinsey.com/~/media/mckinsey/industries/automotive%20and%20assembly/our%20insights/the%20future%20of%20mobility%20is%20at%20our%20doorstep/the-future-of-mobility-5050-1536x1536.jpg",
+        summary:"wejhferu",
+},
+{
+    id:"2",
+    name:"mobility",
+    imgUrl:"https://www.mckinsey.com/~/media/mckinsey/industries/automotive%20and%20assembly/our%20insights/the%20future%20of%20mobility%20is%20at%20our%20doorstep/the-future-of-mobility-5050-1536x1536.jpg",
+    summary:"djewedfarefkef",
+},
+{
+    id:"3",
+    name:"hospitalizations",
+    imgUrl:"https://www.mckinsey.com/~/media/mckinsey/industries/automotive%20and%20assembly/our%20insights/the%20future%20of%20mobility%20is%20at%20our%20doorstep/the-future-of-mobility-5050-1536x1536.jpg",
+    summary:"frferferf",
+},
+{
+    id:"4",
+    name:"vaccinations",
+    imgUrl:"https://www.mckinsey.com/~/media/mckinsey/industries/automotive%20and%20assembly/our%20insights/the%20future%20of%20mobility%20is%20at%20our%20doorstep/the-future-of-mobility-5050-1536x1536.jpg",
+    summary:"erfjkerhferf",
+},
+{
+    id:"5",
+    name:"weather",
+    imgUrl:"https://www.mckinsey.com/~/media/mckinsey/industries/automotive%20and%20assembly/our%20insights/the%20future%20of%20mobility%20is%20at%20our%20doorstep/the-future-of-mobility-5050-1536x1536.jpg",
+    summary:"efkjrefhrei",
+},
+{
+    id:"6",
+    name:"epidemiology",
+    imgUrl:"https://www.mckinsey.com/~/media/mckinsey/industries/automotive%20and%20assembly/our%20insights/the%20future%20of%20mobility%20is%20at%20our%20doorstep/the-future-of-mobility-5050-1536x1536.jpg",
+    summary:"ekjfherfred",
+},
+{
+    id:"7",
+    name:"health",
+    imgUrl:"https://www.mckinsey.com/~/media/mckinsey/industries/automotive%20and%20assembly/our%20insights/the%20future%20of%20mobility%20is%20at%20our%20doorstep/the-future-of-mobility-5050-1536x1536.jpg",
+    summary:"efkewdeoidew",
+},
+{
+    id:"8",
+    name:"demographics",
+    imgUrl:"https://www.mckinsey.com/~/media/mckinsey/industries/automotive%20and%20assembly/our%20insights/the%20future%20of%20mobility%20is%20at%20our%20doorstep/the-future-of-mobility-5050-1536x1536.jpg",
+    summary:"ewjfhwedjewij",
+},
+]
+
+export default data;
