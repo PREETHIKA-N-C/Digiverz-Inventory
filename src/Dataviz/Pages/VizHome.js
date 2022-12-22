@@ -57,8 +57,10 @@ const VizHome = () => {
                     color: "white",
                     textAlign: "center",
                     padding: "5px",
+                    marginInline: "30px",
                     position: "relative",
                     top: "70px",
+                    borderRadius: "110px",
                   }}
                   className="bg-slate-700 text-lg"
                 >
