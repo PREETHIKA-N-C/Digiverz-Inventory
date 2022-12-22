@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from "react";
 import { useParams } from "react-router";
+
 const VizProduct = () => {
   const { id } = useParams();
   const [data_temp, setDataTemp] = useState({});
