@@ -1,0 +1,14 @@
+.product_cont{
+    /* width: 30%; */
+    /* margin-left: 30px; */
+    display: flex;
+    flex-direction: column;
+    height: 390px;
+    width: 370px;
+    border: 1px solid #303030;
+    border-radius: 20px;
+    /* background-color: #FFF; */
+    /* background-color: #242a30dc; */
+    box-shadow: inset 17.12px 17.12px 17px #1A1E23, inset -17.12px -17.12px 17px #2E363D;
+    background-color: #242a30dc;
+}

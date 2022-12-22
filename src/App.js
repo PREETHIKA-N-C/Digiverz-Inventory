@@ -9,6 +9,8 @@ import Login from "./InventoryManagement/Pages/Login";
 import { Provider } from "react-redux";
 import VizHome from "./Dataviz/Pages/VizHome";
 import VizProduct from "./Dataviz/Pages/VizProduct";
+import MarketPlaceHome from "./MarketPlace/Pages/MarketPlaceHome";
+import Pipeline from "./MarketPlace/Pages/Pipeline";
 
 function App() {
   // const [isAuth, setIsAuth] = useState(localStorage.getItem("isAuth"));
@@ -30,6 +32,8 @@ function App() {
           <Route path="Application/Product" element={<Product />} />
           <Route path="VizHome" element={<VizHome />} />
           <Route path="VizHome/Product/:id" element={<VizProduct />} />
+          <Route path="MarketPlaceHome" element={<MarketPlaceHome />}/>
+          <Route path="MarketPlaceHome/Pipeline/:id" element={<Pipeline/>}/>
         </Routes>
       </BrowserRouter>
     </Provider>
