@@ -1,27 +1,15 @@
-
-import React, { useEffect, useState } from "react";
-import Style from "./SideNavBar.module.css";
-import {
-  FiHome,
-  FiGrid,
-  FiCompass,
-  FiHelpCircle,
-  FiSettings,
-  FiSearch,
-  FiMoon,
-  FiSun,
-} from "react-icons/fi";
-import logo1 from "../Assets/Digiverz.png";
-import logo2 from "../Assets/Digiverz_B.png";
-import lottie from "lottie-web";
-import { defineElement } from "lord-icon-element";
-import { Player } from "@lottiefiles/react-lottie-player";
-import compass from "../Assets/compass.json";
-import { NavLink } from "react-router-dom";
-import { useSelector, useDispatch } from "react-redux";
-import { Light, Dark, Toggle, ThemeState } from "../Redux/ThemeSlice";
-
-
+import React, { useEffect, useState } from 'react'
+import Style from './SideNavBar.module.css'
+import { FiHome,FiGrid,FiCompass,FiHelpCircle,FiSettings,FiSearch,FiMoon,FiSun } from "react-icons/fi";
+import logo1 from '../Assets/Digiverz.png'
+import logo2 from '../Assets/Digiverz_B.png'
+import lottie from 'lottie-web';
+import { defineElement} from 'lord-icon-element';
+import { Player} from "@lottiefiles/react-lottie-player";
+import compass from '../Assets/compass.json'
+import {NavLink} from 'react-router-dom'
+import { useSelector, useDispatch } from 'react-redux'
+import { Light, Dark , Toggle, ThemeState } from '../Redux/ThemeSlice'
 function SideNavBar() {
   const [linkState, setLinkState] = useState("");
   const theme = useSelector(ThemeState);
@@ -64,7 +52,7 @@ function SideNavBar() {
 
         </div>
 
-        <div className="flex space-x-8">
+        {/* <div className="flex space-x-8">
           <div
             className={
               theme === "Light" ? Style.profile_icon_Light : Style.profile_icon
@@ -88,7 +76,7 @@ function SideNavBar() {
           >
             <h6>HK</h6>
           </div>
-        </div>
+        </div> */}
       </div>
       <div
         className={theme === "Light" ? Style.container_Light : Style.container}
