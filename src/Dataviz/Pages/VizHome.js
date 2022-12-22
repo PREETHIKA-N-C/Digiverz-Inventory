@@ -59,21 +59,23 @@ const VizHome = () => {
                     padding: "5px",
                     marginInline: "30px",
                     position: "relative",
-                    top: "70px",
+                    top: "80px",
+                    left: "5%",
+                    width: "90%",
                     borderRadius: "110px",
                   }}
                   className="bg-slate-700 text-lg"
                 >
                   {item.group}
                 </h2>
-                <div className="grid grid-cols-3 grid-flow-row  pl-24 pt-20 pb-20 mt-12 -mb-16">
+                <div className="grid lg:grid-cols-3 xs:grid-cols-1 grid-flow-row  pl-24 pt-20 pb-20 mt-12 -mb-16 m-2">
                   {newdata
                     .filter((item2) => {
                       return item2.desc === item.group;
                     })
                     .map((item) => {
                       return (
-                        <div key={item.id}>
+                        <div key={item.id} style={{ marginBottom: "15px" }}>
                           <NavLink to={`./Product/${item.id}`}>
                             <ProductCard
                               name={item.name}
