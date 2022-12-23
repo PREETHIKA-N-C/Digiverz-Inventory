@@ -18,7 +18,7 @@ const VizHome = () => {
   const [newdata, setNewdata] = useState([]);
   const [group, setGroup] = useState([]);
   const [load, setLoad] = useState(true);
-
+  const [tog, setTog] = useState(false);
   useEffect(() => {
     fetch("http://localhost:8000/")
       .then((response) => response.json())
@@ -41,6 +41,19 @@ const VizHome = () => {
   }
   return (
     <div>
+      <div>
+        <button
+          style={{
+            position: "absolute",
+            top: "100px",
+            left: "100px",
+            backgroundColor: "white",
+          }}
+          onClick={() => setTog(!tog)}
+        >
+          Department
+        </button>
+      </div>
       {load ? (
         <div className="grid grid-cols-3 grid-flow-row  pl-24 pt-20 pb-20">
           <ProductCardLoader />
@@ -48,50 +61,73 @@ const VizHome = () => {
           <ProductCardLoader />
         </div>
       ) : (
-        <div>
-          {group.map((item) => {
-            return (
-              <div key={item.id}>
-                <h2
-                  style={{
-                    color: "white",
-                    textAlign: "center",
-                    padding: "5px",
-                    marginInline: "30px",
-                    position: "relative",
-                    top: "80px",
-                    left: "5%",
-                    width: "90%",
-                    borderRadius: "110px",
-                  }}
-                  className="bg-slate-700 text-lg"
-                >
-                  {item.group}
-                </h2>
-                <div className="grid lg:grid-cols-3 xs:grid-cols-1 grid-flow-row  pl-24 pt-20 pb-20 mt-12 -mb-16 m-2">
-                  {newdata
-                    .filter((item2) => {
-                      return item2.desc === item.group;
-                    })
-                    .map((item) => {
-                      return (
-                        <div key={item.id} style={{ marginBottom: "15px" }}>
-                          <NavLink to={`./Product/${item.id}`}>
-                            <ProductCard
-                              name={item.name}
-                              desc={item.desc}
-                              img={item.img}
-                              logo={item.logo}
-                            />
-                          </NavLink>
-                        </div>
-                      );
-                    })}
-                </div>
+        <>
+          {tog ? (
+            <div style={{ paddingTop: "120px" }}>
+              <div className="grid lg:grid-cols-3 xs:grid-cols-1 grid-flow-row  pl-24 pt-20 pb-20 ">
+                {newdata.map((item) => {
+                  return (
+                    <div key={item.id} style={{ marginBottom: "15px" }}>
+                      <NavLink to={`./Product/${item.id}`}>
+                        <ProductCard
+                          name={item.name}
+                          desc={item.desc}
+                          img={item.img}
+                          logo={item.logo}
+                        />
+                      </NavLink>
+                    </div>
+                  );
+                })}
               </div>
-            );
-          })}
-        </div>
+            </div>
+          ) : (
+            <div className="d" style={{ paddingTop: "120px" }}>
+              {group.map((item) => {
+                return (
+                  <div key={item.id}>
+                    <h2
+                      style={{
+                        color: "white",
+                        textAlign: "center",
+                        padding: "5px",
+                        marginInline: "30px",
+                        position: "relative",
+                        top: "80px",
+                        left: "5%",
+                        width: "90%",
+                        borderRadius: "110px",
+                      }}
+                      className="bg-slate-700 text-lg"
+                    >
+                      {item.group}
+                    </h2>
+                    <div className="grid lg:grid-cols-3 xs:grid-cols-1 grid-flow-row  pl-24 pt-20 pb-20 mt-12 -mb-16 m-2">
+                      {newdata
+                        .filter((item2) => {
+                          return item2.desc === item.group;
+                        })
+                        .map((item) => {
+                          return (
+                            <div key={item.id} style={{ marginBottom: "15px" }}>
+                              <NavLink to={`./Product/${item.id}`}>
+                                <ProductCard
+                                  name={item.name}
+                                  desc={item.desc}
+                                  img={item.img}
+                                  logo={item.logo}
+                                />
+                              </NavLink>
+                            </div>
+                          );
+                        })}
+                    </div>
+                  </div>
+                );
+              })}
+            </div>
+          )}
+        </>
       )}
     </div>
   );
