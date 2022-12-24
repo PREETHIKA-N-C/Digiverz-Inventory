@@ -51,7 +51,7 @@ const VizHome = () => {
           }}
           onClick={() => setTog(!tog)}
         >
-          Department
+          Department wise
         </button>
       </div>
       {load ? (
