@@ -53,30 +53,74 @@ const VizHome = () => {
         style={
           theme !== "Light"
             ? {
-                paddingTop: "80px",
-                color: "white",
-                marginLeft: "7%",
+                paddingTop: "5%",
+                color: "red",
+                paddingLeft: "11%",
+                paddingRight: "11%",
+
+                paddingBottom: "1%",
+                marginLeft: "30%",
+                // borderBottom: "3px dashed grey",
+                borderRadius: 20,
                 fontSize: "50px",
+                fontWeight: "500",
+                backgroundColor: "inherit",
+                textAlign: "center",
+                maxWidth: "fit-content",
               }
             : {
-                paddingTop: "80px",
+                paddingTop: "5%",
                 color: "red",
-                marginLeft: "7%",
+                paddingLeft: "11%",
+                paddingRight: "11%",
+
+                paddingBottom: "1%",
+                marginLeft: "30%",
+                // borderBottom: "3px dashed grey",
+                borderRadius: 20,
                 fontSize: "50px",
+                fontWeight: "500",
+                backgroundColor: "inherit",
+                textAlign: "center",
+                maxWidth: "fit-content",
               }
         }
       >
-        E<span style={{ color: "grey" }}>xplore ...</span>
+        <span
+          style={
+            theme !== "Light"
+              ? { color: "grey", fontSize: "30px" }
+              : { color: "black", fontSize: "30px" }
+          }
+        >
+          &lt;&lt;
+        </span>{" "}
+        D
+        <span
+          style={theme !== "Light" ? { color: "grey" } : { color: "black" }}
+        >
+          ata Viz{" "}
+        </span>
+        <span
+          style={
+            theme !== "Light"
+              ? { color: "grey", fontSize: "30px" }
+              : { color: "black", fontSize: "30px" }
+          }
+        >
+          &gt;&gt;
+        </span>{" "}
+        <span
+          style={{
+            color: "grey",
+            fontSize: "11px",
+            display: "block",
+            marginTop: "10px",
+          }}
+        >
+          The Exquisite context for visually appealling dashboards
+        </span>
       </h1>
-      {/* <span
-        style={{
-          color: "grey",
-          marginLeft: "35%",
-          fontSize: "20px",
-        }}
-      >
-        The Exquisite context for visually appealling dashboards
-      </span> */}
 
       <div
         style={
@@ -141,16 +185,16 @@ const VizHome = () => {
       ) : (
         <>
           {all ? (
-            <div style={{ paddingTop: "25px" }}>
+            <div style={{ paddingTop: "10px" }}>
               <h2
                 style={{
                   color: "white",
                   textAlign: "center",
                   padding: "5px",
                   marginInline: "30px",
-                  marginBottom: "25px",
+                  marginBottom: "5px",
                   position: "relative",
-                  top: "55px",
+                  top: "40px",
                   left: "5%",
                   width: "90%",
                   borderRadius: "110px",
@@ -159,7 +203,7 @@ const VizHome = () => {
               >
                 Repository
               </h2>
-              <div className="grid lg:grid-cols-3 xs:grid-cols-1 grid-flow-row  pl-32 pt-20 pb-20 ">
+              <div className="grid lg:grid-cols-3 xs:grid-cols-1 grid-flow-row  pl-32 pt-20 pb-20 -ml-4 ">
                 {newdata.map((item) => {
                   return (
                     <div key={item.id} style={{ marginBottom: "40px" }}>
@@ -177,7 +221,7 @@ const VizHome = () => {
               </div>
             </div>
           ) : (
-            <div className="d" style={{ paddingTop: "30px" }}>
+            <div className="d" style={{ paddingTop: "10px" }}>
               {group.map((item) => {
                 return (
                   <div key={item.id}>
@@ -197,7 +241,7 @@ const VizHome = () => {
                     >
                       {item.group}
                     </h2>
-                    <div className="grid lg:grid-cols-3 xs:grid-cols-1 grid-flow-row  pl-24 pt-10 pb-20 mt-12 -mb-16 m-2">
+                    <div className="grid lg:grid-cols-3 xs:grid-cols-1 grid-flow-row  pl-24 pt-20 pb-20 mt-12 -mb-16 m-2">
                       {newdata
                         .filter((item2) => {
                           return item2.desc === item.group;
