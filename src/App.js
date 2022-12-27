@@ -11,6 +11,7 @@ import VizHome from "./Dataviz/Pages/VizHome";
 import VizProduct from "./Dataviz/Pages/VizProduct";
 import MarketPlaceHome from "./MarketPlace/Pages/MarketPlaceHome";
 import Pipeline from "./MarketPlace/Pages/Pipeline";
+// import "bootstrap/dist/css/bootstrap.min.css";
 
 function App() {
   // const [isAuth, setIsAuth] = useState(localStorage.getItem("isAuth"));
@@ -24,7 +25,6 @@ function App() {
       <BrowserRouter>
         {window.location.pathname !== "/Login" ? <SideNavBar /> : ""}
 
-
         <Routes>
           <Route path="/" element={<Home />} />
           <Route path="Login" element={<Login />} />
@@ -32,13 +32,12 @@ function App() {
           <Route path="Application/Product" element={<Product />} />
           <Route path="VizHome" element={<VizHome />} />
           <Route path="VizHome/Product/:id" element={<VizProduct />} />
-          <Route path="MarketPlaceHome" element={<MarketPlaceHome />}/>
-          <Route path="MarketPlaceHome/Pipeline/:id" element={<Pipeline/>}/>
+          <Route path="MarketPlaceHome" element={<MarketPlaceHome />} />
+          <Route path="MarketPlaceHome/Pipeline/:id" element={<Pipeline />} />
         </Routes>
       </BrowserRouter>
     </Provider>
   );
 }
-
 
 export default App;
