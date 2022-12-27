@@ -31,13 +31,17 @@ function PipelineComp({
 
   const IconColor = theme === "Light" ? "#000000" : "#A6A5A5";
 
+  const [Result,setResult] = useState();
+
   const prams = useParams();
   // console.log(prams.id);
   const details = data.filter((data, index) => {
     return data.name === prams.id;
   });
 
-  function onDownload() {}
+  function onDownload() {
+    
+  }
   return (
     <div className={Style.container}>
       <div
