@@ -87,6 +87,7 @@
 .text_1{
     font-size: large;
     font-weight: bolder;
+    text-align: center;
 }
 .text_2{
     font-size: medium;

@@ -1,0 +1,17 @@
+.li-toggle,
+.li-toggle:hover {
+  padding: 10px;
+  cursor: pointer;
+}
+.li-toggle:hover {
+  border-bottom: 1px solid rgb(132, 255, 0);
+}
+.li-toggle-light,
+.li-toggle-light:hover {
+  padding: 10px;
+  cursor: pointer;
+  color: black;
+}
+.li-toggle-light:hover {
+  border-bottom: 1px solid red;
+}
