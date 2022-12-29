@@ -1,6 +1,7 @@
 import React from "react";
-import { Carousel } from "react-bootstrap";
-import "bootstrap/dist/css/bootstrap.css";
+import { Carousel } from "react-responsive-carousel";
+// import "bootstrap/dist/css/bootstrap.css";
+import "react-responsive-carousel/lib/styles/carousel.css";
 import {
   Light,
   Dark,
@@ -12,18 +13,26 @@ import { useSelector, useDispatch } from "react-redux";
 export const SliderCarousel = ({ data }) => {
   const theme = useSelector(ThemeState);
   return (
-    <Carousel>
+    <Carousel
+      verticalSwipe="standard"
+      useKeyboardArrows={true}
+      emulateTouch={true}
+      showArrows={true}
+      showThumbs={false}
+      renderArrowPrev={(d) => {
+        console.log(d);
+      }}
+    >
       {data.urls.map((item) => {
         return (
-          <Carousel.Item key={item.id}>
-            <br />
+          <div>
+            {/* <h1 style={{ paddingTop: "50px" }}>{item.title}</h1> */}
             <img
-              className="d-block"
               style={{
                 height: "600px",
                 width: "960px",
                 objectFit: "contain",
-                margin: "5% 15%",
+                margin: "5% 13.5%",
                 // borderRadius: 30,
               }}
               src={item.link}
@@ -32,13 +41,13 @@ export const SliderCarousel = ({ data }) => {
             <br />
             <br />
             <br />
-            <br />
-
-            <Carousel.Caption>
-              <h5>{item.title}</h5>
-              <p>Nulla vitae elit libero, a pharetra augue mollis interdum.</p>
-            </Carousel.Caption>
-          </Carousel.Item>
+            <h5
+              className="legend"
+              style={{ left: "51%", fontSize: "20px", marginTop: "12px" }}
+            >
+              {item.title}
+            </h5>
+          </div>
         );
       })}
     </Carousel>

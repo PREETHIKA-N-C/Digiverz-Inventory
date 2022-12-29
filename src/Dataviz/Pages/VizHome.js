@@ -185,8 +185,8 @@ const VizHome = () => {
       ) : (
         <>
           {all ? (
-            <div style={{ paddingTop: "10px" }}>
-              <h2
+            <div style={{ paddingTop: "40px" }}>
+              {/* <h2
                 style={{
                   color: "white",
                   textAlign: "center",
@@ -202,8 +202,8 @@ const VizHome = () => {
                 className="bg-slate-700 text-lg"
               >
                 Repository
-              </h2>
-              <div className="grid lg:grid-cols-3 xs:grid-cols-1 grid-flow-row  pl-32 pt-20 pb-20 -ml-4 ">
+              </h2> */}
+              <div className="grid lg:grid-cols-3 xs:grid-cols-1 grid-flow-row  pl-32 pt-18 pb-20 -ml-4 ">
                 {newdata.map((item) => {
                   return (
                     <div key={item.id} style={{ marginBottom: "40px" }}>
@@ -221,7 +221,7 @@ const VizHome = () => {
               </div>
             </div>
           ) : (
-            <div className="d" style={{ paddingTop: "10px" }}>
+            <div className="d" style={{ paddingTop: "5px" }}>
               {group.map((item) => {
                 return (
                   <div key={item.id}>
@@ -241,7 +241,7 @@ const VizHome = () => {
                     >
                       {item.group}
                     </h2>
-                    <div className="grid lg:grid-cols-3 xs:grid-cols-1 grid-flow-row  pl-24 pt-20 pb-20 mt-12 -mb-16 m-2">
+                    <div className="grid lg:grid-cols-3 xs:grid-cols-1 grid-flow-row  pl-24 pt-20 pb-20 mt-2 -mb-16 m-2">
                       {newdata
                         .filter((item2) => {
                           return item2.desc === item.group;
