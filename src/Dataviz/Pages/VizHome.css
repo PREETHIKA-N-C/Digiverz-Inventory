@@ -15,3 +15,9 @@
 .li-toggle-light:hover {
   border-bottom: 1px solid red;
 }
+.options-container {
+  display: flex;
+  position: absolute;
+  top: 10%;
+  right: 2%;
+}

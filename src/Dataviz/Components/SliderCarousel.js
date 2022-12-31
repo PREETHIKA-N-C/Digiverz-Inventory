@@ -30,7 +30,7 @@ export const SliderCarousel = ({ data }) => {
             <img
               style={{
                 height: "600px",
-                width: "960px",
+                width: "1000px",
                 objectFit: "contain",
                 margin: "5% 13.5%",
                 // borderRadius: 30,

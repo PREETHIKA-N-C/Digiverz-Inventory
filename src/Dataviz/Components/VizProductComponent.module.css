@@ -77,14 +77,16 @@
   color: white;
   font-size: 30px;
   font-weight: bold;
-  margin-top: 32px;
+  margin-top: 28px;
+  text-align: center;
 }
 
 .title1_Light {
   color: black;
   font-size: 30px;
   font-weight: bold;
-  margin-top: 32px;
+  margin-top: 28px;
+  text-align: center;
 }
 
 .title2_Dark {
@@ -149,9 +151,9 @@
   width: 150px;
   height: 35px;
   border-radius: 5px;
-  margin-top: 40px;
+  margin-top: 25px;
   text-align: center;
-  padding-top: 4px;
+  padding: 4px;
   background-color: #46c2cb;
 }
 
@@ -159,9 +161,10 @@
   width: 150px;
   height: 35px;
   border-radius: 5px;
-  margin-top: 40px;
   text-align: center;
-  padding-top: 4px;
+  margin-top: 25px;
+
+  padding: 4px;
   background-color: #2b3467;
 }
 
