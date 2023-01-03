@@ -50,41 +50,7 @@ const VizHome = () => {
         onClick={() => {
           setTog(false);
         }}
-        style={
-          theme !== "Light"
-            ? {
-                paddingTop: "5%",
-                color: "red",
-                paddingLeft: "11%",
-                paddingRight: "11%",
-
-                paddingBottom: "1%",
-                marginLeft: "30%",
-                // borderBottom: "3px dashed grey",
-                borderRadius: 20,
-                fontSize: "50px",
-                fontWeight: "500",
-                backgroundColor: "inherit",
-                textAlign: "center",
-                maxWidth: "fit-content",
-              }
-            : {
-                paddingTop: "5%",
-                color: "red",
-                paddingLeft: "11%",
-                paddingRight: "11%",
-
-                paddingBottom: "1%",
-                marginLeft: "30%",
-                // borderBottom: "3px dashed grey",
-                borderRadius: 20,
-                fontSize: "50px",
-                fontWeight: "500",
-                backgroundColor: "inherit",
-                textAlign: "center",
-                maxWidth: "fit-content",
-              }
-        }
+        className="viz-title"
       >
         {/* <span
           style={
@@ -122,30 +88,7 @@ const VizHome = () => {
         </span>
       </h1>
 
-      <div
-        style={
-          tog
-            ? {
-                position: "absolute",
-                display: "flex",
-                flexDirection: "row",
-                margin: "5px",
-                right: "20px",
-                // justifyContent: "space-evenly",
-                alignItems: "flex-start",
-                top: "90px",
-              }
-            : {
-                display: "flex",
-                flexDirection: "row",
-                justifyContent: "space-evenly",
-                margin: "5px",
-                right: "20px",
-                top: "90px",
-                position: "absolute",
-              }
-        }
-      >
+      <div className={tog ? "options-container-2" : "options-container-1"}>
         {tog ? (
           <ul style={{ color: "white", marginRight: "20px" }}>
             <li
@@ -227,7 +170,7 @@ const VizHome = () => {
               >
                 Repository
               </h2> */}
-              <div className="grid lg:grid-cols-3 xs:grid-cols-1 grid-flow-row  pl-32 pt-18 pb-20 -ml-4 ">
+              <div className="grid lg:grid-cols-3 xs:grid-cols-1 grid-flow-row  pl-32 pt-18 pb-20 -ml-4 prod-container">
                 {newdata.map((item) => {
                   return (
                     <div key={item["_id"]} style={{ marginBottom: "40px" }}>
@@ -272,8 +215,11 @@ const VizHome = () => {
                         })
                         .map((item) => {
                           return (
-                            <div key={item.id} style={{ marginBottom: "30px" }}>
-                              <NavLink to={`./Product/${item.id}`}>
+                            <div
+                              key={item["_id"]}
+                              style={{ marginBottom: "30px" }}
+                            >
+                              <NavLink to={`./Product/${item["_id"]}`}>
                                 <ProductCard
                                   name={item.name}
                                   desc={item.desc}

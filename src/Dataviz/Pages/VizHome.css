@@ -15,9 +15,59 @@
 .li-toggle-light:hover {
   border-bottom: 1px solid red;
 }
-.options-container {
+.options-container-1 {
   display: flex;
+  flex-direction: row;
+  justify-content: space-between;
   position: absolute;
-  top: 10%;
-  right: 2%;
+  margin: 5px;
+  right: 20px;
+  top: 90px;
+}
+
+.options-container-2 {
+  position: absolute;
+  display: flex;
+  flex-direction: row;
+  margin: 5px;
+  right: 20px;
+  align-items: flex-start;
+  top: 90px;
+}
+
+.viz-title {
+  padding-top: 5%;
+  color: red;
+  padding-left: 11%;
+  padding-right: 11%;
+
+  padding-bottom: 1%;
+  border-radius: 20;
+  font-size: 50px;
+  font-weight: 500;
+  background-color: inherit;
+  text-align: center;
+}
+
+@media (max-width: 900px) {
+  .options-container-1 {
+    flex-direction: column-reverse;
+    left: 80px;
+    top: 90px;
+  }
+  .options-container-2 {
+    flex-direction: column-reverse;
+    align-items: flex-start;
+    justify-content: flex-end;
+    left: 80px;
+    top: 90px;
+  }
+  .prod-container {
+    width: 20%;
+    padding-left: 90px;
+  }
+  .viz-title {
+    padding-top: 20%;
+    margin-left: 40%;
+  }
 }
