@@ -11,6 +11,7 @@ import VizHome from "./Dataviz/Pages/VizHome";
 import VizProduct from "./Dataviz/Pages/VizProduct";
 import MarketPlaceHome from "./MarketPlace/Pages/MarketPlaceHome";
 import Pipeline from "./MarketPlace/Pages/Pipeline";
+import AppInfoUpload from "./InventoryManagement/Pages/AppInfoUpload";
 // import "bootstrap/dist/css/bootstrap.min.css";
 
 function App() {
@@ -23,11 +24,13 @@ function App() {
   return (
     <Provider store={store}>
       <BrowserRouter>
-        {window.location.pathname !== "/Login" ? <SideNavBar /> : ""}
+        {/* {window.location.pathname !== "/Login" ? <SideNavBar /> : ""} */}
+        {window.location.pathname == "/AppInfoUpload" || window.location.pathname == "/Login"  ? "" : <SideNavBar />}
 
         <Routes>
           <Route path="/" element={<Home />} />
           <Route path="Login" element={<Login />} />
+          <Route path="AppInfoUpload" element={<AppInfoUpload />} />
           <Route path="Application" element={<Application />} />
           <Route path="Application/Product" element={<Product />} />
           <Route path="VizHome" element={<VizHome />} />
