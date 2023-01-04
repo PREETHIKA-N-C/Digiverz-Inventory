@@ -85,19 +85,19 @@ function SideNavBar() {
               />
             )}
           </div>
-          {/* <div className={theme === 'Light' ? Style.profile_Light : Style.profile} >
+          <div className={theme === 'Light' ? Style.profile_Light : Style.profile} >
             <h6>HK</h6>
-        </div> */}
-          <div>
+        </div>
+          {/* <div>
             <a
               className={Style.signIn}
-              href="Login"
-              // onClick={onClick}
-            >
+              href="Login" */}
+              {/* // onClick={onClick} */}
+            {/* >
               Sign In
-            </a>
+            </a> */}
             {/* { hideSideNavBar ? <SideNavBar/> : true } */}
-          </div>
+          {/* </div> */}
         </div>
 
         {/* <div className="flex space-x-8">
