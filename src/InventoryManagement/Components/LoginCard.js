@@ -1,36 +1,49 @@
 import React, {useState} from 'react'
+import {useNavigate} from "react-router-dom"
 import axios from 'axios'
 import Style from './LoginCard.module.css'
-const url = axios.create({
-	baseURL: 'http://localhost:5000/api/add_user',
-});
+
 
 function LoginCard() {
-	const [Username, setUsername] = useState('');
-  const [Password, setPassword] = useState('');
-  const [Date, setDate] = useState('');
-  const [Time, setTime] = useState('');
-  const postQuery = async (Username,Password,Date,Time) => {
-    		try {
-    			let response = await url.post('', {
-    				Username: Username,
-            Password:Password,
-            Date:Date,
-            Time:Time
-    			});
-    			setUsername('');
-          setPassword('');
-          setDate('');
-          setTime('');
-    		} catch (error) {
-    			console.log(error);
-    		}
+	const [Login, setLogin] = useState({
+		Username : "",
+		Password: ""
+	});
+	const navigate = useNavigate();
+	const config = {
+    method: "POST",
+    headers: {
+      
+      'content-type': 'application/json',
+    },
+    body: JSON.stringify(Login)
+
+  };
+  const postQuery = async () => {
+				console.log(Login);
+				let loginres;
+				await fetch('http://localhost:5000/api/validate_user',config)
+    .then(response => response.json())
+		.then(data => loginres=data)
+		console.log(loginres)
+		if (loginres.ok === true){
+        navigate("/")
+
+		}
+		else{
+			alert("Username or Password wrong")
+		}
+
+		
+    // alert('Registered Successfully!!')
+
+    
     	};
   const submitHandler = (event) => {
     event.preventDefault();
     // toast.success("Submitted Successfully!");
-    console.log(Username,Password,Date,Time);
-    postQuery(Username,Password,Date,Time);
+    console.log(Login.Username,Login.Password);
+    postQuery();
   };
   return (
     <>
@@ -50,7 +63,7 @@ function LoginCard() {
 	</div>
 
   <div className={Style.right}>
-		{/* <h5>Login</h5> */}
+		<h5>Login</h5>
     <div>
 		<p>Don't have an account? <a href="#">Creat Your Account</a> it takes less than a minute</p>
     </div>
@@ -60,8 +73,9 @@ function LoginCard() {
       </div> */}
 			<div className={Style.username}>
 			<input className="name"
-                       value={Username}
-                       onChange={(e) => setUsername(e.target.value)}
+                       value={Login.Username}
+                       onChange={(e) => setLogin({Username: e.target.value,
+										   Password: Login.Password})}
                        type="text"
                        name="Username"
                        placeholder="Username"
@@ -73,15 +87,16 @@ function LoginCard() {
       </div> */}
 			<div className={Style.username}>
 			<input className="name"
-                       value={Password}
-                       onChange={(e) => setPassword(e.target.value)}
+                       value={Login.Password}
+                       onChange={(e) => setLogin({Password: e.target.value,
+												Username: Login.Username})}
                        type="password"
                        name="Password"
                        placeholder="Password"
                        required
                      />
 										 </div>
-										 <div className={Style.username}>
+										 {/* <div className={Style.username}>
 			<input className="name"
                        value={Date}
                        onChange={(e) => setDate(e.target.value)}
@@ -100,7 +115,7 @@ function LoginCard() {
                        placeholder="Time"
                        required
                      />
-										 </div>
+										 </div> */}
 		</div>
     	<br></br>
 			{/* <a className={Style.signIn}  href="/"  */}
