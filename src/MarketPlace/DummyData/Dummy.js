@@ -46,7 +46,7 @@ const data = [
     name:"demographics",
     imgUrl:"https://www.mckinsey.com/~/media/mckinsey/industries/automotive%20and%20assembly/our%20insights/the%20future%20of%20mobility%20is%20at%20our%20doorstep/the-future-of-mobility-5050-1536x1536.jpg",
     summary:"ewjfhwedjewij",
-},
+}
 ]
 
 export default data;

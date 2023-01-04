@@ -1,4 +1,4 @@
-import SideNavBar from "./InventoryManagement/Components/SideNavBar";
+import SideNavBar from "./InventoryManagement/Components/SideNavBar/SideNavBar";
 import "./App.css";
 import { BrowserRouter, Route, Routes } from "react-router-dom";
 import Home from "./InventoryManagement/Pages/Home";
@@ -12,6 +12,7 @@ import VizProduct from "./Dataviz/Pages/VizProduct";
 import MarketPlaceHome from "./MarketPlace/Pages/MarketPlaceHome";
 import Pipeline from "./MarketPlace/Pages/Pipeline";
 import VizAdmin from "./Dataviz/Pages/VizAdmin";
+import AppInfoUpload from "./InventoryManagement/Pages/AppInfoUpload";
 // import "bootstrap/dist/css/bootstrap.min.css";
 
 function App() {
@@ -24,11 +25,13 @@ function App() {
   return (
     <Provider store={store}>
       <BrowserRouter>
-        {window.location.pathname !== "/Login" ? <SideNavBar /> : ""}
+        {/* {window.location.pathname !== "/Login" ? <SideNavBar /> : ""} */}
+        {window.location.pathname == "/AppInfoUpload" || window.location.pathname == "/"  ? "" : <SideNavBar />}
 
         <Routes>
-          <Route path="/" element={<Home />} />
-          <Route path="Login" element={<Login />} />
+          <Route path="/" element={<Login />} />
+          <Route path="Home" element={<Home />} />
+          <Route path="AppInfoUpload" element={<AppInfoUpload />} />
           <Route path="Application" element={<Application />} />
           <Route path="Application/Product" element={<Product />} />
           <Route path="VizHome" element={<VizHome />} />
