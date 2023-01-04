@@ -1,0 +1,182 @@
+.expand_cont{
+    background-color: #000000;
+
+    position: fixed;
+
+    height: 100%;
+
+    width: 225px;
+
+    /* border: 1px solid #2F363D; */
+
+    display: flex;
+
+    flex-direction: column;
+
+    justify-content: space-between;
+
+    z-index: 10;
+
+    padding-top: 10px;
+
+    animation: fadeinleft 1s;
+}
+
+.expand_cont_Light{
+    background-color: #ffffff;
+
+    position: fixed;
+
+    height: 100%;
+
+    width: 225px;
+
+    /* border: 1px solid #2F363D; */
+
+    display: flex;
+
+    flex-direction: column;
+
+    justify-content: space-between;
+
+    z-index: 10;
+
+    padding-top: 10px;
+
+    animation: fadeinleft 1s;
+}
+
+
+
+.top_cont{
+
+    margin-top: 50px;
+    animation: fadeinup 2.5s;
+    /* animation-delay: 0.2s; */
+}
+
+
+
+.bottom_cont{
+    margin-bottom: 20px;
+    animation: fadeinup 2.5s;
+    /* animation-delay: 0.2s; */
+}
+
+.expand_icon_cont{
+    margin: 5px;
+
+   height: 55px;
+
+   padding: 14px;
+
+   display: flex;
+
+   border-radius: 5px;
+}
+
+
+
+.expand_text_2{
+
+    font-size: medium;
+
+    /* margin-top: 4px; */
+
+    /* width: 30px; */
+
+    /* padding-top: 0px; */
+
+    font-weight: 500;
+
+    padding-left: 50px;
+
+    text-align: center;
+
+    color: #ffffff;
+
+}
+
+.expand_text_2_Light{
+
+    font-size: medium;
+
+    /* margin-top: 4px; */
+
+    /* width: 30px; */
+
+    /* padding-top: 0px; */
+
+    font-weight: 500;
+
+    padding-left: 50px;
+
+    text-align: center;
+
+    color: #000000;
+
+}
+
+
+.expand_icon_cont:hover{
+
+    background-color: rgba(190, 187, 187, 0.114);
+
+    /* background-color: rgba(120, 116, 116, 0.666); */
+
+    border: 10px solid transparent;
+
+    border-image: url('../../Assets/border.png') 60 stretch;
+
+    padding: 4px;
+
+}
+
+.expand_icon_cont_active{
+
+    display: flex;
+
+    margin: 5px;
+
+   height: 55px;
+
+   padding: 10px;
+
+   color: white;
+
+   border-radius: 5px;
+
+    background-color: rgba(190, 187, 187, 0.114);
+
+    /* background-color: rgba(120, 116, 116, 0.666); */
+
+    border: 10px solid transparent;
+
+    border-image: url('../../Assets/border.png') 60 stretch;
+
+    padding: 4px;
+
+}
+
+
+@keyframes fadeinleft {
+    from{
+        opacity: 0;
+        transform: translate3d(-50px, 0, 0); 
+    }
+    to{
+        transform: translate3d(0, 0, 0); 
+        opacity: 1;
+    }
+}
+
+@keyframes fadeinup {
+    from{
+        opacity: 0;
+        transform: translate3d(0, 50px, 0); 
+    }
+    to{
+        transform: translate3d(0, 0, 0); 
+        opacity: 1;
+    }
+}
