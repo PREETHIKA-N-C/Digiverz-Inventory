@@ -13,7 +13,7 @@ function ProductComp() {
    <div className={Style.container} >
         
         <div className={theme === 'Light' ? Style.section1_Light : Style.section1_Dark}>
-        <img src='https://upload.wikimedia.org/wikipedia/commons/0/0c/Clash_app_logo.png' className='w-[130px] h-[130px] rounded-[10px] mt-16'/>
+        <img src='https://upload.wikimedia.org/wikipedia/commons/0/0c/Clash_app_logo.png' alt='' className={Style.image}/>
         <p className={theme === 'Light' ? Style.title1_Light : Style.title1_Dark}>Expense Claim App</p>
         <p className={theme === 'Light' ? Style.title2_Light : Style.title2_Dark}>Kaar Technologies Pvt Ltd</p>
         <a className={theme === 'Light' ? Style.btn_Light : Style.btn_Dark} href="http://172.17.19.26:3000/" target="_blank" >Launch App</a>
@@ -29,13 +29,13 @@ function ProductComp() {
         <p className={theme === 'Light' ? Style.title5_Light : Style.title5_Dark}>Customers</p>
     </div>
         </div>
-        <div className='fixed mt-[490px] ml-[300px] hover:bg-[#ffffff3a] w-8 h-8 p-1 rounded-[4px]'>
+        <div className={Style.share_icon}>
         <lord-icon src="https://cdn.lordicon.com/wxhtpnnk.json" trigger="morph" colors={`primary:${IconColor}`} style={{width:"25px",height:"25px"}}></lord-icon>
         </div>
         </div>
 
 
-        <div className='flex-[0.7] space-y-2 overflow-y-scroll overscroll-contain scroll-hide rounded-[10px]'>
+        <div className={Style.next_container}>
            
            
 
