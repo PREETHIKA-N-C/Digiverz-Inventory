@@ -1,10 +1,6 @@
 import React, { useEffect, useState } from "react";
 import Style from "./SideNavBar.module.css";
-import {
-  FiMoon,
-  FiSun,
-  FiMenu,
-} from "react-icons/fi";
+import {FiMoon,FiSun,FiMenu} from "react-icons/fi";
 import logo1 from "../../Assets/Digiverz.png";
 import logo2 from "../../Assets/Digiverz_B.png";
 import lottie from "lottie-web";
