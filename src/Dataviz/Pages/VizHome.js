@@ -5,7 +5,13 @@ import Banner1 from "../../InventoryManagement/Assets/Banner.png";
 import ProductCardLoader from "../../InventoryManagement/Components/ProductCardLoader";
 import { useSelector, useDispatch } from "react-redux";
 import "./VizHome.css";
-import { BsThreeDots, BsFillFileEarmarkArrowUpFill } from "react-icons/bs";
+import axios from "axios";
+import {
+  BsThreeDots,
+  BsFillFileEarmarkArrowUpFill,
+  BsFillTrashFill,
+  BsFillPencilFill,
+} from "react-icons/bs";
 import {
   Light,
   Dark,
@@ -22,6 +28,8 @@ const VizHome = () => {
   const [group, setGroup] = useState([]);
   const [load, setLoad] = useState(true);
   const [tog, setTog] = useState(false);
+  const [del, setDel] = useState(false);
+
   const [all, setAll] = useState(true);
 
   useEffect(() => {
@@ -44,6 +52,31 @@ const VizHome = () => {
   } else {
     document.body.style.background = "#121212";
   }
+
+  const handleDelete = (id) => {
+    console.log(id);
+    axios
+      .delete(`http://localhost:8000/viz/admin/delete/${id}`)
+      .then((res) => {
+        console.log(res);
+        fetch("http://localhost:8000/")
+          .then((response) => response.json())
+          .then((data) => {
+            setNewdata(data.message);
+            fetch("http://localhost:8000/viz/group")
+              .then((res) => res.json())
+              .then((data) => {
+                console.log(data);
+                setGroup(data.message);
+                setLoad(false);
+              });
+          });
+      })
+      .catch((res) => {
+        console.log(res);
+      });
+  };
+
   return (
     <div>
       <h1
@@ -63,7 +96,9 @@ const VizHome = () => {
         </span>{" "} */}
         D
         <span
-          style={theme !== "Light" ? { color: "grey" } : { color: "black" }}
+          style={
+            theme !== "Light" ? { color: "lightgrey" } : { color: "black" }
+          }
         >
           ata Viz{" "}
         </span>
@@ -128,6 +163,20 @@ const VizHome = () => {
           ></BsThreeDots>
         </button>
         <button>
+          <BsFillPencilFill
+            style={{
+              color: "black",
+              backgroundColor: "#abe6e3",
+              borderRadius: "20px",
+              padding: "5px",
+              fontSize: "30px",
+              marginRight: "10px",
+            }}
+            onClick={() => setDel(!del)}
+          ></BsFillPencilFill>
+        </button>
+
+        <button>
           <NavLink to={"./admin"}>
             <BsFillFileEarmarkArrowUpFill
               style={{
@@ -174,6 +223,25 @@ const VizHome = () => {
                 {newdata.map((item) => {
                   return (
                     <div key={item["_id"]} style={{ marginBottom: "40px" }}>
+                      {del ? (
+                        <button>
+                          <BsFillTrashFill
+                            style={{
+                              color: "black",
+                              backgroundColor: "red",
+                              borderRadius: "20px",
+                              padding: "5px",
+                              fontSize: "30px",
+                              marginRight: "10px",
+                            }}
+                            onClick={() => {
+                              handleDelete(item["_id"]);
+                            }}
+                          ></BsFillTrashFill>
+                        </button>
+                      ) : (
+                        ""
+                      )}
                       <NavLink to={`./Product/${item["_id"]}`}>
                         <ProductCard
                           name={item.name}
@@ -219,6 +287,25 @@ const VizHome = () => {
                               key={item["_id"]}
                               style={{ marginBottom: "30px" }}
                             >
+                              {del ? (
+                                <button>
+                                  <BsFillTrashFill
+                                    style={{
+                                      color: "black",
+                                      backgroundColor: "red",
+                                      borderRadius: "20px",
+                                      padding: "5px",
+                                      fontSize: "30px",
+                                      marginRight: "10px",
+                                    }}
+                                    onClick={() => {
+                                      handleDelete(item["_id"]);
+                                    }}
+                                  ></BsFillTrashFill>
+                                </button>
+                              ) : (
+                                ""
+                              )}
                               <NavLink to={`./Product/${item["_id"]}`}>
                                 <ProductCard
                                   name={item.name}
