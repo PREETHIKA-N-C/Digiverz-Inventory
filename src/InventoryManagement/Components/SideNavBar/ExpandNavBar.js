@@ -17,7 +17,7 @@ function ExpandNavBar() {
     <div className={theme === "Light" ? Style.expand_cont_Light : Style.expand_cont}>
       <div className={Style.top_cont}>
           <NavLink
-            to="/"
+            to="/Home"
             className={(state) => (state.isActive ? setLinkState("Home") : "")}
           >
             <div

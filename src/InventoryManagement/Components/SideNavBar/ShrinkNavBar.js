@@ -20,7 +20,7 @@ function ShrinkNavBar() {
       >
         <div className={Style.top_cont}>
           <NavLink
-            to="/"
+            to="/Home"
             className={(state) => (state.isActive ? setLinkState("Home") : "")}
           >
             <div
