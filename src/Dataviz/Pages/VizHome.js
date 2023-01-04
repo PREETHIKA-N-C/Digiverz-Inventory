@@ -5,7 +5,7 @@ import Banner1 from "../../InventoryManagement/Assets/Banner.png";
 import ProductCardLoader from "../../InventoryManagement/Components/ProductCardLoader";
 import { useSelector, useDispatch } from "react-redux";
 import "./VizHome.css";
-import { BsThreeDots } from "react-icons/bs";
+import { BsThreeDots, BsFillFileEarmarkArrowUpFill } from "react-icons/bs";
 import {
   Light,
   Dark,
@@ -50,43 +50,9 @@ const VizHome = () => {
         onClick={() => {
           setTog(false);
         }}
-        style={
-          theme !== "Light"
-            ? {
-                paddingTop: "5%",
-                color: "red",
-                paddingLeft: "11%",
-                paddingRight: "11%",
-
-                paddingBottom: "1%",
-                marginLeft: "30%",
-                // borderBottom: "3px dashed grey",
-                borderRadius: 20,
-                fontSize: "50px",
-                fontWeight: "500",
-                backgroundColor: "inherit",
-                textAlign: "center",
-                maxWidth: "fit-content",
-              }
-            : {
-                paddingTop: "5%",
-                color: "red",
-                paddingLeft: "11%",
-                paddingRight: "11%",
-
-                paddingBottom: "1%",
-                marginLeft: "30%",
-                // borderBottom: "3px dashed grey",
-                borderRadius: 20,
-                fontSize: "50px",
-                fontWeight: "500",
-                backgroundColor: "inherit",
-                textAlign: "center",
-                maxWidth: "fit-content",
-              }
-        }
+        className="viz-title"
       >
-        <span
+        {/* <span
           style={
             theme !== "Light"
               ? { color: "grey", fontSize: "30px" }
@@ -94,14 +60,14 @@ const VizHome = () => {
           }
         >
           &lt;&lt;
-        </span>{" "}
+        </span>{" "} */}
         D
         <span
           style={theme !== "Light" ? { color: "grey" } : { color: "black" }}
         >
           ata Viz{" "}
         </span>
-        <span
+        {/* <span
           style={
             theme !== "Light"
               ? { color: "grey", fontSize: "30px" }
@@ -109,7 +75,7 @@ const VizHome = () => {
           }
         >
           &gt;&gt;
-        </span>{" "}
+        </span>{" "} */}
         <span
           style={{
             color: "grey",
@@ -122,21 +88,9 @@ const VizHome = () => {
         </span>
       </h1>
 
-      <div
-        style={
-          tog
-            ? {
-                position: "absolute",
-                display: "flex",
-                flexDirection: "row",
-                right: "50px",
-                top: "90px",
-              }
-            : { display: "flex", flexDirection: "column" }
-        }
-      >
+      <div className={tog ? "options-container-2" : "options-container-1"}>
         {tog ? (
-          <ul style={{ color: "white" }}>
+          <ul style={{ color: "white", marginRight: "20px" }}>
             <li
               className={theme !== "Light" ? "li-toggle" : "li-toggle-light"}
               onClick={() => {
@@ -159,6 +113,7 @@ const VizHome = () => {
         ) : (
           ""
         )}
+
         <button>
           <BsThreeDots
             style={{
@@ -167,11 +122,23 @@ const VizHome = () => {
               borderRadius: "20px",
               padding: "5px",
               fontSize: "30px",
-              marginLeft: "96.5%",
-              marginTop: "-5%",
+              marginRight: "10px",
             }}
             onClick={() => setTog(!tog)}
           ></BsThreeDots>
+        </button>
+        <button>
+          <NavLink to={"./admin"}>
+            <BsFillFileEarmarkArrowUpFill
+              style={{
+                color: "black",
+                backgroundColor: "#abe6e3",
+                borderRadius: "20px",
+                padding: "5px",
+                fontSize: "30px",
+              }}
+            ></BsFillFileEarmarkArrowUpFill>
+          </NavLink>
         </button>
 
         {/* </button> */}
@@ -203,11 +170,11 @@ const VizHome = () => {
               >
                 Repository
               </h2> */}
-              <div className="grid lg:grid-cols-3 xs:grid-cols-1 grid-flow-row  pl-32 pt-18 pb-20 -ml-4 ">
+              <div className="grid lg:grid-cols-3 xs:grid-cols-1 grid-flow-row  pl-32 pt-18 pb-20 -ml-4 prod-container">
                 {newdata.map((item) => {
                   return (
-                    <div key={item.id} style={{ marginBottom: "40px" }}>
-                      <NavLink to={`./Product/${item.id}`}>
+                    <div key={item["_id"]} style={{ marginBottom: "40px" }}>
+                      <NavLink to={`./Product/${item["_id"]}`}>
                         <ProductCard
                           name={item.name}
                           desc={item.desc}
@@ -248,8 +215,11 @@ const VizHome = () => {
                         })
                         .map((item) => {
                           return (
-                            <div key={item.id} style={{ marginBottom: "30px" }}>
-                              <NavLink to={`./Product/${item.id}`}>
+                            <div
+                              key={item["_id"]}
+                              style={{ marginBottom: "30px" }}
+                            >
+                              <NavLink to={`./Product/${item["_id"]}`}>
                                 <ProductCard
                                   name={item.name}
                                   desc={item.desc}
