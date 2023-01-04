@@ -1,4 +1,4 @@
-import SideNavBar from "./InventoryManagement/Components/SideNavBar";
+import SideNavBar from "./InventoryManagement/Components/SideNavBar/SideNavBar";
 import "./App.css";
 import { BrowserRouter, Route, Routes } from "react-router-dom";
 import Home from "./InventoryManagement/Pages/Home";
