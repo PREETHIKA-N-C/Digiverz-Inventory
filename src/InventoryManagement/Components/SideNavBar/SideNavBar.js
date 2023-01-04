@@ -83,15 +83,17 @@ function SideNavBar() {
               />
             )}
           </div>
-          
-          <div>
+          <div className={theme === 'Light' ? Style.profile_Light : Style.profile} >
+            <h6>HK</h6>
+        </div>
+          {/* <div>
             <a
               className={Style.signIn}
               href="Login"
             >
               Sign In
             </a>
-          </div>
+          </div> */}
         </div>
       </div>
 
