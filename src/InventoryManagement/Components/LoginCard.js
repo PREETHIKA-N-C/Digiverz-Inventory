@@ -50,7 +50,7 @@ function LoginCard() {
 	</div>
 
   <div className={Style.right}>
-		{/* <h5>Login</h5> */}
+		<h5>Login</h5>
     <div>
 		<p>Don't have an account? <a href="#">Creat Your Account</a> it takes less than a minute</p>
     </div>
@@ -81,7 +81,7 @@ function LoginCard() {
                        required
                      />
 										 </div>
-										 <div className={Style.username}>
+										 {/* <div className={Style.username}>
 			<input className="name"
                        value={Date}
                        onChange={(e) => setDate(e.target.value)}
@@ -100,7 +100,7 @@ function LoginCard() {
                        placeholder="Time"
                        required
                      />
-										 </div>
+										 </div> */}
 		</div>
     	<br></br>
 			{/* <a className={Style.signIn}  href="/"  */}
