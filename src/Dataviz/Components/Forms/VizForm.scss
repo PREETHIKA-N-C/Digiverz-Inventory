@@ -1,0 +1,267 @@
+.container {
+  position: relative;
+  width: 100%;
+  height: 400px;
+  margin: auto auto;
+  top: 110px;
+  left: 32px;
+
+  ::placeholder {
+    color: white;
+    font-size: 0.9rem;
+  }
+
+  .header {
+    position: absolute;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    background: inherit;
+    width: 100%;
+    height: 45px;
+
+    // border-bottom: 1px solid lightgrey;
+    z-index: 10;
+
+    top: 0;
+    left: 0;
+
+    .indicator {
+      position: relative;
+      display: inline-block;
+      width: 12px;
+      height: 12px;
+      border-radius: 50%;
+      margin-left: 15px;
+      background-color: lightgrey;
+      top: 15px;
+      &:first-of-type {
+        margin-left: 0;
+      }
+    }
+  }
+}
+
+.content {
+  box-sizing: border-box;
+  overflow: hidden;
+  z-index: 5;
+  display: block;
+  position: absolute;
+  background: inherit;
+  color: black;
+  height: 450px;
+  top: 20px;
+  padding: 20px;
+  width: 100%;
+  box-shadow: 15px 5px 80px -20px rgba(0, 0, 0, 0.6);
+
+  .content__box {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    right: 1000px;
+    padding: 10px;
+    text-align: center;
+
+    top: 0;
+
+    &.visible__no-animation {
+      right: 0;
+    }
+
+    &.slide-in {
+      animation: slide-in 500ms ease-in-out forwards;
+    }
+
+    &.slide-out {
+      animation: slide-out 500ms ease-in-out forwards;
+    }
+  }
+
+  .title {
+    position: relative;
+    text-align: center;
+    font-size: 2rem;
+    // text-transform: uppercase;
+    color: lightblue;
+    margin: 50px 0 10px 0;
+    // margin-left: 15px;
+  }
+
+  .description {
+    text-align: center;
+    margin-bottom: 10px;
+  }
+
+  .body {
+    text-align: center;
+    padding: 20px;
+
+    button {
+      margin: 30px;
+      background-color: lightblue;
+      padding: 5px;
+      border-radius: 40%;
+      width: 100px;
+      color: black;
+      font-weight: 500;
+    }
+    .input-group {
+      margin-inline: 36%;
+      margin-top: 10px;
+      margin-bottom: 10px;
+      display: flex;
+      align-items: center;
+      justify-content: flex-end;
+      padding: 5px;
+
+      input {
+        padding: 5px;
+        margin-left: 20px;
+      }
+      .input-group-addon {
+        color: white;
+      }
+    }
+    .container2 {
+      font-family: "Bebas Neue", cursive;
+    }
+    .et_pb_contact_form_label {
+      display: block;
+      color: black;
+      font-weight: bold;
+      letter-spacing: 1.2px;
+      font-size: 18px;
+      padding-bottom: 5px;
+    }
+    input[id="et_pb_contact_brand_file_request_0"] {
+      display: none;
+    }
+    label[for="et_pb_contact_brand_file_request_0"] {
+      background: inherit;
+
+      height: 100px;
+      background-image: url("https://image.flaticon.com/icons/svg/126/126477.svg");
+      background-repeat: no-repeat;
+      background-position: top 18px center;
+      position: absolute;
+      background-size: 7%;
+      color: transparent;
+      margin: auto;
+      width: 300px;
+      top: 50%;
+      left: 0;
+      right: 0;
+      transform: translateY(-50%);
+      border: 1px solid #a2a1a7;
+      box-sizing: border-box;
+    }
+    label[for="et_pb_contact_brand_file_request_0"]:before {
+      content: "Click to browse";
+      display: block;
+      position: absolute;
+      top: 50%;
+      transform: translateY(-50%);
+      font-size: 14px;
+      color: grey;
+      font-weight: 400;
+      left: 0;
+      right: 0;
+      margin-left: auto;
+      margin-right: auto;
+      text-align: center;
+    }
+    label[for="et_pb_contact_brand_file_request_0"]:after {
+      display: block;
+      // background: red;
+      width: 86px;
+      height: 27px;
+      line-height: 27px;
+      position: absolute;
+      bottom: 19px;
+      font-size: 14px;
+      color: white;
+      font-weight: 500;
+      border-radius: 40%;
+      left: 0;
+      right: 0;
+      margin-left: auto;
+      margin-right: auto;
+      text-align: center;
+    }
+    label[for="et_pb_contact_brand_request_0"]:after {
+      content: " (Provide link or Upload files if you already have guidelines)";
+      font-size: 12px;
+      letter-spacing: -0.31px;
+      color: #7a7a7a;
+      font-weight: normal;
+    }
+    label[for="et_pb_contact_design_request_0"]:after {
+      content: " (Provide link or Upload design files)";
+      font-size: 12px;
+      letter-spacing: -0.31px;
+      color: #7a7a7a;
+      font-weight: normal;
+    }
+    label[for="et_pb_contact_brand_file_request_0"].changed,
+    label[for="et_pb_contact_brand_file_request_0"]:hover {
+      background-color: #d32121;
+    }
+    label[for="et_pb_contact_brand_file_request_0"] {
+      cursor: pointer;
+      transition: 400ms ease;
+    }
+    .file_names {
+      display: block;
+      position: absolute;
+      color: black;
+      left: 0;
+      bottom: -30px;
+      font-size: 13px;
+      font-weight: 300;
+    }
+    .file_names {
+      text-align: center;
+    }
+
+    .submit-button {
+      // z-index: 100;
+      // position: absolute;
+      margin-top: 17%;
+    }
+  }
+}
+
+content-1 {
+  p {
+    text-align: center;
+  }
+  text-align: center;
+}
+
+div.container div.header span.active {
+  background-color: lightgreen;
+}
+
+@keyframes slide-in {
+  0% {
+    right: 1000px;
+  }
+
+  100% {
+    right: 0;
+  }
+}
+
+@keyframes slide-out {
+  0% {
+    left: 0;
+  }
+
+  100% {
+    left: 1000px;
+  }
+}
