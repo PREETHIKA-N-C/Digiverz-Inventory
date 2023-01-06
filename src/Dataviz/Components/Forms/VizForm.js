@@ -1,9 +1,12 @@
 import React, { useEffect, useState } from "react";
 import "./VizForm.scss";
 import axios from "axios";
+import { useNavigate } from "react-router-dom";
+
 // import styles from "./VizForm.module.css";
 import $ from "jquery";
 const VizForm = () => {
+  const nav = useNavigate();
   let step = 1;
   const [formData, setFormData] = useState({
     title: "",
@@ -63,6 +66,7 @@ const VizForm = () => {
       .post("http://localhost:8000/viz/admin/upload", form)
       .then((response) => {
         console.log(response);
+        nav("/VizHome");
       })
       .catch((err) => {
         console.log(err);
