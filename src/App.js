@@ -26,7 +26,12 @@ function App() {
     <Provider store={store}>
       <BrowserRouter>
         {/* {window.location.pathname !== "/Login" ? <SideNavBar /> : ""} */}
-        {window.location.pathname == "/AppInfoUpload" || window.location.pathname == "/"  ? "" : <SideNavBar />}
+        {window.location.pathname == "/AppInfoUpload" ||
+        window.location.pathname == "/" ? (
+          ""
+        ) : (
+          <SideNavBar />
+        )}
 
         <Routes>
           <Route path="/" element={<Login />} />
