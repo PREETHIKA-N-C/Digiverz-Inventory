@@ -22,7 +22,7 @@
   position: absolute;
   margin: 5px;
   right: 20px;
-  top: 90px;
+  top: 70px;
 }
 
 .options-container-2 {
@@ -32,7 +32,7 @@
   margin: 5px;
   right: 20px;
   align-items: flex-start;
-  top: 90px;
+  top: 70px;
 }
 
 .viz-title {
@@ -48,26 +48,32 @@
   background-color: inherit;
   text-align: center;
 }
-
+.d {
+  padding-top: 5px;
+}
 @media (max-width: 900px) {
   .options-container-1 {
     flex-direction: column-reverse;
     left: 80px;
-    top: 90px;
+    top: 50px;
   }
   .options-container-2 {
     flex-direction: column-reverse;
     align-items: flex-start;
     justify-content: flex-end;
     left: 80px;
-    top: 90px;
+    top: 60px;
   }
   .prod-container {
     width: 20%;
     padding-left: 90px;
+    padding-top: 30px;
   }
   .viz-title {
     padding-top: 20%;
     margin-left: 40%;
+  }
+  .d {
+    padding-top: 10%;
   }
 }

@@ -20,19 +20,20 @@ import {
 } from "../../InventoryManagement/Redux/ThemeSlice";
 
 import data from "../utils/data";
-
 const VizHome = () => {
   const theme = useSelector(ThemeState);
   const dispatch = useDispatch();
   const [newdata, setNewdata] = useState([]);
   const [group, setGroup] = useState([]);
+  const [industry, setIndustry] = useState([]);
   const [load, setLoad] = useState(true);
   const [tog, setTog] = useState(false);
   const [del, setDel] = useState(false);
-
+  const [alert, setalert] = useState(false);
   const [all, setAll] = useState(true);
-
+  const [ind, setInd] = useState(false);
   useEffect(() => {
+    setalert(false);
     fetch("http://localhost:8000/")
       .then((response) => response.json())
       .then((data) => {
@@ -42,7 +43,13 @@ const VizHome = () => {
           .then((data) => {
             console.log(data);
             setGroup(data.message);
-            setLoad(false);
+            fetch("http://localhost:8000/viz/industry")
+              .then((res) => res.json())
+              .then((data) => {
+                console.log(data);
+                setIndustry(data.message);
+                setLoad(false);
+              });
           });
       });
   }, []);
@@ -55,30 +62,33 @@ const VizHome = () => {
 
   const handleDelete = (id) => {
     console.log(id);
-    axios
-      .delete(`http://localhost:8000/viz/admin/delete/${id}`)
-      .then((res) => {
-        console.log(res);
-        fetch("http://localhost:8000/")
-          .then((response) => response.json())
-          .then((data) => {
-            setNewdata(data.message);
-            fetch("http://localhost:8000/viz/group")
-              .then((res) => res.json())
-              .then((data) => {
-                console.log(data);
-                setGroup(data.message);
-                setLoad(false);
-              });
-          });
-      })
-      .catch((res) => {
-        console.log(res);
-      });
+    axios.delete(`http://localhost:8000/viz/admin/delete/${id}`).then((res) => {
+      console.log(res);
+      fetch("http://localhost:8000/")
+        .then((response) => response.json())
+        .then((data) => {
+          setNewdata(data.message);
+          fetch("http://localhost:8000/viz/group")
+            .then((res) => res.json())
+            .then((data) => {
+              console.log(data);
+              setGroup(data.message);
+              setLoad(false);
+            });
+        });
+    });
+
+    setalert(true);
+    setTimeout(() => {
+      setalert(false);
+    }, 1000).catch((res) => {
+      console.log(res);
+    });
   };
 
   return (
     <div>
+      {/* {alert ? <Alert tog={`success`}></Alert> : ""} */}
       <h1
         onClick={() => {
           setTog(false);
@@ -131,6 +141,7 @@ const VizHome = () => {
               onClick={() => {
                 setAll(true);
                 setTog(false);
+                setInd(true);
               }}
             >
               All
@@ -140,9 +151,21 @@ const VizHome = () => {
               onClick={() => {
                 setAll(false);
                 setTog(false);
+                setInd(false);
               }}
             >
-              Department
+              Line of Business
+            </li>
+
+            <li
+              className={theme !== "Light" ? "li-toggle" : "li-toggle-light"}
+              onClick={() => {
+                setAll(false);
+                setTog(false);
+                setInd(true);
+              }}
+            >
+              Industry
             </li>
           </ul>
         ) : (
@@ -201,7 +224,7 @@ const VizHome = () => {
       ) : (
         <>
           {all ? (
-            <div style={{ paddingTop: "40px" }}>
+            <div style={{ paddingTop: "50px" }}>
               {/* <h2
                 style={{
                   color: "white",
@@ -255,8 +278,8 @@ const VizHome = () => {
                 })}
               </div>
             </div>
-          ) : (
-            <div className="d" style={{ paddingTop: "5px" }}>
+          ) : ind === false ? (
+            <div className="d">
               {group.map((item) => {
                 return (
                   <div key={item.id}>
@@ -280,6 +303,73 @@ const VizHome = () => {
                       {newdata
                         .filter((item2) => {
                           return item2.desc === item.group;
+                        })
+                        .map((item) => {
+                          return (
+                            <div
+                              key={item["_id"]}
+                              style={{ marginBottom: "30px" }}
+                            >
+                              {del ? (
+                                <button>
+                                  <BsFillTrashFill
+                                    style={{
+                                      color: "black",
+                                      backgroundColor: "red",
+                                      borderRadius: "20px",
+                                      padding: "5px",
+                                      fontSize: "30px",
+                                      marginRight: "10px",
+                                    }}
+                                    onClick={() => {
+                                      handleDelete(item["_id"]);
+                                    }}
+                                  ></BsFillTrashFill>
+                                </button>
+                              ) : (
+                                ""
+                              )}
+                              <NavLink to={`./Product/${item["_id"]}`}>
+                                <ProductCard
+                                  name={item.name}
+                                  desc={item.desc}
+                                  img={item.img}
+                                  logo={item.logo}
+                                />
+                              </NavLink>
+                            </div>
+                          );
+                        })}
+                    </div>
+                  </div>
+                );
+              })}
+            </div>
+          ) : (
+            <div className="d">
+              {industry.map((item) => {
+                return (
+                  <div key={item.id}>
+                    <h2
+                      style={{
+                        color: "white",
+                        textAlign: "center",
+                        padding: "5px",
+                        marginInline: "30px",
+                        position: "relative",
+                        top: "40px",
+                        left: "5%",
+                        width: "90%",
+                        borderRadius: "110px",
+                      }}
+                      className="bg-slate-700 text-lg"
+                    >
+                      {item.industry}
+                    </h2>
+                    <div className="grid lg:grid-cols-3 xs:grid-cols-1 grid-flow-row  pl-24 pt-20 pb-20 mt-2 -mb-16 m-2">
+                      {newdata
+                        .filter((item2) => {
+                          return item2.industry === item.industry;
                         })
                         .map((item) => {
                           return (

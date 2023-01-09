@@ -75,6 +75,7 @@ const VizForm = () => {
   return (
     <>
       <h1></h1>
+      <div className="top"></div>
       <div class="container">
         <div class="header">
           <span class="indicator active"></span>
@@ -91,7 +92,7 @@ const VizForm = () => {
                 <div class="form-group">
                   <div class="input-group">
                     <span class="input-group-addon" id="basic-addon1">
-                      Title
+                      Title :
                     </span>
                     <input
                       type="text"
@@ -107,7 +108,7 @@ const VizForm = () => {
                   </div>
                   <div class="input-group">
                     <span class="input-group-addon" id="basic-addon1">
-                      Logo url
+                      Logo url :
                     </span>
                     <input
                       type="text"
@@ -123,7 +124,7 @@ const VizForm = () => {
                   </div>
                   <div class="input-group">
                     <span class="input-group-addon" id="basic-addon1">
-                      Group Name
+                      Group Name :
                     </span>
                     <input
                       type="text"
@@ -139,7 +140,7 @@ const VizForm = () => {
                   </div>
                   <div class="input-group">
                     <span class="input-group-addon" id="basic-addon1">
-                      View Description
+                      View Description :
                     </span>
                     <input
                       type="text"
