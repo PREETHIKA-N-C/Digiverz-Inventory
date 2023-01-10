@@ -25,7 +25,7 @@ function ProductSkullLoader() {
     <div className={`text-xs h-[50px] w-[50px] ${loadAnimation} rounded-[5px] flex flex-col items-center text-[#A6A5A5]`}>
     </div>
         </div>
-        <div className='fixed mt-[515px] ml-[315px] hover:bg-[#ffffff3a] w-8 h-8 p-1 rounded-[4px]'>
+        <div className='ml-[320px] hover:bg-[#ffffff3a] w-8 h-8 p-1 rounded-[4px]'>
         <div className={`w-[30px] h-[30px] ${loadAnimation} rounded-[5px]`}></div>
         </div>
         </div>

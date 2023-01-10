@@ -1,9 +1,15 @@
 import Style from './Form.module.css';
 import React, { useState } from "react";
-import { Button } from 'react-bootstrap';
+import Button from '@mui/material/Button';
+import { Input ,TextField }from '@mui/material';
+import { DesktopDatePicker } from '@mui/x-date-pickers/DesktopDatePicker';
+import { LocalizationProvider } from '@mui/x-date-pickers/LocalizationProvider';
+import { AdapterDayjs } from '@mui/x-date-pickers/AdapterDayjs';
 // import axios from 'axios';
 
 function Form(){
+  const d = new Date();
+  const [date,setDate] = useState(d)
   const [formData, setFormData] = useState({
     AppID: "",
     AppCategory:"",
@@ -17,7 +23,7 @@ function Form(){
     AppURL: "",
     PublishedBy: "",
     PublishedInfo: "",
-    ReleaseDate: "",
+    ReleaseDate: "09-01-2023",
     
     
     
@@ -58,9 +64,13 @@ function Form(){
   
   
  const formHandler = (e) =>{
-   
-      setFormData({ ...formData, [e.target.name]: e.target.value });
-    
+      setFormData({ ...formData, [e.target.name]: e.target.value }); 
+ }
+
+ const dateHandler = (e) =>{
+  setDate(e)
+  var dateString = e.$D.toString()+ "/" + (e.$M + 1).toString() + "/" + e.$y.toString()
+  setFormData({...formData, ReleaseDate: dateString})
  }
 
   async function  readFileDataAsBase64(e) {
@@ -115,80 +125,53 @@ async function  readFileDataAsBase64SrcArray(e) {
 }
 
  return (
+  // <div className={Style.bg}>
    <div className={Style.formContainer}>
-      <form onSubmit={submitHandler}>
-        <div className={Style.Title}>
-        <h1>APP INFO</h1>
+   <div className={Style.Title}>
+        <h1>REGISTER YOUR APPLICATION</h1>
           </div>
-          <div>
-          <div className={Style.label}><label >AppID</label></div>
-             <div >
-               <input className={Style.FName}
-                       value={formData.AppID}
-                       onChange={formHandler}
-                       type="text"
-                       name="AppID"
-                       placeholder="App ID"
-                       required
-                     />
-                  
-                   </div>
+      <form onSubmit={submitHandler}>
 
-                   <div className={Style.label}><label >App Name</label></div>
-             <div >
-               <input className={Style.FName}
-                       value={formData.AppName}
-                       onChange={formHandler}
-                       type="text"
-                       name="AppName"
-                       placeholder="App Name"
-                       required
-                     />
+            <div className={Style.section1}>
+            <TextField name="AppID" label="App ID" className={Style.input_id}  value={formData.AppID} onChange={formHandler} required color="" />
+            
                   
-                   </div>
-
-                   <div className={Style.label}><label >App URL</label></div>
-             <div >
-               <input className={Style.FName}
-                       value={formData.AppURL}
-                       onChange={formHandler}
-                       type="text"
-                       name="AppURL"
-                       placeholder="App URL"
-                       required
-                     />
+            <TextField name="AppName" label="App Name" className={Style.input}  value={formData.AppName} onChange={formHandler} required color="" />
+            </div>
+          
+             
+              
                   
-                   </div>
+            <div className={Style.section2}>
+             <TextField name="AppDescription" className={Style.input2} label="App Description"  value={formData.AppDescription} onChange={formHandler} required color="" />
+             <TextField name="AppCategory" className={Style.input2} label="App Category"  value={formData.AppCategory} onChange={formHandler} required color="" />
+             <TextField name="AppURL" className={Style.input2} label="App URL"  value={formData.AppURL} onChange={formHandler} required color="" />
+            </div> 
 
-                   <div className={Style.label}><label >App Description</label></div>
-             <div >
-               <input className={Style.FName}
-                       value={formData.AppDescription}
-                       onChange={formHandler}
-                       type="text"
-                       name="AppDescription"
-                       placeholder="App Description"
-                       required
-                     />
-                  
-                   </div>
+            <div className={Style.section2}>
+            <TextField name="PublishedBy" className={Style.input2} label="Published By"  value={formData.PublishedBy} onChange={formHandler} required color="" />
+            <TextField name="PublishedInfo" className={Style.input2} label="Publisher Info"  value={formData.PublishedInfo} onChange={formHandler} required color="" />   
+           <LocalizationProvider dateAdapter={AdapterDayjs}>
+           <DesktopDatePicker className={Style.input2}
+           label="Release Date"
+           inputFormat="DD/MM/YYYY"
+           value={date}
+           color=""
+           onChange={dateHandler}
+           renderInput={(params) => <TextField {...params} />}
+           />
+           </LocalizationProvider>
+            </div>
+           
 
-                   <div className={Style.label}><label >App Category</label></div>
-             <div >
-               <input className={Style.FName}
-                       value={formData.AppCategory}
-                       onChange={formHandler}
-                       type="text"
-                       name="AppCategory"
-                       placeholder="App Category"
-                       required
-                     />
-                  
-                   </div>
-
-                   <div className={Style.label}><label >App Screenshots</label></div>
-             <div >
-               <input className={Style.FName}
+           <div className={Style.upload_sec1}>
+            <div className={Style.stack}>
+            <div className={Style.label}><label >Drop Screenshots for your Application</label></div>
+             <Button variant="contained" component="label">
+                Browse File
+              <input accept="image/*" hidden name="AppScreenshotURL" multiple type="file" onChange={readFileDataAsBase64SrcArray} required />
+             </Button>
+               {/* <input className={Style.FName}
                        
                        onChange={readFileDataAsBase64SrcArray}
                        type="file" 
@@ -196,40 +179,61 @@ async function  readFileDataAsBase64SrcArray(e) {
                        placeholder="App Screenshots"
                        multiple
                        required
-                     />
-                  
-                   </div>
+                     /> */}
+            </div>
+            
 
-                   <div className={Style.label}><label >App Documents</label></div>
-             <div >
-               <input className={Style.FName}
-                       
+
+            <div className={Style.stack}>
+             <div className={Style.label}><label >Drop Your Application Documents</label></div>
+
+             <Button variant="contained" component="label">
+                Browse File
+              <input accept="pdf/*" hidden name="AppDocURL" multiple type="file" onChange={readFileDataAsBase64DocArray} required />
+             </Button>
+               {/* <input className={Style.FName}
                        onChange={readFileDataAsBase64DocArray}
                        type="file"
                        name="AppDocURL"
                        placeholder="App Documents"
                        multiple
                        required
-                     />
-                  
-                   </div>
+                     /> */}
 
-                   <div className={Style.label}><label >App Logo</label></div>
-             <div >
-               <input className={Style.FName}
+              </div>
+        
+              </div>
+
+
+              <div className={Style.upload_sec1}>
+              <div className={Style.stack}>
+              <div className={Style.label}><label >Drop your Application Logo</label></div>
+             
+             <Button variant="contained" component="label">
+                Browse File
+              <input accept="image/*" hidden name="AppLogo" type="file" onChange={readFileDataAsBase64} required />
+             </Button>
+               {/* <input className={Style.FName}
                        
                        onChange={readFileDataAsBase64}
                        type="file"
                        name="AppLogo"
                        placeholder="App Logo"
                        required
-                     />
-                  
-                   </div>
+                     /> */}
+            
+              </div>
 
-                   <div className={Style.label}><label >App Demo Video</label></div>
-             <div >
-               <input className={Style.FName}
+               
+
+              <div className={Style.stack}>
+              <div className={Style.label}><label >Drop your Application Demo Video</label></div>
+             
+             <Button variant="contained" component="label">
+                Browse File
+              <input accept="video/*" hidden name="AppDemoURL" type="file" onChange={readFileDataAsBase64} required />
+             </Button>
+               {/* <input className={Style.FName}
                       
                        onChange={readFileDataAsBase64}
                        type="file"
@@ -237,13 +241,21 @@ async function  readFileDataAsBase64SrcArray(e) {
                        placeholder="App Demo Video"
                       
                        required
-                     />
+                     /> */}
                   
-                   </div>
+              </div>
+              </div>
 
-                   <div className={Style.label}><label >App Poster</label></div>
-             <div >
-               <input className={Style.FName}
+
+              <div className={Style.upload_sec2}>
+              <div className={Style.stack}>
+              <div className={Style.label}><label >Drop your Application Poster</label></div>
+           
+             <Button variant="contained" component="label">
+                Browse File
+              <input accept="image/*" hidden name="AppPoster" type="file" onChange={readFileDataAsBase64} required />
+             </Button>
+               {/* <input className={Style.FName}
                       
                        onChange={readFileDataAsBase64}
                        type="file"
@@ -251,257 +263,15 @@ async function  readFileDataAsBase64SrcArray(e) {
                        placeholder="App Poster"
                       
                        required
-                     />
-                  
-                   </div>
-
-                   <div className={Style.label}><label >Published By</label></div>
-             <div >
-               <input className={Style.FName}
-                       value={formData.PublishedBy}
-                       onChange={formHandler}
-                       type="text"
-                       name="PublishedBy"
-                       placeholder="Published By"
-                       required
-                     />
-                  
-                   </div>
-
-                   <div className={Style.label}><label >Published Info</label></div>
-             <div >
-               <input className={Style.FName}
-                       value={formData.PublishedInfo}
-                       onChange={formHandler}
-                       type="text"
-                       name="PublishedInfo"
-                       placeholder="Published By"
-                       required
-                     />
-                  
-                   </div>
-
-                   <div className={Style.label}><label >Release Date</label></div>
-             <div >
-               <input className={Style.FName}
-                       value={formData.ReleaseDate}
-                       onChange={formHandler}
-                       type="date"
-                       name="ReleaseDate"
-                       placeholder="Release Date"
-                       required
-                     />
-                      <Button variant="secondary" className="mr-2 submitButton" type="submit" value="Submit">Submit</Button> 
-                  
-                   </div>
-
-
-                   
-
-                   {/* <div>
-                   <input className={Style.FName}
-                       value={formData.firstName}
-                       onChange={formHandler}
-                       type="text"
-                       name="firstName"
-                       placeholder="First Name"
-                       required
-                     />
-                   </div> */}
-                   </div>
-                   
-                   
-                   {/* <div className={Style.label}><label>Address</label></div>
-                   <div>
-                   <input className={Style.Address}
-                       value={formData.streetAddress}
-                       onChange={formHandler}
-                       type="text"
-                       name="streetAddress"
-                       placeholder="Street Address"
-                       required
-                     />
-                   </div>
-                   <div>
-                   <input className={Style.Address}
-                       value={formData.streetAddressLine2}
-                       onChange={formHandler}
-                       type="text"
-                       name="streetAddressLine2"
-                       placeholder="Street Address Line 2"
-                     />
-                   </div>
-                   <div>
-                   <input className={Style.city}
-                       value={formData.city}
-                       onChange={formHandler}
-                       type="text"
-                       name="city"
-                       placeholder="City"
-                       required
-                     />
-                     <input className={Style.city}
-                       value={formData.state}
-                       onChange={formHandler}
-                       type="text"
-                       name="state"
-                       placeholder="State"
-                       required
-                     />
-                     <input className={Style.zipcode}
-                       value={formData.zipCode}
-                       onChange={formHandler}
-                       type="text"
-                       name="zipCode"
-                       placeholder="Zip Code"
-                       required
-                     />
-                   </div>
-                   
-                   
-                   <div className={Style.label}><label>Email</label></div>
-                <div >
-                 <input className={Style.Address}
-                    value={formData.email}
-                    onChange={formHandler}
-                    type="email"
-                    name="email"
-                    placeholder="example@gmail.com"
-                    required
-                  />
-                </div>
-                <div className={Style.label}><label>Mobile Number</label></div>
-                <div>
-                
-                 <input className={Style.Address}
-                    value={formData.mobilenumber}
-                    onChange={formHandler}
-                    type="Number"
-                    name="mobilenumber"
-                    placeholder="+91 8248365519"
-                    required
-                  />
-                </div>
-               
-                <div className={Style.Title}>
-        <h2>BOOKING INFORMATION</h2>
-          </div>
-          <div>
-          <div className="label"><label>Check-in Date</label></div>
-                    <input className={Style.Address}
-                    type="date" 
-                    name="checkindate" 
-                    value={formData.checkindate} 
-                    onChange={formHandler}  
-                    required/>
-                  <div className="label"><label>Check-out Date</label></div>
-                    <input className={Style.Address}
-                    type="date" 
-                    name="checkoutdate"
-                    value={formData.checkoutdate} 
-                    onChange={formHandler} 
-                    required/>
-                </div>
-               
-                <div className="label"><label>Number of Guests in Room</label></div>
-                <div>
-                
-                 <input className={Style.Address}
-                    value={formData.guestCount}
-                    onChange={formHandler}
-                    type="Number"
-                    name="guestCount"
-                    placeholder="Guest Count"
-                    required
-                  />
-                </div> 
-                <div className="label">
-                  <select className={Style.Address}
-                    name="roomType"
-                    value={formData.roomType}
-                    onChange={formHandler}
-                    required
-                  >
-                    <option>Select a Room Type</option>
-                    <option value="Single $100">Single $100</option>
-                    <option value="Double $150">Double $150</option>
-                    <option value="Queen $200">Queen $200</option>
-                    <option value="King $250">King $250</option>
-                    <option value="2-Bedroom $350">2-Bedroom $350</option>
-                    <option value="Suite $500">Suite $500</option>
-                  </select>
-                  </div>
-                
-                <div>
-                <div className={Style.labelOp}><label>Lease Pocket Wifi $5</label></div>
-                <div>
-                
-                  <div>
-                  <input
-                    value="Yes"
-                    onChange={formHandler}
-                    type="radio"
-                    name="wifi"
-                    id="op1"
-                    
-                  />
-                  <label className={Style.option} for="op1">Yes</label>
-                  </div>
-                  <div>
-                  <input
-                    value="No"
-                    onChange={formHandler}
-                    type="radio"
-                    name="wifi"
-                    id="op2"
-                  />
-                  <label className={Style.option} for="op2">No</label>
-                  </div>
-               
-                </div>
-                </div>
-                <div>
-                  <div className={Style.labelOp}><label>Free Shuttle Service</label></div>
-                
-                  <div>
-                  <input
-                    value="Yes"
-                    onChange={formHandler}
-                    type="radio"
-                    name="shuttleService"
-                    id="op11"
-                  />
-                  <label className={Style.option} for="op11">Yes</label>
-                  </div>
-                  <div>
-                  <input
-                    value="No"
-                    onChange={formHandler}
-                    type="radio"
-                    name="shuttleService"
-                    id="op12"
-                  />
-                  <label className={Style.option} for="op12">No</label>
-                  </div>
-               
-                </div>
-                <div >
-                  <div className={Style.label}>
-        <label>Notes/Special requirements</label></div>
-        <textarea className={Style.txtArea}
-         rows="10" 
-          value={formData.notes}
-          onChange={formHandler}
-          name= "notes"
-        
-        />
-      </div >
-      <div className={Style.infoTxt}>
-          <p>The submission of this form makes a reservation for the type of room selected in the form. Any changes prior the scheduled occupancy should be communicated to us at least 24 hours prior, which may be subject to availability of request.</p>
-          <p>Check-in time shall be at 2:00PM and checkout time shall be at 12:00NN.</p> </div> */}
-          {/* <Button variant="secondary" className="mr-2 submitButton" type="submit" value="Submit">Submit</Button>  */}
+                     /> */} 
+              </div>
+              </div>
+                <div className={Style.upload_sec2}>
+                      <Button variant="contained" color="success"> Submit</Button>
+                      </div>
               </form>
             </div>
+            // </div>
            
        
   );

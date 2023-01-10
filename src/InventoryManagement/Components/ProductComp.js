@@ -23,7 +23,7 @@ function ProductComp() {
       >
         <img
           src="https://upload.wikimedia.org/wikipedia/commons/0/0c/Clash_app_logo.png"
-          className="w-[130px] h-[130px] rounded-[10px] mt-16"
+          className={Style.image} alt=""
         />
         <p
           className={theme === "Light" ? Style.title1_Light : Style.title1_Dark}
@@ -74,7 +74,7 @@ function ProductComp() {
             </p>
           </div>
         </div>
-        <div className="fixed mt-[490px] ml-[300px] hover:bg-[#ffffff3a] w-8 h-8 p-1 rounded-[4px]">
+        <div className="ml-[320px] hover:bg-[#ffffff3a] w-8 h-8 p-1 rounded-[4px]">
           <lord-icon
             src="https://cdn.lordicon.com/wxhtpnnk.json"
             trigger="morph"
