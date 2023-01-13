@@ -27,6 +27,45 @@
   top: 110px;
   left: 32px;
 
+  .modal-window {
+    position: absolute;
+    z-index: 100;
+    background-color: whitesmoke;
+    padding: 20px;
+    width: 100%;
+
+    top: -22px;
+    animation: tags;
+    animation-duration: 2s;
+    border-radius: 30px;
+    li {
+      list-style: none;
+      padding: 10px;
+      cursor: pointer;
+      text-align: center;
+    }
+    li:hover {
+      background-color: #a2a1a7;
+    }
+    li:hover::first-letter {
+      color: red;
+    }
+
+    h1 {
+      text-align: center;
+      font-size: 2rem;
+    }
+    h1::first-letter {
+      color: red;
+      font-weight: 400;
+    }
+    .grid-temp {
+      margin: 30px;
+      display: grid;
+      grid-template-columns: auto auto auto;
+    }
+  }
+
   // filter: blur(1px);
   ::placeholder {
     color: black;
@@ -74,8 +113,8 @@
   position: absolute;
   background: inherit;
   color: black;
-  height: 480px;
-  top: 14px;
+  height: 570px;
+  top: 6px;
   padding: 20px;
   width: 100%;
   // box-shadow: 15px 5px 80px -20px rgba(0, 0, 0, 0.6);
@@ -128,7 +167,7 @@
     padding: 20px;
 
     button {
-      margin: 40px;
+      margin: 30px;
       background-color: inherit;
       padding: 5px;
       // border-radius: 60%;
@@ -277,7 +316,7 @@
     .submit-button {
       // z-index: 100;
       // position: absolute;
-      margin-top: 14%;
+      margin-top: 17%;
     }
   }
 }
@@ -319,5 +358,14 @@ div.container div.header span.active {
   }
   100% {
     background-position-y: -480px;
+  }
+}
+
+@keyframes tags {
+  0% {
+    top: -42px;
+  }
+  100% {
+    top: -22px;
   }
 }

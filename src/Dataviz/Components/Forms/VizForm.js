@@ -2,16 +2,34 @@ import React, { useEffect, useState } from "react";
 import "./VizForm.scss";
 import axios from "axios";
 import { useNavigate } from "react-router-dom";
-
 // import styles from "./VizForm.module.css";
+
+import {
+  BsThreeDots,
+  BsFillFileEarmarkArrowUpFill,
+  BsFillTrashFill,
+  BsFillXCircleFill,
+  BsFillPlusCircleFill,
+  BsInfo,
+  BsFillPencilFill,
+} from "react-icons/bs";
 import $ from "jquery";
 const VizForm = () => {
   const nav = useNavigate();
+  const [show, setShow] = useState(false);
+  const [modal_1, setModel1] = useState(false);
+  const [modal_2, setModel2] = useState(false);
+  const [groups, setGroups] = useState([]);
+  const [industries, setIndustries] = useState([]);
+
+  const handleClose = () => setShow(false);
+  const handleShow = () => setShow(true);
   let step = 1;
   const [formData, setFormData] = useState({
     title: "",
     logo: "",
     group: "",
+    industry: "",
     desc: "",
     files: "",
   });
@@ -19,7 +37,8 @@ const VizForm = () => {
     const button1 = document.querySelector("#button-1");
     const button2 = document.querySelector("#button-2");
     const button3 = document.querySelector("#button-3");
-
+    setModel1(false);
+    setModel2(false);
     const indicator = document.querySelectorAll(".indicator");
     let stepClass = `.step-${step}`;
     console.log(stepClass);
@@ -41,6 +60,20 @@ const VizForm = () => {
       stepElm.classList.add("slide-in");
     }, 100);
   }
+
+  useEffect(() => {
+    fetch("http://localhost:8000/viz/group")
+      .then((res) => res.json())
+      .then((data) => {
+        setGroups(data.message);
+        fetch("http://localhost:8000/viz/industry")
+          .then((res) => res.json())
+          .then((data) => {
+            setIndustries(data.message);
+          });
+      });
+  }, []);
+
   const handleForm = (e) => {
     e.preventDefault();
     // setFormData({ ...formData, files: e.target[0].files });
@@ -50,6 +83,7 @@ const VizForm = () => {
 
     form.append("title", formData.title);
     form.append("logo", formData.logo);
+    form.append("industry", formData.industry);
 
     form.append("group", formData.group);
 
@@ -137,6 +171,52 @@ const VizForm = () => {
                       }}
                       aria-describedby="basic-addon1"
                     />
+                    <BsInfo
+                      style={{
+                        color: "black",
+                        backgroundColor: "#abe6e3",
+                        borderRadius: "20px",
+                        padding: "5px",
+                        fontSize: "30px",
+                        position: "absolute",
+                        right: "33%",
+                      }}
+                      onClick={() => {
+                        setModel2(false);
+                        setModel1(!modal_1);
+                      }}
+                    ></BsInfo>
+                  </div>
+                  <div class="input-group">
+                    <span class="input-group-addon" id="basic-addon1">
+                      Industry :
+                    </span>
+                    <input
+                      type="text"
+                      class="form-control"
+                      placeholder="Enter industry name"
+                      aria-label="email"
+                      value={formData.industry}
+                      onChange={(e) => {
+                        setFormData({ ...formData, industry: e.target.value });
+                      }}
+                      aria-describedby="basic-addon1"
+                    />
+                    <BsInfo
+                      style={{
+                        color: "black",
+                        backgroundColor: "#abe6e3",
+                        borderRadius: "20px",
+                        padding: "5px",
+                        fontSize: "30px",
+                        position: "absolute",
+                        right: "33%",
+                      }}
+                      onClick={() => {
+                        setModel1(false);
+                        setModel2(!modal_2);
+                      }}
+                    ></BsInfo>
                   </div>
                   <div class="input-group">
                     <span class="input-group-addon" id="basic-addon1">
@@ -154,6 +234,7 @@ const VizForm = () => {
                       aria-describedby="basic-addon1"
                     />
                   </div>
+
                   <div>
                     <button
                       type="submit"
@@ -207,6 +288,82 @@ const VizForm = () => {
               </div>
             </div>
           </div>
+          {modal_1 ? (
+            <div className="modal-window">
+              <BsFillXCircleFill
+                style={{
+                  borderRadius: "20px",
+                  color: "red",
+                  padding: "4px",
+                  fontSize: "30px",
+                  position: "absolute",
+                  right: "2%",
+                }}
+                onClick={() => {
+                  setModel1(false);
+                  setModel2(false);
+                }}
+              ></BsFillXCircleFill>
+              <h1>Line of Business</h1>
+              <div className="grid-temp">
+                {groups.map((item) => {
+                  return (
+                    <li
+                      onClick={() => {
+                        setFormData({ ...formData, group: item.group });
+                        setModel1(false);
+                        setModel2(false);
+                      }}
+                    >
+                      {item.group}
+                    </li>
+                  );
+                })}
+              </div>
+            </div>
+          ) : (
+            ""
+          )}
+          {modal_2 ? (
+            <div className="modal-window">
+              <BsFillXCircleFill
+                style={{
+                  borderRadius: "20px",
+                  color: "red",
+
+                  padding: "4px",
+                  fontSize: "30px",
+                  position: "absolute",
+                  right: "2%",
+                }}
+                onClick={() => {
+                  setModel1(false);
+                  setModel2(false);
+                }}
+              ></BsFillXCircleFill>
+              <h1>Industry</h1>
+              <div className="grid-temp">
+                {industries.map((item) => {
+                  return (
+                    <li
+                      onClick={() => {
+                        setFormData({
+                          ...formData,
+                          industry: item.industry,
+                        });
+                        setModel1(false);
+                        setModel2(false);
+                      }}
+                    >
+                      {item.industry}
+                    </li>
+                  );
+                })}
+              </div>
+            </div>
+          ) : (
+            ""
+          )}
         </div>
       </div>
     </>
