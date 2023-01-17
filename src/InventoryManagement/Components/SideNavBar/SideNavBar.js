@@ -9,6 +9,7 @@ import { useSelector, useDispatch } from "react-redux";
 import { Light, Dark, Toggle, ThemeState } from "../../Redux/ThemeSlice";
 import ExpandNavBar from "./ExpandNavBar";
 import ShrinkNavBar from "./ShrinkNavBar";
+import AuthService from "../../Services/auth.service";
 function SideNavBar() {
   const [DrawerState, setDrawerState] = useState(false);
   const theme = useSelector(ThemeState);
@@ -17,6 +18,10 @@ function SideNavBar() {
 
   const LightColor = "primary:#ffffff";
   const DarkColor = "primary:#000000";
+
+  const logOut = () => {
+    AuthService.logout();
+  };
 
   return (
     <div>
@@ -80,7 +85,9 @@ function SideNavBar() {
             )}
           </div>
           <div className={theme === 'Light' ? Style.profile_Light : Style.profile} >
-            <h6>HK</h6>
+          <a href="/" className="nav-link" onClick={logOut}>
+                HK
+              </a>
             
         </div>
           {/* <div>

@@ -52,7 +52,7 @@ const LoginCard = () => {
           value={Password}
           onChange={(e) => setPassword(e.target.value)}
         />
-      <p className={`${Style.animation} ${Style.a5}`}><a href="#">Forgot Password</a></p>
+      <p className={`${Style.animation} ${Style.a5}`}><a href="/">Forgot Password</a></p>
       <button className={`${Style.animation} ${Style.a6} ${Style.Button}`} type="submit">Sign In</button>
       </form>
     </div>
