@@ -232,7 +232,7 @@ box-shadow: 0px 15px 5px -6px rgba(0,0,0,0.16);
 }
 
 .input_search{
-    /* font-family:'Oxygen', sans-serif ; */
+    font-family:'Oxygen', sans-serif ;
     outline: "none";
     height: 100%;
     width: 100%;
