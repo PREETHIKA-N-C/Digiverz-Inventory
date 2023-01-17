@@ -90,6 +90,21 @@ body {
 .form-field:focus {
   border-color: #2ea6a2;
 }
+
+.password-div {
+  position: relative;
+}
+
+.password-button {
+  position: absolute;
+  right: 23px;
+  z-index: 2;
+  border: none;
+  top: 35px;
+  cursor: pointer;
+  width: 6%;
+  transform: translateX(10px);
+}
 .Button {
   width: 80%;
   margin-top: 30px;
@@ -173,3 +188,4 @@ body {
     width: 440px;
   }
 }
+

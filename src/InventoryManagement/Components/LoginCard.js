@@ -1,13 +1,25 @@
 import React, { useState } from "react";
 import { useNavigate } from "react-router-dom";
 import AuthService from "../Services/auth.service";
-import Style from './LoginCard.module.css'
+import Style from './LoginCard.module.css';
+import eye from "../Assets/eye.png";
+import hide from "../Assets/hide.png";
 
 const LoginCard = () => {
   const [Username, setUsername] = useState("");
   const [Password, setPassword] = useState("");
+  const [passwordType, setPasswordType] = useState("password");
 
   const navigate = useNavigate();
+  
+const togglePassword =()=>{
+  if(passwordType==="password")
+  {
+   setPasswordType("text")
+   return;
+  }
+  setPasswordType("password")
+}
 
   const handleLogin = async (e) => {
     e.preventDefault();
@@ -44,14 +56,24 @@ const LoginCard = () => {
           placeholder="Username"
           value={Username}
           onChange={(e) => setUsername(e.target.value)}
+          required
         />
+        <div  className={Style["password-div"]}>
       <input
           className={`${Style["form-field"]} ${Style.animation} ${Style.a4}`}
-          type="password"
+          type={passwordType}
           placeholder="Password"
           value={Password}
           onChange={(e) => setPassword(e.target.value)}
+          required
+          
         />
+        
+        <a className={`${Style.animation} ${Style.a4} ${Style["password-button"]}`} onClick={togglePassword}>
+        { passwordType==="password"? <img src={eye}/>:<img src={hide}/> }
+        </a>
+        </div>
+
       <p className={`${Style.animation} ${Style.a5}`}><a href="/">Forgot Password</a></p>
       <button className={`${Style.animation} ${Style.a6} ${Style.Button}`} type="submit">Sign In</button>
       </form>
