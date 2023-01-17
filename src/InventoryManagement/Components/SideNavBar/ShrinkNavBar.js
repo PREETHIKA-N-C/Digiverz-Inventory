@@ -1,6 +1,7 @@
 import React, {useState} from 'react'
 import Style from './ShrinkNavBar.module.css'
-import { Light, Dark, Toggle, ThemeState } from "../../Redux/ThemeSlice";
+import { ThemeState } from "../../Redux/ThemeSlice";
+import { NavbarState , setNavState } from '../../Redux/NavbarSlice'
 import { defineElement } from "lord-icon-element";
 import { useSelector, useDispatch } from "react-redux";
 import { NavLink } from "react-router-dom";
@@ -8,8 +9,8 @@ import lottie from "lottie-web";
 
 
 function ShrinkNavBar() {
-    const [linkState, setLinkState] = useState("");
     const theme = useSelector(ThemeState);
+    const linkState = useSelector(NavbarState);
     const dispatch = useDispatch();
     defineElement(lottie.loadAnimation);
     const LightColor = "primary:#ffffff";
@@ -21,7 +22,7 @@ function ShrinkNavBar() {
         <div className={Style.top_cont}>
           <NavLink
             to="/Home"
-            className={(state) => (state.isActive ? setLinkState("Home") : "")}
+            className={(state) => (state.isActive ? dispatch(setNavState("Home")) : "")}
           >
             <div
               className={
@@ -41,7 +42,7 @@ function ShrinkNavBar() {
           <NavLink
             to="/Application"
             className={(state) =>
-              state.isActive ? setLinkState("Application") : ""
+              state.isActive ? dispatch(setNavState("Application")) : ""
             }
           >
             <div
@@ -64,7 +65,7 @@ function ShrinkNavBar() {
           <NavLink
             to="/MarketPlaceHome"
             className={(state) =>
-              state.isActive ? setLinkState("Market") : ""
+              state.isActive ? dispatch(setNavState("Market")) : ""
             }
           >
             <div
@@ -85,7 +86,7 @@ function ShrinkNavBar() {
 
           <NavLink
             to="/VizHome"
-            className={(state) => (state.isActive ? setLinkState("Viz") : "")}
+            className={(state) => (state.isActive ? dispatch(setNavState("Viz")) : "")}
           >
             <div
               className={

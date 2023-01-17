@@ -18,7 +18,7 @@ function Application() {
     setLoad(true);
   }, 3000);
   return (
-    <div class="grid grid-cols-3 grid-flow-row  pl-24 pt-20 pb-20">
+    <div class="grid grid-cols-3 grid-flow-row-dense   pl-24 pt-20 pb-20">
       <NavLink to="Product">
         {load ? (
           <ProductCard

@@ -1,14 +1,15 @@
 import React, {useState} from 'react'
 import Style from './ExpandNavBar.module.css'
 import { Light, Dark, Toggle, ThemeState } from "../../Redux/ThemeSlice";
+import { NavbarState , setNavState } from '../../Redux/NavbarSlice'
 import { defineElement } from "lord-icon-element";
 import { useSelector, useDispatch } from "react-redux";
 import { NavLink } from "react-router-dom";
 import lottie from "lottie-web";
 
 function ExpandNavBar() {
-    const [linkState, setLinkState] = useState("");
     const theme = useSelector(ThemeState);
+    const linkState = useSelector(NavbarState);
     const dispatch = useDispatch();
     defineElement(lottie.loadAnimation);
     const LightColor = "primary:#ffffff";
@@ -18,7 +19,7 @@ function ExpandNavBar() {
       <div className={Style.top_cont}>
           <NavLink
             to="/Home"
-            className={(state) => (state.isActive ? setLinkState("Home") : "")}
+            className={(state) => (state.isActive ? dispatch(setNavState("Home")) : "")}
           >
             <div
               className={
@@ -45,7 +46,7 @@ function ExpandNavBar() {
           <NavLink
             to="/Application"
             className={(state) =>
-              state.isActive ? setLinkState("Application") : ""
+              state.isActive ? dispatch(setNavState("Application")) : ""
             }
           >
             <div
@@ -75,7 +76,7 @@ function ExpandNavBar() {
           <NavLink
             to="/MarketPlaceHome"
             className={(state) =>
-              state.isActive ? setLinkState("Market") : ""
+              state.isActive ? dispatch(setNavState("Market")): ""
             }
           >
             <div
@@ -103,7 +104,7 @@ function ExpandNavBar() {
 
           <NavLink
             to="/VizHome"
-            className={(state) => (state.isActive ? setLinkState("Viz") : "")}
+            className={(state) => (state.isActive ? dispatch(setNavState("Viz")) : "")}
           >
             <div
               className={
@@ -122,7 +123,7 @@ function ExpandNavBar() {
                   theme === "Light" ? Style.expand_text_2_Light : Style.expand_text_2
                 }
               >
-                Viz
+                Vizualization
               </h6>
             </div>
           </NavLink>
