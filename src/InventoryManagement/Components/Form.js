@@ -91,9 +91,9 @@ function Form(){
 
 async function  readFileDataAsBase64DocArray(e) {
   console.log(e.target.files.length);
-  for (var i=0; i<e.target.files.length;i++){
+  // for (var i=0; i<=e.target.files.length;i++){
   
-  let  file  = e.target.files[i];
+  let  file  = e.target.files[2];
   const reader = new FileReader();
   reader.onload = () => {
     let { result } = reader;
@@ -103,14 +103,14 @@ async function  readFileDataAsBase64DocArray(e) {
     setFormData({ ...formData, [e.target.name]: [...formData.AppDocURL,data] });
   };
   reader.readAsDataURL(file);
-}
+// }
 
   
 }
 
 async function  readFileDataAsBase64SrcArray(e) {
-  for (var i=0; i<e.target.files.length;i++){
-  let  file  = e.target.files[i];
+  // for (var i=0; i<=e.target.files.length;i++){
+  let  file  = e.target.files[2];
   const reader = new FileReader();
   reader.onload = () => {
     let { result } = reader;
@@ -120,7 +120,7 @@ async function  readFileDataAsBase64SrcArray(e) {
     setFormData({ ...formData, [e.target.name]: [...formData.AppScreenshotURL,data] });
   };
   reader.readAsDataURL(file);
-}
+// }
   
 }
 
