@@ -1,135 +1,70 @@
-import React, {useState} from 'react'
-import {useNavigate} from "react-router-dom"
-import axios from 'axios'
+import React, { useState } from "react";
+import { useNavigate } from "react-router-dom";
+import AuthService from "../Services/auth.service";
 import Style from './LoginCard.module.css'
 
+const LoginCard = () => {
+  const [Username, setUsername] = useState("");
+  const [Password, setPassword] = useState("");
 
-function LoginCard() {
-	const [Login, setLogin] = useState({
-		Username : "",
-		Password: ""
-	});
-	const navigate = useNavigate();
-	const config = {
-    method: "POST",
-    headers: {
-      
-      'content-type': 'application/json',
-    },
-    body: JSON.stringify(Login)
+  const navigate = useNavigate();
 
+  const handleLogin = async (e) => {
+    e.preventDefault();
+    try {
+      await AuthService.login(Username, Password).then(
+        () => {
+          navigate("/home");
+          window.location.reload();
+        },
+        (error) => {
+          console.log(error);
+        }
+      );
+    } catch (err) {
+      console.log(err);
+    }
   };
-  const postQuery = async () => {
-				console.log(Login);
-				let loginres;
-				await fetch('http://localhost:5000/api/validate_user',config)
-    .then(response => response.json())
-		.then(data => loginres=data)
-		console.log(loginres)
-		if (loginres.ok === true){
-        navigate("/")
 
-		}
-		else{
-			alert("Username or Password wrong")
-		}
-
-		
-    // alert('Registered Successfully!!')
-
-    
-    	};
-  const submitHandler = (event) => {
-    event.preventDefault();
-    // toast.success("Submitted Successfully!");
-    console.log(Login.Username,Login.Password);
-    postQuery();
-  };
   return (
     <>
-		<form onSubmit={submitHandler}>
-    <div className={Style.boxform}>
-	<div className={Style.left}>
-		<div className={Style.overlay}>
-		<h1>Digiverz Inventory</h1>
-		{/* <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-		Curabitur et est sed felis aliquet sollicitudin</p> */}
-		{/* <span> */}
-			{/* <p>login with social media</p>
-			<a href="#"><i className ="fa fa-facebook" aria-hidden="true"></i></a>
-			<a href="#"><i className="fa fa-twitter" aria-hidden="true"></i> Login with Twitter</a> */}
-		{/* </span> */}
-		</div>
-	</div>
-
-  <div className={Style.right}>
-		<h5>Login</h5>
-    <div>
-		<p>Don't have an account? <a href="#">Creat Your Account</a> it takes less than a minute</p>
+    
+    <div className={Style.container}>
+    <div className={Style["right-section"]}></div>
+  <div className={Style["left-section"]}>
+    <div className={Style.header}>
+      <h1 className={`${Style.animation} ${Style.a1}`}>Digiverz Inventory</h1>
+      <h4 className={`${Style.animation} ${Style.a2}`}>LOGIN </h4>
     </div>
-		<div className={Style.inputs}>
-      {/* <div className={Style.username}>
-			<input type="text" placeholder="Username"/>
-      </div> */}
-			<div className={Style.username}>
-			<input className="name"
-                       value={Login.Username}
-                       onChange={(e) => setLogin({Username: e.target.value,
-										   Password: Login.Password})}
-                       type="text"
-                       name="Username"
-                       placeholder="Username"
-                       required
-                     />
-										 </div>
-		  {/* <div>
-			<input type="password" placeholder="Password"/>
-      </div> */}
-			<div className={Style.username}>
-			<input className="name"
-                       value={Login.Password}
-                       onChange={(e) => setLogin({Password: e.target.value,
-												Username: Login.Username})}
-                       type="password"
-                       name="Password"
-                       placeholder="Password"
-                       required
-                     />
-										 </div>
-										 {/* <div className={Style.username}>
-			<input className="name"
-                       value={Date}
-                       onChange={(e) => setDate(e.target.value)}
-                       type="date"
-                       name="Date"
-                       placeholder="Date"
-                       required
-                     />
-										 </div>
-										 <div className={Style.username}>
-			<input className="name"
-                       value={Time}
-                       onChange={(e) => setTime(e.target.value)}
-                       type="time"
-                       name="Time"
-                       placeholder="Time"
-                       required
-                     />
-										 </div> */}
-		</div>
-    	<br></br>
-			{/* <a className={Style.signIn}  href="/"  */}
-        {/* // onClick={onClick} */}
-        {/* >Sign In</a> */}
-				<button variant="secondary" className= "SignInButton" type="submit" value="Submit">SignIn</button>
-		
-			
-		
-	</div>
+    <div className={Style.form}>
+    <form onSubmit={handleLogin}>
+    <input
+          className={`${Style["form-field"]} ${Style.animation} ${Style.a3}`}
+          type="text"
+          placeholder="Username"
+          value={Username}
+          onChange={(e) => setUsername(e.target.value)}
+        />
+      <input
+          className={`${Style["form-field"]} ${Style.animation} ${Style.a4}`}
+          type="password"
+          placeholder="Password"
+          value={Password}
+          onChange={(e) => setPassword(e.target.value)}
+        />
+      <p className={`${Style.animation} ${Style.a5}`}><a href="#">Forgot Password</a></p>
+      <button className={`${Style.animation} ${Style.a6} ${Style.Button}`} type="submit">Sign In</button>
+      </form>
+    </div>
   </div>
-	</form>
-    </>
-  )
-}
+  
+</div>
 
-export default LoginCard
+
+
+    </>
+
+  );
+};
+
+export default LoginCard;

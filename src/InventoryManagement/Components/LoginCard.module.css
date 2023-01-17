@@ -1,133 +1,175 @@
-body {
-  background: linear-gradient(140deg, #58e0dc, #70dad6, #abe6e3 );
-  background-size: cover;
-  background-repeat: no-repeat;
-  background-attachment: fixed;
-  /* font-family: "Open Sans", sans-serif;
-  color: #333333; */
-}
-
-.boxform {
-  margin: 0 auto;
-  width: 80%;
-  height: 500px;
-  margin-top: 60px;
-  background: #FFFFFF;
-  border-radius: 10px;
-  overflow: hidden;
-  display: flex;
-  flex: 1 1 100%;
-  align-items: stretch;
-  justify-content: space-between;
-  box-shadow: 0 0 20px 6px #090b6f85;
-  /* box-shadow: inset 17.12px 17.12px 17px #84d3d1, inset -17.12px -17.12px 17px #84d3d1; */
-}
-@media (max-width: 980px) {
-  .boxform {
-    flex-flow: wrap;
-    text-align: center;
-    align-content: center;
-    align-items: center;
-  }
-}
-.boxform div {
-  height: auto;
-}
-.boxform .left {
-  color: #FFFFFF;
-  background-size: cover;
-  background-repeat: no-repeat;
-  background-image: url("https://i.pinimg.com/736x/5d/73/ea/5d73eaabb25e3805de1f8cdea7df4a42--tumblr-backgrounds-iphone-phone-wallpapers-iphone-wallaper-tumblr.jpg");
-  overflow: hidden;
-}
-.boxform .left .overlay {
-  padding: 30px;
-  width: 100%;
-  height: 100%;
-  background: #abe6e3ad;
-  overflow: hidden;
+* {
   box-sizing: border-box;
 }
-.boxform .left .overlay h1 {
-  font-size: 7vmax;
-  text-align:center;
-  line-height: 1;
-  font-weight: 900;
-  margin-top: 100px;
-  /* margin-bottom: 20px; */
-  color: #000000;
-}
-.boxform .right {
-  padding: 40px;
-  overflow: hidden;
-}
-@media (max-width: 980px) {
-  .boxform .right {
-    width: 100%;
-  }
-}
-.boxform .right h5 {
-  font-size: 5vmax;
-  margin-top: 40px;
-  margin-left: 70px;
-  line-height: 1;
-  font-weight: 700;
-  color: #000000;
-}
-.boxform .right p {
-  font-size: 14px;
-  color: #ffffff;
-  padding-top: 5px;
-}
-.boxform .right .inputs {
-  overflow: hidden;
-}
-.boxform .right input {
-  width: 100%;
-  padding: 10px;
-  /* margin-top: 10px; */
-  font-size: 16px;
-  border: none;
-  outline: none;
-  border-bottom: 2px solid #B0B3B9;
-}
-.username{
-  margin-bottom: 30px;
-
-}
-
-.boxform .right .remember-me {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  padding-top: 40px;
-}
-.boxform .right .remember-me input {
+body {
+  font-family: 'Rubik', sans-serif;
   margin: 0;
-  margin-right: 7px;
-  width: auto;
+  padding: 0;
 }
+.container {
+  display: flex;
+  height: 100vh;
+}
+.left-section {
+  overflow: hidden;
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: column;
+  justify-content: center;
+  text-align: center;
+  -webkit-animation-name: left-section;
+          animation-name: left-section;
+  -webkit-animation-duration: 1s;
+          animation-duration: 1s;
+  -webkit-animation-fill-mode: both;
+          animation-fill-mode: both;
+  -webkit-animation-delay: 1s;
+          animation-delay: 1s;
+          /* border: 1px solid #84d3d1; */
+          background: #ffffff;
+          /* border-radius: 50px; */
+          box-shadow: rgba(0, 0, 0, 0.17) 0px -23px 25px 0px inset, rgba(0, 0, 0, 0.15) 0px -36px 30px 0px inset, rgba(0, 0, 0, 0.1) 0px -79px 40px 0px inset, rgba(0, 0, 0, 0.06) 0px 2px 1px, rgba(0, 0, 0, 0.09) 0px 4px 2px, rgba(0, 0, 0, 0.09) 0px 8px 4px, rgba(0, 0, 0, 0.09) 0px 16px 8px, rgba(0, 0, 0, 0.09) 0px 32px 16px;
+}
+.right-section {
+  flex: 1;
+  background: linear-gradient(to right, #f50629 0%, #fd9d08 100%);
+  transition: 1s;
+  background-image: url(C:\Users\ncpre\Desktop\Digiverz-Inventory\src\InventoryManagement\Assets\data-science-courses1.jpg);
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+.header  h1 {
+  margin-top: 0px;
+  margin-bottom: 70px;
+  color: #2ea6a2;
+  font-weight: 700;
+  font-size: 3vmax;
+  width: 100%;
 
-
-.signIn{
+}
+.header h4 {
+  font-weight: 700;
+  font-size: 2vmax;
+  color: #000000;
+}
+.form {
+  max-width: 100%;
   display: flex;
   flex-direction: column;
-  line-height: normal;
-  width: 90px;
-  height: 40px;
-  margin-top: 12px;
-  margin-left: 120px;
-  padding-top: 7px;
-  padding-right: 17px;
-  padding-bottom: 7px;
-  padding-left: 17px;
-  border: 1px solid #84d3d1;
-  border-radius: 5px;
-  background-color: #abe6e3;
-  box-shadow: inset 17.12px 17.12px 17px #84d3d1, inset -17.12px -17.12px 17px #84d3d1;
 }
-.signIn:hover{
-  transform: translateX(1px);
-  transition: transform 0.5s ease-in-out;
+.form p {
+  text-decoration:underline;
+  margin-top: 20px;
+  margin-left: 215px;
+}
+.form p a:hover {
+  color: #2ea6a2;
+}
+
+.form  p  a {
+  color: #000;
+  font-size: 14px;
+  
+}
+.form-field {
+  height: 46px;
+  padding: 2px 5px;
+  font-family: 'Rubik', sans-serif;
+  outline: 0;
+  transition: .2s;
+  margin-top: 20px;
+  margin-left: 10px;
+  background: transparent;
+  border: none;
+  border-bottom: 2px solid #000000;
+  border-radius: 10px 10px 10px 10px;
+  width: 90%;
+
+}
+.form-field:focus {
+  border-color: #2ea6a2;
+}
+.Button {
+  width: 80%;
+  margin-top: 30px;
+  border-radius: 20px;
+  position: relative;
+  display: inline-block;
+  padding: 8px 20px;
+  background: linear-gradient(to right, #61cbc8 0%, #98e0dc 20%, #a7dbda 40%, #61cbc8 100%);
+  color: black;
+  font-size: 1em;
+  font-weight: 600;
+  text-decoration: none;
+  box-shadow: 0 10px 20px rgba(0,0,0,0.2);
+  border:none;
+  /* transition: 0.5s; */
+}
+.Button:hover{
+  /* transform: translateX(10px); */
+  background: #6dbab8;
+  color: white;
   font-weight:600;
+  
+}
+.animation {
+  -webkit-animation-name: move;
+          animation-name: move;
+  -webkit-animation-duration: .4s;
+          animation-duration: .4s;
+  -webkit-animation-fill-mode: both;
+          animation-fill-mode: both;
+  -webkit-animation-delay: 2s;
+          animation-delay: 2s;
+}
+ 
+.a1 {
+  -webkit-animation-delay: 2s;
+          animation-delay: 2s;
+}
+.a2 {
+  -webkit-animation-delay: 2.1s;
+          animation-delay: 2.1s;
+}
+.a3 {
+  -webkit-animation-delay: 2.2s;
+          animation-delay: 2.2s;
+}
+.a4 {
+  -webkit-animation-delay: 2.3s;
+          animation-delay: 2.3s;
+}
+.a5 {
+  -webkit-animation-delay: 2.4s;
+          animation-delay: 2.4s;
+}
+.a6 {
+  -webkit-animation-delay: 2.5s;
+          animation-delay: 2.5s;
+}
+@keyframes move {
+  0% {
+    opacity: 0;
+    visibility: hidden;
+    -webkit-transform: translateY(-40px);
+            transform: translateY(-40px);
+  }
+  100% {
+    opacity: 1;
+    visibility: visible;
+    -webkit-transform: translateY(0);
+            transform: translateY(0);
+  }
+}
+@keyframes left-section {
+  0% {
+    opacity: 0;
+    width: 0;
+  }
+  100% {
+    opacity: 1;
+    padding: 20px 40px;
+    width: 440px;
+  }
 }

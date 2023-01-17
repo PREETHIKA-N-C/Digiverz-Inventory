@@ -1,8 +1,9 @@
 .formContainer{
   margin: auto;
-  margin-top: 50px;
+  margin-top: 20px;
   margin-bottom: 50px;
-  width: 80%;
+  margin-left: 350px;
+  width: 100%;
   position: relative;
   padding: 40px;
   box-sizing: border-box;
@@ -11,13 +12,19 @@
   background-size: cover;
   /* box-shadow: 5px 10px #abe6e3ad; */
   /* box-shadow: 14px 14px 20px #cbced1, -14px -14px 20px white; */
+  overflow: scroll;
+  
 }
 .Title{
-  margin-top: 40px;
+  margin-bottom: 40px;
+  margin-left: 150px;
+  font-size: 30px;
+  font-weight: 600;
 }
 .label{
-  margin-top: 15px;
+  margin-top: 20px;
   font-size: 20px;
+  font-weight: 500;
 }
 .labelOp{
   margin-top: 15px;
@@ -29,6 +36,8 @@
   background-color: white;
   margin-right: 5px;
   padding-left: 6px;
+  margin-top: 10px;
+  font-weight: 500;
 }
 .LName{
   width: 39.5%;
@@ -72,7 +81,7 @@
 
 .infoTxt{
   margin:auto;
-  width: 95%;
+  width: 100%;
   font-size: 20px;
   font-weight: bold;
   color: grey;
