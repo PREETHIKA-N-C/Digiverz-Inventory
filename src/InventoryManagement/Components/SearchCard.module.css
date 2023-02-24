@@ -60,3 +60,14 @@
   margin-left: 100px;
   margin-top: 30px;
 }
+
+.cardCont{
+  display: flex;
+  flex-direction: column;
+  padding-top: 150px;
+  padding-left: 100px;
+  gap:10px
+}
+
+
+

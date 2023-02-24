@@ -42,11 +42,11 @@ function Application() {
       <div className={Style.cardDiv}>
       {data.map((item) => {
                   return (
-                    <div key={item["id"]}>
+                    <div key={item["Id"]}>
                     
-                      <NavLink to={`./Product/${item["id"]}`}>
+                      <NavLink to={`./Product/${item["Id"]}`}>
                       
-                      <ProductCard name={item. appName} desc={item.AppDescription} logo={item.appLogo} img={item.AppScreenShot}/>
+                      <ProductCard name={item.appName} desc={item.AppType} logo={item.appLogo} img={item.AppCoverPic}/>
                         
                       </NavLink>
                       </div>

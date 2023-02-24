@@ -74,7 +74,7 @@ function ShrinkNavBar() {
               }
             >
               <lord-icon
-                src="https://cdn.lordicon.com/icxqolmx.json"
+                src="https://cdn.lordicon.com/xfftupfv.json"
                 trigger="hover"
                 colors={theme === "Light" ? DarkColor : LightColor}
                 style={{ width: "23px", height: "23px", marginLeft: "7px" }}
