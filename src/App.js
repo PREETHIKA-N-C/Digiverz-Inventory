@@ -3,6 +3,7 @@ import "./App.css";
 import { BrowserRouter, Route, Routes } from "react-router-dom";
 import Home from "./InventoryManagement/Pages/Home";
 import Application from "./InventoryManagement/Pages/Application";
+import Search from "./InventoryManagement/Pages/Search";
 import Product from "./InventoryManagement/Pages/Product";
 import store from "./store";
 import Login from "./InventoryManagement/Pages/Login";
@@ -33,7 +34,8 @@ function App() {
           <Route path="Home" element={<Home />} />
           <Route path="AppInfoUpload" element={<AppInfoUpload />} />
           <Route path="Application" element={<Application />} />
-          <Route path="Application/Product" element={<Product />} />
+          <Route path="Search" element={<Search />} />
+          <Route path="Application/Product/:id" element={<Product />} />
           <Route path="VizHome" element={<VizHome />} />
           <Route path="VizHome/Product/:id" element={<VizProduct />} />
           <Route path="VizHome/Admin" element={<VizAdmin />} />

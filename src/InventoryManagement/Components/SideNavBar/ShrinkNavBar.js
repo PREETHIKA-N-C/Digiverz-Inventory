@@ -20,7 +20,7 @@ function ShrinkNavBar() {
         className={theme === "Light" ? Style.container_Light : Style.container}
       >
         <div className={Style.top_cont}>
-          <NavLink
+          {/* <NavLink
             to="/Home"
             className={(state) => (state.isActive ? dispatch(setNavState("Home")) : "")}
           >
@@ -37,7 +37,7 @@ function ShrinkNavBar() {
                 style={{ width: "23px", height: "23px", marginLeft: "7px" }}
               ></lord-icon>
             </div>
-          </NavLink>
+          </NavLink> */}
 
           <NavLink
             to="/Application"
@@ -60,9 +60,29 @@ function ShrinkNavBar() {
               ></lord-icon>
             </div>
           </NavLink>
-
-
           <NavLink
+            to="/Search"
+            className={(state) =>
+              state.isActive ? dispatch(setNavState("Search")) : ""
+            }
+          >
+            <div
+              className={
+                linkState === "Search"
+                  ? Style.icon_cont_active
+                  : Style.icon_cont
+              }
+            >
+              <lord-icon
+                src="https://cdn.lordicon.com/icxqolmx.json"
+                trigger="hover"
+                colors={theme === "Light" ? DarkColor : LightColor}
+                style={{ width: "23px", height: "23px", marginLeft: "7px" }}
+              ></lord-icon>
+            </div>
+          </NavLink>
+
+          {/* <NavLink
             to="/MarketPlaceHome"
             className={(state) =>
               state.isActive ? dispatch(setNavState("Market")) : ""
@@ -82,9 +102,9 @@ function ShrinkNavBar() {
                 style={{ width: "23px", height: "23px", marginLeft: "7px" }}
               ></lord-icon>
             </div>
-          </NavLink>
+          </NavLink> */}
 
-          <NavLink
+          {/* <NavLink
             to="/VizHome"
             className={(state) => (state.isActive ? dispatch(setNavState("Viz")) : "")}
           >
@@ -101,7 +121,7 @@ function ShrinkNavBar() {
                 style={{ width: "23px", height: "23px", marginLeft: "7px" }}
               ></lord-icon>
             </div>
-          </NavLink>
+          </NavLink> */}
         </div>
         <div className={Style.bottom_cont}>
           <div className={Style.icon_cont}>

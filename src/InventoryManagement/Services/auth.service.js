@@ -12,9 +12,9 @@ const login = (Username, Password) => {
     .then((response) => {
       if (response.data.access_token) {
         localStorage.setItem("user", JSON.stringify(response.data));
-        
-      }
-
+        }
+      
+      // console.log(response.config.data);
       return response.data;
     });
 };

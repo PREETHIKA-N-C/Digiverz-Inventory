@@ -10,6 +10,9 @@ import { Light, Dark, Toggle, ThemeState } from "../../Redux/ThemeSlice";
 import ExpandNavBar from "./ExpandNavBar";
 import ShrinkNavBar from "./ShrinkNavBar";
 import AuthService from "../../Services/auth.service";
+import Popup from 'reactjs-popup';
+import 'reactjs-popup/dist/index.css';
+
 function SideNavBar() {
   const [DrawerState, setDrawerState] = useState(false);
   const theme = useSelector(ThemeState);
@@ -85,9 +88,20 @@ function SideNavBar() {
             )}
           </div>
           <div className={theme === 'Light' ? Style.profile_Light : Style.profile} >
-          <a href="/" className="nav-link" onClick={logOut}>
+            <div className={Style["popup-wrapper"]}>
+          <Popup trigger={<button>
                 HK
+              </button>} 
+     position="bottom right" contentStyle={{ width: '18%',
+     textAlign:'center', height: '20%',boxShadow: '0 10px 20px rgba(0,0,0,0.2)',border: '1px solid rgba(0, 0, 0, 0.17)', boxShadow: 'rgba(0, 0, 0, 0.17) 0px -23px 25px 0px inset, rgba(0, 0, 0, 0.15) 0px -36px 30px 0px inset, rgba(0, 0, 0, 0.1) 0px -79px 40px 0px inset, rgba(0, 0, 0, 0.06) 0px 2px 1px, rgba(0, 0, 0, 0.09) 0px 4px 2px, rgba(0, 0, 0, 0.09) 0px 8px 4px, rgba(0, 0, 0, 0.09) 0px 16px 8px, rgba(0, 0, 0, 0.09) 0px 32px 16px'}} overlayStyle={{boxShadow: '0 10px 20px rgba(0,0,0,0.2)'}}
+     closeOnDocumentClick>
+      <h6>Sign me out?</h6>
+      <a href="/" className={Style["Logout-pop-up"]} onClick={logOut}>
+                Logout
               </a>
+    </Popup>
+    </div>
+          
             
         </div>
           {/* <div>

@@ -34,6 +34,7 @@ body {
   flex: 1;
   background: linear-gradient(to right, #f50629 0%, #fd9d08 100%);
   transition: 1s;
+  background-image: url(../Assets/data-science-courses1.jpg);
   background-image: url("../Assets/data-science-courses1.png");
   background-size: cover;
   background-repeat: no-repeat;

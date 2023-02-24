@@ -5,10 +5,12 @@ import Style from './LoginCard.module.css';
 import eye from "../Assets/eye.png";
 import hide from "../Assets/hide.png";
 
+
 const LoginCard = () => {
   const [Username, setUsername] = useState("");
   const [Password, setPassword] = useState("");
   const [passwordType, setPasswordType] = useState("password");
+  const user = JSON.parse(localStorage.getItem("user"));
 
   const navigate = useNavigate();
   
@@ -26,8 +28,12 @@ const togglePassword =()=>{
     try {
       await AuthService.login(Username, Password).then(
         () => {
-          navigate("/home");
+          // if(user.ok == true){
+          
+          navigate("/Application");
           window.location.reload();
+          // }
+          
         },
         (error) => {
           console.log(error);

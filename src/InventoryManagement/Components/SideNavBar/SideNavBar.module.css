@@ -278,3 +278,25 @@ box-shadow: 0px 15px 5px -6px rgba(0,0,0,0.16);
     font-weight:600;
 }
 
+.Logout-pop-up{
+    width: 60%;
+  margin-top: 13px;
+  border-radius: 15px;
+  position: relative;
+  display: inline-block;
+  padding: 8px 20px;
+  background: linear-gradient(to right, #61cbc8 0%, #98e0dc 20%, #a7dbda 40%, #61cbc8 100%);
+  color: black;
+  font-size: 1em;
+  font-weight: 600;
+  text-decoration: none;
+  box-shadow: 0 10px 20px rgba(0,0,0,0.2);
+  border:none;
+}
+
+.Logout-pop-up:hover{
+    background: #6dbab8;
+    color: white;
+    font-weight:600;
+    
+  }

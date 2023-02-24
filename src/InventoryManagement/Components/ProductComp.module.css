@@ -198,7 +198,8 @@
   margin-top: 40px;
   text-align: center;
   padding-top: 4px;
-  background-color: #2b3467;
+  background-color: #c9fefd;
+  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
 }
 
 .info_title1_variant1_Dark {
@@ -503,7 +504,8 @@
       text-align: center;
       font-size: 40px;
       padding-top: 4px;
-      background-color: #2B3467;
+      background-color: #c9fefd;
+      box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
   }
 
   .share_icon{

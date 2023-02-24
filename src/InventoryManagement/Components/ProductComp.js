@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import { useParams } from "react-router";
 import LightBoxSlider from "./LightBoxSlider";
 import {
   FiCodesandbox,
@@ -10,6 +11,8 @@ import { useSelector, useDispatch } from "react-redux";
 import { Light, Dark, ThemeState } from "../Redux/ThemeSlice";
 import Style from "./ProductComp.module.css";
 function ProductComp() {
+  const { id } = useParams();
+  console.log(id);
   const theme = useSelector(ThemeState);
   const dispatch = useDispatch();
 
@@ -33,7 +36,7 @@ function ProductComp() {
         <p
           className={theme === "Light" ? Style.title2_Light : Style.title2_Dark}
         >
-          Kaar Technologies Pvt Ltd
+          ABC Pvt Ltd
         </p>
         <a
           className={theme === "Light" ? Style.btn_Light : Style.btn_Dark}
@@ -147,7 +150,7 @@ function ProductComp() {
                       : Style.info_title2_variant2_Dark
                   }
                 >
-                  <p>Kaar Technologies Pvt Ltd</p>
+                  <p>ABC Pvt Ltd</p>
                 </div>
               </div>
             </div>
