@@ -17,7 +17,7 @@ function ExpandNavBar() {
   return (
     <div className={theme === "Light" ? Style.expand_cont_Light : Style.expand_cont}>
       <div className={Style.top_cont}>
-          <NavLink
+          {/* <NavLink
             to="/Home"
             className={(state) => (state.isActive ? dispatch(setNavState("Home")) : "")}
           >
@@ -41,7 +41,7 @@ function ExpandNavBar() {
                 Home
               </h6>
             </div>
-          </NavLink>
+          </NavLink> */}
 
           <NavLink
             to="/Application"
@@ -74,14 +74,14 @@ function ExpandNavBar() {
 
 
           <NavLink
-            to="/MarketPlaceHome"
+            to="/Search"
             className={(state) =>
-              state.isActive ? dispatch(setNavState("Market")): ""
+              state.isActive ? dispatch(setNavState("Search")): ""
             }
           >
             <div
               className={
-                linkState === "Market"
+                linkState === "Search"
                   ? Style.expand_icon_cont_active
                   : Style.expand_icon_cont
               }
@@ -97,12 +97,12 @@ function ExpandNavBar() {
                   theme === "Light" ? Style.expand_text_2_Light : Style.expand_text_2
                 }
               >
-                Market
+                Search
               </h6>
             </div>
           </NavLink>
 
-          <NavLink
+          {/* <NavLink
             to="/VizHome"
             className={(state) => (state.isActive ? dispatch(setNavState("Viz")) : "")}
           >
@@ -126,7 +126,7 @@ function ExpandNavBar() {
                 Vizualization
               </h6>
             </div>
-          </NavLink>
+          </NavLink> */}
         </div>
         <div className={Style.bottom_cont}>
           <div className={Style.expand_icon_cont}>

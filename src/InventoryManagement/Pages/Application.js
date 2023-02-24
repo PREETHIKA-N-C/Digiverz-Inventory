@@ -1,10 +1,13 @@
 import React, { useState } from "react";
 import ProductCard from "../Components/ProductCard.js";
+import Filter from "../Components/Filter.js";
 import ProductCardLoader from "../Components/ProductCardLoader.js";
+import Style from '../Components/Filter.module.css'
 import Banner1 from "../Assets/Banner.png";
 import { NavLink } from "react-router-dom";
 import { useSelector, useDispatch } from "react-redux";
 import { Light, Dark, Toggle, ThemeState } from "../Redux/ThemeSlice";
+import data from '../ApplicationData/data.js';
 function Application() {
   const theme = useSelector(ThemeState);
   const dispatch = useDispatch();
@@ -18,8 +21,13 @@ function Application() {
     setLoad(true);
   }, 3000);
   return (
-    <div class="grid grid-cols-3 grid-flow-row-dense   pl-24 pt-20 pb-20">
-      <NavLink to="Product">
+    <>
+    <div className={Style.flexWrap}>
+      <div className={Style.filterDiv}>
+    <Filter/>
+    </div>
+    
+      {/* <NavLink to="Product">
         {load ? (
           <ProductCard
             name="Expense Claim App"
@@ -30,10 +38,28 @@ function Application() {
         ) : (
           <ProductCardLoader />
         )}
-      </NavLink>
-      {load ? <ProductCard /> : <ProductCardLoader />}
-      {load ? <ProductCard /> : <ProductCardLoader />}
+      </NavLink> */}
+      <div className={Style.cardDiv}>
+      {data.map((item) => {
+                  return (
+                    <div key={item["id"]}>
+                    
+                      <NavLink key={item["id"]} to={`./Product/${item["id"]}`}>
+                      
+                      <ProductCard name={item. appName} desc={item.AppDescription} logo={item.appLogo} img={item.AppScreenShot}/>
+                        
+                      </NavLink>
+                      </div>
+                    
+                  );
+                })}
+                </div>
+      
+     {/* : <ProductCardLoader /> */}
+      {/* {load ? <ProductCard /> : <ProductCardLoader />} */}
+   
     </div>
+    </>
   );
 }
 
