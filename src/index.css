@@ -39,13 +39,13 @@ body::-webkit-scrollbar {
   animation: shine 1s ease infinite;
 }
 .skull-Load-Light {
-  background: #84d3d1;
+  background: #dfdfde;
   background-image: linear-gradient(
     to right,
-    #84d3d1 0%,
-    #abe6e3 20%,
-    #84d3d1 40%,
-    #84d3d1 100%
+    #f9f9f9 0%,
+    #ffffff 20%,
+    #f9f9f9 40%,
+    #f9f9f9 100%
   );
   background-size: 40px 100%;
   background-repeat: no-repeat;

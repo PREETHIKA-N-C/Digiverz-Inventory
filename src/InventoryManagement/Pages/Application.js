@@ -8,6 +8,7 @@ import { NavLink } from "react-router-dom";
 import { useSelector, useDispatch } from "react-redux";
 import { Light, Dark, Toggle, ThemeState } from "../Redux/ThemeSlice";
 import data from '../ApplicationData/data.js';
+import DashboardCard from "../Components/DashboardCard.js";
 function Application() {
   const theme = useSelector(ThemeState);
   const dispatch = useDispatch();
@@ -19,7 +20,7 @@ function Application() {
   const [load, setLoad] = useState(false);
   setTimeout(() => {
     setLoad(true);
-  }, 3000);
+  }, 1500);
   return (
     <>
     <div className={Style.flexWrap}>
@@ -40,22 +41,11 @@ function Application() {
         )}
       </NavLink> */}
       <div className={Style.cardDiv}>
-      {data.map((item) => {
-                  return (
-                    <div key={item["Id"]}>
-                    
-                      <NavLink to={`./Product/${item["Id"]}`}>
-                      
-                      <ProductCard url={item.AppUrl} name={item.appName} desc={item.AppType} logo={item.appLogo} img={item.AppCoverPic}/>
-                        
-                      </NavLink>
-                      </div>
-                    
-                  );
-                })}
-                </div>
+      {load ? data.map((item) => {return (item.Type === "App" ? <ProductCard id={item.Id} url={item.AppUrl} name={item.appName} desc={item.AppType} logo={item.appLogo} img={item.AppCoverPic}/> :<DashboardCard id={item.Id} url={item.AppUrl} name={item.appName} desc={item.AppType} logo={item.appLogo} img={item.AppCoverPic}/>);}) :data.map((value)=> <ProductCardLoader />) }
       
-     {/* : <ProductCardLoader /> */}
+      </div>
+      
+     {/* <ProductCardLoader /> */}
       {/* {load ? <ProductCard /> : <ProductCardLoader />} */}
    
     </div>

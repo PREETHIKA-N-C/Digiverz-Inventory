@@ -1,15 +1,15 @@
 import React from 'react'
-import Style from './ProductCard.module.css'
+import Style from './Dashboard.module.css'
 import { useSelector, useDispatch } from 'react-redux'
 import { AiFillStar,AiOutlineStar } from "react-icons/ai";
 import { NavLink } from "react-router-dom";
 import { Light, Dark , Toggle, ThemeState } from '../Redux/ThemeSlice'
-function ProductCard({id,name="Sentiment Analysis",desc="Accelerator | Productivity",logo="https://yt3.ggpht.com/ytc/AMLnZu_i0kljAsakXn2qz5sjtj7Tab-bmDtwDtBvM5t2aQ=s900-c-k-c0x00ffffff-no-rj",img="https://www.adobe.com/content/dam/www/us/en/max/2021/MAX2021-RegOpen-bnr-social-share-nodate-1200X630.jpg",url}) {
-  const theme = useSelector(ThemeState)
-  const dispatch = useDispatch()  
+function DashboardCard({id,name="Sentiment Analysis",desc="Accelerator | Productivity",logo="https://yt3.ggpht.com/ytc/AMLnZu_i0kljAsakXn2qz5sjtj7Tab-bmDtwDtBvM5t2aQ=s900-c-k-c0x00ffffff-no-rj",img="https://www.adobe.com/content/dam/www/us/en/max/2021/MAX2021-RegOpen-bnr-social-share-nodate-1200X630.jpg",url}) {
+    const theme = useSelector(ThemeState)
+    const dispatch = useDispatch()  
 return (
     <>
-    <NavLink to={`./Product/${id}`}>
+    <a href={url}>
       <div className={theme === 'Light' ? Style.product_cont_Light : Style.product_cont}>  
        <div className={Style.product}>
          <img className={Style.product_logo} src={logo}/>
@@ -28,10 +28,9 @@ return (
        </div>
        <img className={Style.product_img} src={img} /> 
        </div>
-       </NavLink>
+       </a>
     </>
   )
 }
 
-export default ProductCard
-
+export default DashboardCard
