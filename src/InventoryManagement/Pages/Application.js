@@ -46,7 +46,7 @@ function Application() {
                     
                       <NavLink to={`./Product/${item["Id"]}`}>
                       
-                      <ProductCard name={item.appName} desc={item.AppType} logo={item.appLogo} img={item.AppCoverPic}/>
+                      <ProductCard url={item.AppUrl} name={item.appName} desc={item.AppType} logo={item.appLogo} img={item.AppCoverPic}/>
                         
                       </NavLink>
                       </div>

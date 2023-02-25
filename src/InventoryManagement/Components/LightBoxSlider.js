@@ -9,49 +9,8 @@ import sc5 from "../Assets/sc5.png";
 import sc6 from "../Assets/sc6.png";
 import sc7 from "../Assets/sc7.png";
 import sc8 from "../Assets/sc8.png";
-function LightBoxSlider() {
-  const images = [
-    {
-      src: sc1,
-      loading: "lazy",
-      alt: "Windows 10 Dark Mode Setting",
-    },
-    {
-      src: sc2,
-      loading: "lazy",
-      alt: "Windows 10 Dark Mode Setting",
-    },
-    {
-      src: sc3,
-      loading: "lazy",
-      alt: "macOS Mojave Dark Mode Setting",
-    },
-    {
-      src: sc4,
-      loading: "lazy",
-      alt: "Android 9.0 Dark Mode Setting",
-    },
-    {
-      src: sc5,
-      loading: "lazy",
-      alt: "Android 9.0 Dark Mode Setting",
-    },
-    {
-      src: sc6,
-      loading: "lazy",
-      alt: "Android 9.0 Dark Mode Setting",
-    },
-    {
-      src: sc7,
-      loading: "lazy",
-      alt: "Android 9.0 Dark Mode Setting",
-    },
-    {
-      src: sc8,
-      loading: "lazy",
-      alt: "Android 9.0 Dark Mode Setting",
-    },
-  ];
+function LightBoxSlider({images}) {
+  
   const [currentImageIndex, setCurrentIndex] = useState(0);
   const [lightBoxOpen, setLightBoxOpen] = useState(false);
   const gotoPrevious = () => {

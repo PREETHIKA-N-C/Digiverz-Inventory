@@ -115,7 +115,7 @@ function ProductComp() {
             </p>
           </div>
           <div className="flex p-6 space-x-6 overflow-x-scroll scroll-hide">
-            <LightBoxSlider />
+            <LightBoxSlider images={singleData.AppScreenShot} />
           </div>
         </div>
 
