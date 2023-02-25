@@ -9,6 +9,12 @@
     gap: 10px;
 }
 
+@media only screen and (min-height: 700px) {
+  .container{
+    height: 750px !important;
+}
+}
+
 
 
 .next_container{
