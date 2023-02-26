@@ -73,7 +73,7 @@ function ExpandNavBar() {
           </NavLink>
 
 
-          <NavLink
+          {/* <NavLink
             to="/Search"
             className={(state) =>
               state.isActive ? dispatch(setNavState("Search")): ""
@@ -100,7 +100,7 @@ function ExpandNavBar() {
                 Search
               </h6>
             </div>
-          </NavLink>
+          </NavLink> */}
 
           {/* <NavLink
             to="/VizHome"
