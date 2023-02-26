@@ -50,7 +50,7 @@ function ProductComp() {
         </p>
         <a
           className={theme === "Light" ? Style.btn_Light : Style.btn_Dark}
-          href="http://172.17.19.26:3000/"
+          href={singleData.AppUrl}
           target="_blank"
         >
           Launch App

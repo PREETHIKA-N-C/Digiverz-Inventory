@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import ProductCard from "../Components/ProductCard.js";
 import Filter from "../Components/Filter.js";
+import filter from "../Assets/filtering.png";
 import ProductCardLoader from "../Components/ProductCardLoader.js";
 import Style from '../Components/Filter.module.css'
 import Banner1 from "../Assets/Banner.png";
@@ -12,6 +13,7 @@ import DashboardCard from "../Components/DashboardCard.js";
 function Application() {
   const theme = useSelector(ThemeState);
   const dispatch = useDispatch();
+  const [type,setType] = useState("App");
   if (theme === "Light") {
     document.body.style.background = "#fefeff";
   } else {
@@ -25,7 +27,17 @@ function Application() {
     <>
     <div className={Style.flexWrap}>
       <div className={Style.filterDiv}>
-    <Filter/>
+    {/* <Filter/> */}
+    <div className ={Style.dropdown}>
+    <button className= {Style.dropbtn}><img 
+    // className={Style.product_img} 
+    src={filter} /> </button>
+    <div className = {Style.dropdownContent}>
+      <div className="h-10 pt-2 hover:cursor-pointer hover:bg-slate-100" onClick={()=>(setType("App"))}>Apps</div>
+      <div className="h-10 pt-2 hover:cursor-pointer hover:bg-slate-100" onClick={()=>(setType("Dashboard"))}>Dashboards</div>
+        </div>
+  </div>
+
     </div>
     
       {/* <NavLink to="Product">
@@ -41,7 +53,7 @@ function Application() {
         )}
       </NavLink> */}
       <div className={Style.cardDiv}>
-      {load ? data.map((item) => {return (item.Type === "App" ? <ProductCard id={item.Id} url={item.AppUrl} name={item.appName} desc={item.AppType} logo={item.appLogo} img={item.AppCoverPic}/> :<DashboardCard id={item.Id} url={item.AppUrl} name={item.appName} desc={item.AppType} logo={item.appLogo} img={item.AppCoverPic}/>);}) :data.map((value)=> <ProductCardLoader />) }
+      {load ? data.filter((data)=>data.AppType !== type).map((item) => {return (item.Type === "App" ? <ProductCard id={item.Id} url={item.AppUrl} name={item.appName} desc={item.AppType} logo={item.appLogo} img={item.AppCoverPic}/> :<DashboardCard id={item.Id} url={item.AppUrl} name={item.appName} desc={item.AppType} logo={item.appLogo} img={item.AppCoverPic}/>);}) :data.map((value)=> <ProductCardLoader />) }
       
       </div>
       

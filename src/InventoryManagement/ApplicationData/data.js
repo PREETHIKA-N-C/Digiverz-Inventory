@@ -4,7 +4,6 @@ const data = [
     Id: "1",
     Type: "App",
     appName:"Expense Claim App",
-    // appLogo:"https://upload.wikimedia.org/wikipedia/commons/0/0c/Clash_app_logo.png",
     appLogo:"https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQt-avOv5Evf8-4BYlrPdWdW4Q6XytlTJwPqoWlgqcrkyW2sbIqCkJWyC68JwsbrLXnj3U&usqp=CAU",
     AppCoverPic:"https://pspdfkit.com/assets/images/blog/2020/optical-character-recognition-in-scanned-pdfs/article-header-3477d6fd.png",
     AppScreenShot:[{
@@ -49,7 +48,7 @@ const data = [
     },],
     AppType:"Accelerator | Data science",
     AppDescription:"This application simplifies the process of expense claims in an organization by automating the process of expense claim which automatically extracts all the data from the invoice once the invoice image is uploaded and displays it where the user can view and edit the contents of the invoice. The key features of this OCR application is that it has 3 levels of hierarchy namely employee/vendor, managers and head. The approval of claims goes from L1 manager to head after approval of each level. This has unique dashboard view for every hierarchy and a separate dashboard for admin where users can be added or removed based on requirements. This application currently supports two languages (English and Arabic) and can be viewed in both according to the preference of user and also supports both light and dark theme.",
-    AppUrl:""
+    AppUrl:"https://colorhunt.co/palettes/white"
   },
   {
     Id: "4",
@@ -58,9 +57,9 @@ const data = [
     appLogo:"https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSMng5sXC1ldt6Iaam_rSb2fNFtm_b_KaCCLa54BWAes5I3qPBlQXu2Z48UV9BTlQpo0qI&usqp=CAU",
     AppCoverPic:"https://zdblogs.zohocorp.com/show/chronicles/sites/show/chronicles/files/2022-01/show-libraries-blog%401.5x.png",
     AppScreenShot:[],
-    AppType:"Accelerator | Dashboard",
+    AppType:"Accelerator | Data science",
     AppDescription:"A centralized repository management system is a system that provides a centralized location for storing, managing, and versioning code and other related files. This allows multiple developers to work on the same codebase simultaneously, while also providing a way to track changes, revert to previous versions, and manage access permissions. In a centralized model, you work on the code while connected to the server itself. This maintains a single source of truth. The centralized model has been incredibly successful for version control. This is especially true as teams and projects grow and get more complex.",
-    AppUrl:""
+    AppUrl:"http://localhost:3000/search"
   },
   {
     Id: "2",

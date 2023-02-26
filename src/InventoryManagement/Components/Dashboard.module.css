@@ -106,7 +106,7 @@ box-shadow: inset -4px 6px 186px -160px rgba(0,0,0,0.59);
 .get_btn{
     text-align: center;
     margin-left: 70px;
-    padding-top: 6px;
+    padding-top: 8px;
     border-radius: 10px;
     background-color: #6776863b;
     color: #ffffff;
@@ -122,7 +122,7 @@ box-shadow: inset -4px 6px 186px -160px rgba(0,0,0,0.59);
 .get_btn_Light{
     text-align: center;
     margin-left: 70px;
-    padding-top: 6px;
+    padding-top: 8px;
     border-radius: 10px;
     background-color: #ebf0f5fb;
     color: #000000;
