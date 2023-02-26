@@ -15,6 +15,7 @@ function ProductComp() {
   const { id } = useParams();
   console.log(id);
   const theme = useSelector(ThemeState);
+  
   const dispatch = useDispatch();
 
   var singleData ;
@@ -51,7 +52,7 @@ function ProductComp() {
         <a
           className={theme === "Light" ? Style.btn_Light : Style.btn_Dark}
           href={singleData.AppUrl}
-          target="_blank"
+          target={singleData.Id==="4"?"_self":"_blank"}
         >
           Launch App
         </a>

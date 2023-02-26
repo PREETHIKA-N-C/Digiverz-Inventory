@@ -9,7 +9,7 @@ function DashboardCard({id,name="Sentiment Analysis",desc="Accelerator | Product
     const dispatch = useDispatch()  
 return (
     <>
-    <a href={url}>
+    <a href={url} target="_blank">
       <div className={theme === 'Light' ? Style.product_cont_Light : Style.product_cont}>  
        <div className={Style.product}>
          <img className={Style.product_logo} src={logo}/>

@@ -14,9 +14,17 @@ import MarketPlaceHome from "./MarketPlace/Pages/MarketPlaceHome";
 import Pipeline from "./MarketPlace/Pages/Pipeline";
 import VizAdmin from "./Dataviz/Pages/VizAdmin";
 import AppInfoUpload from "./InventoryManagement/Pages/AppInfoUpload";
+import { useEffect, useState } from "react";
 // import "bootstrap/dist/css/bootstrap.min.css";
 
 function App() {
+  const [navBarState, setNavBarState] = useState(false)
+
+  useEffect(()=>{
+    window.location.pathname === "/" ? setNavBarState(false) : setNavBarState(true) 
+    console.log(window.location.pathname)
+    console.log(navBarState)
+  })
   // const [isAuth, setIsAuth] = useState(localStorage.getItem("isAuth"));
 
   //   const data = {
@@ -26,11 +34,12 @@ function App() {
   return (
     <Provider store={store}>
       <BrowserRouter>
-        {/* {window.location.pathname !== "/Login" ? <SideNavBar /> : ""} */}
-        {window.location.pathname == "/AppInfoUpload" || window.location.pathname == "/"  ? "" : <SideNavBar />}
-
+        {/* {navBarState ? <SideNavBar /> : "" } */}
+        {/* {window.location.pathname === "/AppInfoUpload" || window.location.pathname === "/"  ? "" : <SideNavBar />} */}
+        {/* {navBarState ? <SideNavBar /> : ""} */}
         <Routes>
           <Route path="/" element={<Login />} />
+          {/* <SideNavBar/> */}
           <Route path="Home" element={<Home />} />
           <Route path="AppInfoUpload" element={<AppInfoUpload />} />
           <Route path="Application" element={<Application />} />

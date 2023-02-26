@@ -26,7 +26,7 @@ return (
             <AiFillStar style={theme === 'Light' ? {color:"black"} :  {color:"white"}} />
             <AiFillStar style={theme === 'Light' ? {color:"black"} :  {color:"white"}} />
             <AiOutlineStar style={theme === 'Light' ? {color:"black"} :  {color:"white"}} />
-            <a className={theme === "Light" ? Style.get_btn_Light : Style.get_btn} href={url}>LAUNCH</a>
+            <a className={theme === "Light" ? Style.get_btn_Light : Style.get_btn} href={url} target={id==="4"?"_self":"_blank"}>LAUNCH</a>
             </div>
          </div>
        </div>

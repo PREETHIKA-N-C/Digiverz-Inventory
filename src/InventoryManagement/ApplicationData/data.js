@@ -56,7 +56,21 @@ const data = [
     appName:"Centralized Repository",
     appLogo:"https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSMng5sXC1ldt6Iaam_rSb2fNFtm_b_KaCCLa54BWAes5I3qPBlQXu2Z48UV9BTlQpo0qI&usqp=CAU",
     AppCoverPic:"https://zdblogs.zohocorp.com/show/chronicles/sites/show/chronicles/files/2022-01/show-libraries-blog%401.5x.png",
-    AppScreenShot:[],
+    AppScreenShot:[{
+      src: require("../Assets/sc31.png"),
+      loading: "lazy",
+      alt: "Windows 10 Dark Mode Setting",
+    },
+    {
+      src: require("../Assets/sc32.png"),
+      loading: "lazy",
+      alt: "Windows 10 Dark Mode Setting",
+    },
+    {
+      src: require("../Assets/sc33.png"),
+      loading: "lazy",
+      alt: "macOS Mojave Dark Mode Setting",
+    },],
     AppType:"Accelerator | Data science",
     AppDescription:"A centralized repository management system is a system that provides a centralized location for storing, managing, and versioning code and other related files. This allows multiple developers to work on the same codebase simultaneously, while also providing a way to track changes, revert to previous versions, and manage access permissions. In a centralized model, you work on the code while connected to the server itself. This maintains a single source of truth. The centralized model has been incredibly successful for version control. This is especially true as teams and projects grow and get more complex.",
     AppUrl:"http://localhost:3000/search"
@@ -65,7 +79,8 @@ const data = [
     Id: "2",
     Type: "App",
     appName:"Sentimental Analysis",
-    appLogo:"https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT_A4CEAlxuOO18Fl85OsA_8Q8UEbBgnRNJArd4Skx60ytzK3uZcjSVPyIiwjVA6gL_Kco&usqp=CAU",
+    // appLogo:"https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT_A4CEAlxuOO18Fl85OsA_8Q8UEbBgnRNJArd4Skx60ytzK3uZcjSVPyIiwjVA6gL_Kco&usqp=CAU",
+    appLogo: require("../Assets/sentiLogo.jpg"),
     AppCoverPic:"https://media.licdn.com/dms/image/C5112AQE4uttixdtXIw/article-cover_image-shrink_720_1280/0/1520174446395?e=2147483647&v=beta&t=TEInKSoH9Wdg0-lBfpiqQvxeZt9onDjdRBNqS8xVxQc",
     AppScreenShot:[{
       src: require("../Assets/sc21.png"),
@@ -159,7 +174,7 @@ const data = [
     },],
     AppType:"Accelerator | Data science",
     AppDescription:"A data cleaning tool to pre-process the data and perform Auto ML operations. The real-world datasets used for machine learning models are highly susceptible to be missing, inconsistent, and noisy due to their heterogeneous origin. Applying data mining algorithms on this noisy data would not give quality results as they would fail to identify patterns effectively. Duplicate or missing values may give an incorrect view of the overall statistics of data. Outliers and inconsistent data points often tend to disturb the model’s overall learning, leading to false predictions. Data Processing is, therefore, important to improve the overall data quality. The pre-processed data is then modelled statistically by using various machine learning algorithms to predict the future outcome. ",
-    AppUrl:""
+    AppUrl:"http://20.109.92.241:9400"
   },
   {
     Id: "5",

@@ -10,6 +10,7 @@ import { useSelector, useDispatch } from "react-redux";
 import { Light, Dark, Toggle, ThemeState } from "../Redux/ThemeSlice";
 import data from '../ApplicationData/data.js';
 import DashboardCard from "../Components/DashboardCard.js";
+import SideNavBar from "../Components/SideNavBar/SideNavBar.js";
 function Application() {
   const theme = useSelector(ThemeState);
   const dispatch = useDispatch();
@@ -25,6 +26,7 @@ function Application() {
   }, 1500);
   return (
     <>
+    <SideNavBar/>
     <div className={Style.flexWrap}>
       <div className={Style.filterDiv}>
     {/* <Filter/> */}

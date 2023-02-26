@@ -3,6 +3,7 @@ import ProductComp from '../Components/ProductComp'
 import ProductSkullLoader from '../Components/ProductSkullLoader'
 import { useSelector, useDispatch } from 'react-redux'
 import { Light, Dark , Toggle, ThemeState } from '../Redux/ThemeSlice'
+import SideNavBar from '../Components/SideNavBar/SideNavBar'
 
 
 function Product() {
@@ -20,6 +21,7 @@ function Product() {
   },3000)
   return (
      <>
+     <SideNavBar/>
     {load ? (theme=== 'Light' ?<ProductComp />:<ProductComp/>) :(theme === 'Light') ? <ProductSkullLoader /> : <ProductSkullLoader/>}
     </>
   )
