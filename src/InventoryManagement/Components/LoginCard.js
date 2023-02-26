@@ -24,24 +24,25 @@ const togglePassword =()=>{
 }
 
   const handleLogin = async (e) => {
-    e.preventDefault();
-    try {
-      await AuthService.login(Username, Password).then(
-        () => {
-          // if(user.ok == true){
+    // e.preventDefault();
+    // try {
+    //   await AuthService.login(Username, Password).then(
+    //     () => {
+    //       // if(user.ok == true){
           
-          navigate("/Application");
-          window.location.reload();
-          // }
+    //       navigate("/Application");
+    //       window.location.reload();
+    //       // }
           
-        },
-        (error) => {
-          console.log(error);
-        }
-      );
-    } catch (err) {
-      console.log(err);
-    }
+    //     },
+    //     (error) => {
+    //       console.log(error);
+    //     }
+    //   );
+    // } catch (err) {
+    //   console.log(err);
+    // }
+    navigate("Application");
   };
 
   return (

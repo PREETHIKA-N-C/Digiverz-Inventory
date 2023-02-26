@@ -4,7 +4,6 @@ const data = [
     Id: "1",
     Type: "App",
     appName:"Expense Claim App",
-    // appLogo:"https://upload.wikimedia.org/wikipedia/commons/0/0c/Clash_app_logo.png",
     appLogo:"https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQt-avOv5Evf8-4BYlrPdWdW4Q6XytlTJwPqoWlgqcrkyW2sbIqCkJWyC68JwsbrLXnj3U&usqp=CAU",
     AppCoverPic:"https://pspdfkit.com/assets/images/blog/2020/optical-character-recognition-in-scanned-pdfs/article-header-3477d6fd.png",
     AppScreenShot:[{
@@ -49,7 +48,7 @@ const data = [
     },],
     AppType:"Accelerator | Data science",
     AppDescription:"This application simplifies the process of expense claims in an organization by automating the process of expense claim which automatically extracts all the data from the invoice once the invoice image is uploaded and displays it where the user can view and edit the contents of the invoice. The key features of this OCR application is that it has 3 levels of hierarchy namely employee/vendor, managers and head. The approval of claims goes from L1 manager to head after approval of each level. This has unique dashboard view for every hierarchy and a separate dashboard for admin where users can be added or removed based on requirements. This application currently supports two languages (English and Arabic) and can be viewed in both according to the preference of user and also supports both light and dark theme.",
-    AppUrl:""
+    AppUrl:"https://colorhunt.co/palettes/white"
   },
   {
     Id: "4",
@@ -57,16 +56,31 @@ const data = [
     appName:"Centralized Repository",
     appLogo:"https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSMng5sXC1ldt6Iaam_rSb2fNFtm_b_KaCCLa54BWAes5I3qPBlQXu2Z48UV9BTlQpo0qI&usqp=CAU",
     AppCoverPic:"https://zdblogs.zohocorp.com/show/chronicles/sites/show/chronicles/files/2022-01/show-libraries-blog%401.5x.png",
-    AppScreenShot:[],
-    AppType:"Accelerator | Dashboard",
+    AppScreenShot:[{
+      src: require("../Assets/sc31.png"),
+      loading: "lazy",
+      alt: "Windows 10 Dark Mode Setting",
+    },
+    {
+      src: require("../Assets/sc32.png"),
+      loading: "lazy",
+      alt: "Windows 10 Dark Mode Setting",
+    },
+    {
+      src: require("../Assets/sc33.png"),
+      loading: "lazy",
+      alt: "macOS Mojave Dark Mode Setting",
+    },],
+    AppType:"Accelerator | Data science",
     AppDescription:"A centralized repository management system is a system that provides a centralized location for storing, managing, and versioning code and other related files. This allows multiple developers to work on the same codebase simultaneously, while also providing a way to track changes, revert to previous versions, and manage access permissions. In a centralized model, you work on the code while connected to the server itself. This maintains a single source of truth. The centralized model has been incredibly successful for version control. This is especially true as teams and projects grow and get more complex.",
-    AppUrl:""
+    AppUrl:"http://localhost:3000/search"
   },
   {
     Id: "2",
     Type: "App",
     appName:"Sentimental Analysis",
-    appLogo:"https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT_A4CEAlxuOO18Fl85OsA_8Q8UEbBgnRNJArd4Skx60ytzK3uZcjSVPyIiwjVA6gL_Kco&usqp=CAU",
+    // appLogo:"https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT_A4CEAlxuOO18Fl85OsA_8Q8UEbBgnRNJArd4Skx60ytzK3uZcjSVPyIiwjVA6gL_Kco&usqp=CAU",
+    appLogo: require("../Assets/sentiLogo.jpg"),
     AppCoverPic:"https://media.licdn.com/dms/image/C5112AQE4uttixdtXIw/article-cover_image-shrink_720_1280/0/1520174446395?e=2147483647&v=beta&t=TEInKSoH9Wdg0-lBfpiqQvxeZt9onDjdRBNqS8xVxQc",
     AppScreenShot:[{
       src: require("../Assets/sc21.png"),
@@ -160,7 +174,7 @@ const data = [
     },],
     AppType:"Accelerator | Data science",
     AppDescription:"A data cleaning tool to pre-process the data and perform Auto ML operations. The real-world datasets used for machine learning models are highly susceptible to be missing, inconsistent, and noisy due to their heterogeneous origin. Applying data mining algorithms on this noisy data would not give quality results as they would fail to identify patterns effectively. Duplicate or missing values may give an incorrect view of the overall statistics of data. Outliers and inconsistent data points often tend to disturb the model’s overall learning, leading to false predictions. Data Processing is, therefore, important to improve the overall data quality. The pre-processed data is then modelled statistically by using various machine learning algorithms to predict the future outcome. ",
-    AppUrl:""
+    AppUrl:"http://20.109.92.241:9400"
   },
   {
     Id: "5",

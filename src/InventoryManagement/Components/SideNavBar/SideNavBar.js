@@ -12,10 +12,16 @@ import ShrinkNavBar from "./ShrinkNavBar";
 import AuthService from "../../Services/auth.service";
 import Popup from 'reactjs-popup';
 import 'reactjs-popup/dist/index.css';
+import axios from "axios";
+import { useNavigate } from "react-router-dom";
+import {setData ,SearchDataState} from '../../Redux/SearchDataSlice'
 
 function SideNavBar() {
+  const [input , setInput] = useState("")
   const [DrawerState, setDrawerState] = useState(false);
   const theme = useSelector(ThemeState);
+  const data = useSelector(SearchDataState)
+  const navigate = useNavigate();
   const dispatch = useDispatch();
   defineElement(lottie.loadAnimation);
 
@@ -25,6 +31,27 @@ function SideNavBar() {
   const logOut = () => {
     AuthService.logout();
   };
+
+  const elasticSearch = async (e) =>{
+
+    
+    await axios.post("http://20.109.92.241:8081/search",{
+        query:e
+    }).then((response)=>{
+      // console.log(response)
+            console.log(response.data.hits)
+            dispatch(setData(response.data.hits))
+        console.log(data)
+    })
+    
+}
+
+  const onEnter = (e) => {
+       if (e.key === 'Enter') {
+        elasticSearch(input)
+        navigate("/Search")
+      }
+  }
 
   return (
     <div>
@@ -57,7 +84,8 @@ function SideNavBar() {
             <lord-icon
               src="https://cdn.lordicon.com/xfftupfv.json"
               colors={theme === "Light" ? DarkColor : LightColor}
-              trigger="morph"
+              trigger="click"
+              onClick={()=>elasticSearch(input)}
             ></lord-icon>
           </div>
           <input
@@ -65,6 +93,9 @@ function SideNavBar() {
             className={
               theme === "Light" ? Style.input_search_Light : Style.input_search
             }
+            onChange={(e)=> setInput(e.target.value)}
+            onKeyDown={onEnter}
+            
           />{" "}
         </div>
 

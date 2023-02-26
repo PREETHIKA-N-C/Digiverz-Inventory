@@ -63,10 +63,12 @@
 
 .cardCont{
   display: flex;
-  flex-direction: column;
+  /* flex-direction: column; */
   padding-top: 150px;
-  padding-left: 100px;
-  gap:10px
+  padding-left: 150px;
+  gap:70px;
+  flex-direction: row;
+  flex-wrap: wrap;
 }
 
 
