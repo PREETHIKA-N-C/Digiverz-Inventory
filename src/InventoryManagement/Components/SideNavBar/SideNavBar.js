@@ -35,7 +35,7 @@ function SideNavBar() {
   const elasticSearch = async (e) =>{
 
     
-    await axios.post("http://localhost:8081/search",{
+    await axios.post("http://20.109.92.241:8081/search",{
         query:e
     }).then((response)=>{
       // console.log(response)
