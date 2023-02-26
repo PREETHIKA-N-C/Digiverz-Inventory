@@ -5,18 +5,18 @@ FROM node:alpine AS development
 ENV NODE_ENV development
 
 # Setting up the work directory
-WORKDIR /Digiverz-Inventory-Dockerized
+WORKDIR /Digiverz-Inventory
 
 # Installing dependencies
-COPY ./package.json /Digiverz-Inventory-Dockerized
-RUN npm install
+COPY ./package.json /Digiverz-Inventory
+RUN npm install --force
 
 # Copying all the files in our project
 COPY . .
 
 # Expose The port
 
-EXPOSE 3000
+EXPOSE 3300
 
 # Starting our application
 CMD npm start
