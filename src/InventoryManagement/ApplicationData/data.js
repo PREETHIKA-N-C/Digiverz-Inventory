@@ -48,7 +48,7 @@ const data = [
     },],
     AppType:"Accelerator | Data science",
     AppDescription:"This application simplifies the process of expense claims in an organization by automating the process of expense claim which automatically extracts all the data from the invoice once the invoice image is uploaded and displays it where the user can view and edit the contents of the invoice. The key features of this OCR application is that it has 3 levels of hierarchy namely employee/vendor, managers and head. The approval of claims goes from L1 manager to head after approval of each level. This has unique dashboard view for every hierarchy and a separate dashboard for admin where users can be added or removed based on requirements. This application currently supports two languages (English and Arabic) and can be viewed in both according to the preference of user and also supports both light and dark theme.",
-    AppUrl:"https://colorhunt.co/palettes/white"
+    AppUrl:"http://20.109.92.241:3000"
   },
   {
     Id: "4",
@@ -73,7 +73,7 @@ const data = [
     },],
     AppType:"Accelerator | Data science",
     AppDescription:"A centralized repository management system is a system that provides a centralized location for storing, managing, and versioning code and other related files. This allows multiple developers to work on the same codebase simultaneously, while also providing a way to track changes, revert to previous versions, and manage access permissions. In a centralized model, you work on the code while connected to the server itself. This maintains a single source of truth. The centralized model has been incredibly successful for version control. This is especially true as teams and projects grow and get more complex.",
-    AppUrl:"http://localhost:3000/search"
+    AppUrl:"http://172.174.210.92:3000/search"
   },
   {
     Id: "2",
@@ -174,7 +174,7 @@ const data = [
     },],
     AppType:"Accelerator | Data science",
     AppDescription:"A data cleaning tool to pre-process the data and perform Auto ML operations. The real-world datasets used for machine learning models are highly susceptible to be missing, inconsistent, and noisy due to their heterogeneous origin. Applying data mining algorithms on this noisy data would not give quality results as they would fail to identify patterns effectively. Duplicate or missing values may give an incorrect view of the overall statistics of data. Outliers and inconsistent data points often tend to disturb the model’s overall learning, leading to false predictions. Data Processing is, therefore, important to improve the overall data quality. The pre-processed data is then modelled statistically by using various machine learning algorithms to predict the future outcome. ",
-    AppUrl:"http://20.109.92.241:9400"
+    AppUrl:"http://172.174.210.92:4200"
   },
   {
     Id: "5",
@@ -307,6 +307,39 @@ const data = [
     AppType: "Accelerator | Dashboard",
     AppDescription: "",
     AppUrl: "https://kaartech.jp10.hcs.cloud.sap/sap/fpa/ui/tenants/e7d29/bo/story/4F108482FE35653EEDDE3451CA6E8102"
-  }
+  },
+  {
+    Id: "17",
+    Type: "Dashboard",
+    appName: "Environment,Health,Safety and Management",
+    appLogo: "https://images.squarespace-cdn.com/content/v1/60069f64dfad4a364923e2c4/6bf4fe9c-517e-41cd-b9de-f2c10eb7f35d/dashboard-lim-squarespace_social_sharing_logo-2.png",
+    AppCoverPic: "https://ubiq.co/analytics-blog/wp-content/uploads/2020/06/dashboard-features.png",
+    AppScreenShot: [],
+    AppType: "Accelerator | Dashboard",
+    AppDescription: "",
+    AppUrl: "https://kaartech.jp10.hcs.cloud.sap/sap/fpa/ui/tenants/e7d29/bo/story/6F881204290D790DF80842F124A7EE00"
+  },
+  {
+    Id: "18",
+    Type: "Dashboard",
+    appName: "Finance Dashboard",
+    appLogo: "https://images.squarespace-cdn.com/content/v1/60069f64dfad4a364923e2c4/6bf4fe9c-517e-41cd-b9de-f2c10eb7f35d/dashboard-lim-squarespace_social_sharing_logo-2.png",
+    AppCoverPic: "https://bs-uploads.toptal.io/blackfish-uploads/components/seo/content/og_image_file/og_image/1156348/0823-DashboardDesign-Dan-Social-e319a5a8a7ceb75b9e5010740700d409.png",
+    AppScreenShot: [],
+    AppType: "Accelerator | Dashboard",
+    AppDescription: "",
+    AppUrl: "https://kaartech.jp10.hcs.cloud.sap/sap/fpa/ui/tenants/e7d29/bo/story/AC901A042908E3E8E4E257F8B4317A8B"
+  },
+  {
+    Id: "19",
+    Type: "Dashboard",
+    appName: "Exploratory Data Analysis Dashboard",
+    appLogo: "https://images.squarespace-cdn.com/content/v1/60069f64dfad4a364923e2c4/6bf4fe9c-517e-41cd-b9de-f2c10eb7f35d/dashboard-lim-squarespace_social_sharing_logo-2.png",
+    AppCoverPic: "https://imgproxy.epicpxls.com/3Cu8ta4_rmJzF2Uiby76mmwPsvwtGiaqoIzuSGRJrKQ/rs:fill:800:600:0/g:no/aHR0cHM6Ly9pdGVt/cy5lcGljcHhscy5j/b20vdXBsb2Fkcy9w/aG90by9hYmM1NmNl/Yjk0NTgyNTIxMGI0/OTQ3MTFhYjE2NDAx/NQ.jpg",
+    AppScreenShot: [],
+    AppType: "Accelerator | Dashboard",
+    AppDescription: "",
+    AppUrl: "https://kaartech.jp10.hcs.cloud.sap/sap/fpa/ui/tenants/e7d29/bo/story/3E5002042909C8C2C44762E3155B85B5"
+  },
 ]
 export default data;

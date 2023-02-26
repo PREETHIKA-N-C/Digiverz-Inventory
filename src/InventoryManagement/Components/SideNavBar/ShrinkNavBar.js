@@ -60,7 +60,7 @@ function ShrinkNavBar() {
               ></lord-icon>
             </div>
           </NavLink>
-          <NavLink
+          {/* <NavLink
             to="/Search"
             className={(state) =>
               state.isActive ? dispatch(setNavState("Search")) : ""
@@ -80,7 +80,7 @@ function ShrinkNavBar() {
                 style={{ width: "23px", height: "23px", marginLeft: "7px" }}
               ></lord-icon>
             </div>
-          </NavLink>
+          </NavLink> */}
 
           {/* <NavLink
             to="/MarketPlaceHome"

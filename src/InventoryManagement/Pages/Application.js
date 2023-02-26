@@ -14,7 +14,7 @@ import SideNavBar from "../Components/SideNavBar/SideNavBar.js";
 function Application() {
   const theme = useSelector(ThemeState);
   const dispatch = useDispatch();
-  const [type,setType] = useState("App");
+  const [type,setType] = useState("All");
   if (theme === "Light") {
     document.body.style.background = "#fefeff";
   } else {
@@ -35,27 +35,26 @@ function Application() {
     // className={Style.product_img} 
     src={filter} /> </button>
     <div className = {Style.dropdownContent}>
+      <div className="h-10 pt-2 hover:cursor-pointer hover:bg-slate-100" onClick={()=>(setType("All"))}>All</div>
       <div className="h-10 pt-2 hover:cursor-pointer hover:bg-slate-100" onClick={()=>(setType("App"))}>Apps</div>
       <div className="h-10 pt-2 hover:cursor-pointer hover:bg-slate-100" onClick={()=>(setType("Dashboard"))}>Dashboards</div>
-        </div>
+      </div>
   </div>
 
     </div>
     
-      {/* <NavLink to="Product">
-        {load ? (
-          <ProductCard
-            name="Expense Claim App"
-            desc="Accelerator | Data science"
-            logo="https://upload.wikimedia.org/wikipedia/commons/0/0c/Clash_app_logo.png"
-            img={Banner1}
-          />
-        ) : (
-          <ProductCardLoader />
-        )}
-      </NavLink> */}
+    <p className="text-2xl ml-28 font-bold font-sans"> {type==="App" ? "APPLICATIONS" : (type === "Dashboard" ? "DASHBOARDS" : "")} </p>
+
       <div className={Style.cardDiv}>
-      {load ? data.filter((data)=>data.AppType !== type).map((item) => {return (item.Type === "App" ? <ProductCard id={item.Id} url={item.AppUrl} name={item.appName} desc={item.AppType} logo={item.appLogo} img={item.AppCoverPic}/> :<DashboardCard id={item.Id} url={item.AppUrl} name={item.appName} desc={item.AppType} logo={item.appLogo} img={item.AppCoverPic}/>);}) :data.map((value)=> <ProductCardLoader />) }
+
+      
+      {load ? data.filter((data)=>{
+        if(type === "All"){
+          return data
+        }else{
+          return data.Type === type
+        }
+      }).map((item) => {return (item.Type === "App" ? <ProductCard id={item.Id} url={item.AppUrl} name={item.appName} desc={item.AppType} logo={item.appLogo} img={item.AppCoverPic}/> :<DashboardCard id={item.Id} url={item.AppUrl} name={item.appName} desc={item.AppType} logo={item.appLogo} img={item.AppCoverPic}/>);}) :data.map((value)=> <ProductCardLoader />) }
       
       </div>
       

@@ -18,7 +18,7 @@ function Product() {
      const [load,setLoad] = useState(false);
   setTimeout(()=>{
     setLoad(true)
-  },3000)
+  },2000)
   return (
      <>
      <SideNavBar/>

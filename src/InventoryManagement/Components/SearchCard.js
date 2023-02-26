@@ -11,7 +11,7 @@ function SearchCard() {
 
   return (
     <div>
-    <div className ={Style.dropdown}>
+    {/* <div className ={Style.dropdown}>
     <button className= {Style.dropbtn}><img 
     // className={Style.product_img} 
     src={filter} /> </button>
@@ -20,14 +20,16 @@ function SearchCard() {
       <a href="">Pdf</a>
       <a href="">Video</a>
         </div>
-  </div>
+  </div> */}
 
   
   <div className={Style.cardCont}>
 
-  {
+  {searchData.length === 0 ? (<p className='text-4xl ml-[23rem] mt-48'> Data Not Found For Your Search</p>): (searchData.map((val)=><SearchCardItem fileName={val._source.title} dataBase64={val._source.data} type={val._source.attachment.content_type} />))}
+
+  {/* {
     searchData.map((val)=><SearchCardItem fileName={val._source.title} dataBase64={val._source.data} type={val._source.attachment.content_type} />)
-  }
+  } */}
 
   </div>
   </div>

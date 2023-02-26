@@ -52,7 +52,7 @@ const togglePassword =()=>{
     <div className={Style["right-section"]}></div>
   <div className={Style["left-section"]}>
     <div className={Style.header}>
-      <h1 className={`${Style.animation} ${Style.a1}`}>Digiverz Inventory</h1>
+      {/* <h1 className={`${Style.animation} ${Style.a1}`}>Digiverz Inventory</h1> */}
       <h4 className={`${Style.animation} ${Style.a2}`}>LOGIN </h4>
     </div>
     <div className={Style.form}>

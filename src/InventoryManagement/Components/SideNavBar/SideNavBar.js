@@ -67,12 +67,12 @@ function SideNavBar() {
                 className={theme === "Light" ? Style.icon_Light : Style.icon}
               />
         </div>
-        <img
+        {/* <img
           src={theme === "Light" ? logo1 : logo2}
           alt="logo"
           width={150}
           height={50}
-        />
+        /> */}
         </div>
 
         <div
@@ -96,7 +96,7 @@ function SideNavBar() {
             onChange={(e)=> setInput(e.target.value)}
             onKeyDown={onEnter}
             
-          />{" "}
+          />
         </div>
 
         <div className="flex space-x-8">
