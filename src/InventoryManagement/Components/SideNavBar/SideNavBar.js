@@ -94,7 +94,8 @@ function SideNavBar() {
         {/* </div> */}
         <div className={
               theme === "Light" ? Style.heading_Light : Style.heading
-            }>CENTRALIZED REPOSITORY</div>
+            }>CENTRALIZED REPOSITORY
+            </div>
 
         <div className="flex space-x-8">
           <div
