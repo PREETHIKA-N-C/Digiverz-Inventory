@@ -48,33 +48,33 @@ const data = [
     },],
     AppType:"Accelerator | Data science",
     AppDescription:"This application simplifies the process of expense claims in an organization by automating the process of expense claim which automatically extracts all the data from the invoice once the invoice image is uploaded and displays it where the user can view and edit the contents of the invoice. The key features of this OCR application is that it has 3 levels of hierarchy namely employee/vendor, managers and head. The approval of claims goes from L1 manager to head after approval of each level. This has unique dashboard view for every hierarchy and a separate dashboard for admin where users can be added or removed based on requirements. This application currently supports two languages (English and Arabic) and can be viewed in both according to the preference of user and also supports both light and dark theme.",
-    AppUrl:"http://20.109.92.241:3000"
+    AppUrl:"http://172.174.180.163:3000/"
   },
-  {
-    Id: "4",
-    Type: "App",
-    appName:"Centralized Repository",
-    appLogo:"https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSMng5sXC1ldt6Iaam_rSb2fNFtm_b_KaCCLa54BWAes5I3qPBlQXu2Z48UV9BTlQpo0qI&usqp=CAU",
-    AppCoverPic:"https://zdblogs.zohocorp.com/show/chronicles/sites/show/chronicles/files/2022-01/show-libraries-blog%401.5x.png",
-    AppScreenShot:[{
-      src: require("../Assets/sc31.png"),
-      loading: "lazy",
-      alt: "Windows 10 Dark Mode Setting",
-    },
-    {
-      src: require("../Assets/sc32.png"),
-      loading: "lazy",
-      alt: "Windows 10 Dark Mode Setting",
-    },
-    {
-      src: require("../Assets/sc33.png"),
-      loading: "lazy",
-      alt: "macOS Mojave Dark Mode Setting",
-    },],
-    AppType:"Accelerator | Data science",
-    AppDescription:"A centralized repository management system is a system that provides a centralized location for storing, managing, and versioning code and other related files. This allows multiple developers to work on the same codebase simultaneously, while also providing a way to track changes, revert to previous versions, and manage access permissions. In a centralized model, you work on the code while connected to the server itself. This maintains a single source of truth. The centralized model has been incredibly successful for version control. This is especially true as teams and projects grow and get more complex.",
-    AppUrl:"http://172.174.210.92:3000/search"
-  },
+  // {
+  //   Id: "4",
+  //   Type: "App",
+  //   appName:"Centralized Repository",
+  //   appLogo:"https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSMng5sXC1ldt6Iaam_rSb2fNFtm_b_KaCCLa54BWAes5I3qPBlQXu2Z48UV9BTlQpo0qI&usqp=CAU",
+  //   AppCoverPic:"https://zdblogs.zohocorp.com/show/chronicles/sites/show/chronicles/files/2022-01/show-libraries-blog%401.5x.png",
+  //   AppScreenShot:[{
+  //     src: require("../Assets/sc31.png"),
+  //     loading: "lazy",
+  //     alt: "Windows 10 Dark Mode Setting",
+  //   },
+  //   {
+  //     src: require("../Assets/sc32.png"),
+  //     loading: "lazy",
+  //     alt: "Windows 10 Dark Mode Setting",
+  //   },
+  //   {
+  //     src: require("../Assets/sc33.png"),
+  //     loading: "lazy",
+  //     alt: "macOS Mojave Dark Mode Setting",
+  //   },],
+  //   AppType:"Accelerator | Data science",
+  //   AppDescription:"A centralized repository management system is a system that provides a centralized location for storing, managing, and versioning code and other related files. This allows multiple developers to work on the same codebase simultaneously, while also providing a way to track changes, revert to previous versions, and manage access permissions. In a centralized model, you work on the code while connected to the server itself. This maintains a single source of truth. The centralized model has been incredibly successful for version control. This is especially true as teams and projects grow and get more complex.",
+  //   AppUrl:"http://172.174.210.92:3000/search"
+  // },
   {
     Id: "2",
     Type: "App",
@@ -124,7 +124,7 @@ const data = [
     },],
     AppType:"Accelerator | Data science",
     AppDescription:"Happy customers are more likely to be receptive to upselling.With our sentiment analysis, you can easily identify your happiest customers.This helps you recognise chatters who might be receptive to spending more, as well as avoiding upsetting disgruntled customers with any unwelcome sales pitches.Our Sentiment analysis gives you a clear overview of customer satisfaction, agent by agent. This means you can keep an eye on the quality of service each team member is offering customers, as well as their more subtle ability to create happy customers.",
-    AppUrl:""
+    AppUrl:"http://20.124.84.116:3000/"
   },
   {
     Id: "3",
@@ -174,10 +174,54 @@ const data = [
     },],
     AppType:"Accelerator | Data science",
     AppDescription:"A data cleaning tool to pre-process the data and perform Auto ML operations. The real-world datasets used for machine learning models are highly susceptible to be missing, inconsistent, and noisy due to their heterogeneous origin. Applying data mining algorithms on this noisy data would not give quality results as they would fail to identify patterns effectively. Duplicate or missing values may give an incorrect view of the overall statistics of data. Outliers and inconsistent data points often tend to disturb the model’s overall learning, leading to false predictions. Data Processing is, therefore, important to improve the overall data quality. The pre-processed data is then modelled statistically by using various machine learning algorithms to predict the future outcome. ",
-    AppUrl:"http://172.174.210.92:4200"
+    AppUrl:"http://20.121.40.192:4200/"
   },
   {
     Id: "5",
+    Type: "App",
+    appName: "Demand App",
+    appLogo: "https://images.squarespace-cdn.com/content/v1/60069f64dfad4a364923e2c4/6bf4fe9c-517e-41cd-b9de-f2c10eb7f35d/dashboard-lim-squarespace_social_sharing_logo-2.png",
+    AppCoverPic: "https://ubiq.co/analytics-blog/wp-content/uploads/2020/06/dashboard-features.png",
+    AppScreenShot: [],
+    AppType: "Accelerator | Data science",
+    AppDescription: "",
+    AppUrl: "http://3.7.71.229:8080/"
+  },
+  {
+    Id: "6",
+    Type: "App",
+    appName: "Chatbot",
+    appLogo: "https://images.squarespace-cdn.com/content/v1/60069f64dfad4a364923e2c4/6bf4fe9c-517e-41cd-b9de-f2c10eb7f35d/dashboard-lim-squarespace_social_sharing_logo-2.png",
+    AppCoverPic: "https://cdn.dribbble.com/users/2492784/screenshots/9519661/illustration_4x.png",
+    AppScreenShot: [],
+    AppType: "Accelerator | Data Science",
+    AppDescription: "",
+    AppUrl: "http://43.205.73.172:3000"
+  },
+  {
+    Id: "7",
+    Type: "Dashboard",
+    appName: "Cloudera Manager",
+    appLogo: "https://images.squarespace-cdn.com/content/v1/60069f64dfad4a364923e2c4/6bf4fe9c-517e-41cd-b9de-f2c10eb7f35d/dashboard-lim-squarespace_social_sharing_logo-2.png",
+    AppCoverPic: "https://imgproxy.epicpxls.com/3Cu8ta4_rmJzF2Uiby76mmwPsvwtGiaqoIzuSGRJrKQ/rs:fill:800:600:0/g:no/aHR0cHM6Ly9pdGVt/cy5lcGljcHhscy5j/b20vdXBsb2Fkcy9w/aG90by9hYmM1NmNl/Yjk0NTgyNTIxMGI0/OTQ3MTFhYjE2NDAx/NQ.jpg",
+    AppScreenShot: [],
+    AppType: "Accelerator | Dashboard",
+    AppDescription: "",
+    AppUrl: "http://3.112.247.127:7180/"
+  },
+  {
+    Id: "8",
+    Type: "Dashboard",
+    appName: "Nifi ingestion tool",
+    appLogo: "https://images.squarespace-cdn.com/content/v1/60069f64dfad4a364923e2c4/6bf4fe9c-517e-41cd-b9de-f2c10eb7f35d/dashboard-lim-squarespace_social_sharing_logo-2.png",
+    AppCoverPic: "https://imgproxy.epicpxls.com/-yc4n9fCLAEcWjh1OtcHpwbs6jniZyBXBbge6WEvXec/rs:fill:800:600:0/g:no/aHR0cHM6Ly9pdGVt/cy5lcGljcHhscy5j/b20vdXBsb2Fkcy9w/aG90by9hMWZhNTY4/OTMxNzA0NDNiNWE5/ZWNkNjBlNDhhMzdi/Mw.jpg",
+    AppScreenShot: [],
+    AppType: "Accelerator | Dashboard",
+    AppDescription: "",
+    AppUrl: "https://172.31.47.27:8443/nifi/"
+  },
+  {
+    Id: "20",
     Type: "Dashboard",
     appName: "Human Capital Management Dashboard",
     appLogo: "https://images.squarespace-cdn.com/content/v1/60069f64dfad4a364923e2c4/6bf4fe9c-517e-41cd-b9de-f2c10eb7f35d/dashboard-lim-squarespace_social_sharing_logo-2.png",
@@ -188,7 +232,7 @@ const data = [
     AppUrl: "https://kaartech.jp10.hcs.cloud.sap/sap/fpa/ui/tenants/e7d29/bo/story/2F108482FE32E3A964A2ABA7D68ABB6F"
   },
   {
-    Id: "6",
+    Id: "21",
     Type: "Dashboard",
     appName: "Manufacturing Dashboard",
     appLogo: "https://images.squarespace-cdn.com/content/v1/60069f64dfad4a364923e2c4/6bf4fe9c-517e-41cd-b9de-f2c10eb7f35d/dashboard-lim-squarespace_social_sharing_logo-2.png",
@@ -199,7 +243,7 @@ const data = [
     AppUrl: "https://kaartech.jp10.hcs.cloud.sap/sap/fpa/ui/tenants/e7d29/bo/story/1EB08482FE36334798C1AC81CAF306A1"
   },
   {
-    Id: "7",
+    Id: "22",
     Type: "Dashboard",
     appName: "Inventory Dashboard",
     appLogo: "https://images.squarespace-cdn.com/content/v1/60069f64dfad4a364923e2c4/6bf4fe9c-517e-41cd-b9de-f2c10eb7f35d/dashboard-lim-squarespace_social_sharing_logo-2.png",
@@ -210,7 +254,7 @@ const data = [
     AppUrl: "https://kaartech.jp10.hcs.cloud.sap/sap/fpa/ui/tenants/e7d29/bo/story/B6C88482FE3622A2C8CB7B4015CFA432"
   },
   {
-    Id: "8",
+    Id: "23",
     Type: "Dashboard",
     appName: "Material Management Dashboard",
     appLogo: "https://images.squarespace-cdn.com/content/v1/60069f64dfad4a364923e2c4/6bf4fe9c-517e-41cd-b9de-f2c10eb7f35d/dashboard-lim-squarespace_social_sharing_logo-2.png",

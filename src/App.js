@@ -38,9 +38,10 @@ function App() {
         {/* {window.location.pathname === "/AppInfoUpload" || window.location.pathname === "/"  ? "" : <SideNavBar />} */}
         {/* {navBarState ? <SideNavBar /> : ""} */}
         <Routes>
-          <Route path="/" element={<Login />} />
+          {/* <Route path="/" element={<Login />} /> */}
           {/* <SideNavBar/> */}
-          <Route path="Home" element={<Home />} />
+          {/* <Route path="Home" element={<Home />} /> */}
+          <Route path="/" element={<Application />} />
           <Route path="AppInfoUpload" element={<AppInfoUpload />} />
           <Route path="Application" element={<Application />} />
           <Route path="Search" element={<Search />} />
