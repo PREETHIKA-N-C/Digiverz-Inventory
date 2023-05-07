@@ -3,7 +3,7 @@ const data = [
   {
     Id: "1",
     Type: "App",
-    appName:"Expense Claim App",
+    appName:"OCR Data Management",
     appLogo:"https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQt-avOv5Evf8-4BYlrPdWdW4Q6XytlTJwPqoWlgqcrkyW2sbIqCkJWyC68JwsbrLXnj3U&usqp=CAU",
     AppCoverPic:"https://pspdfkit.com/assets/images/blog/2020/optical-character-recognition-in-scanned-pdfs/article-header-3477d6fd.png",
     AppScreenShot:[{
@@ -180,7 +180,7 @@ const data = [
     Id: "5",
     Type: "App",
     appName: "Demand App",
-    appLogo: "https://images.squarespace-cdn.com/content/v1/60069f64dfad4a364923e2c4/6bf4fe9c-517e-41cd-b9de-f2c10eb7f35d/dashboard-lim-squarespace_social_sharing_logo-2.png",
+    appLogo: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQt-avOv5Evf8-4BYlrPdWdW4Q6XytlTJwPqoWlgqcrkyW2sbIqCkJWyC68JwsbrLXnj3U&usqp=CAU",
     AppCoverPic: "https://ubiq.co/analytics-blog/wp-content/uploads/2020/06/dashboard-features.png",
     AppScreenShot: [],
     AppType: "Accelerator | Data science",
@@ -191,7 +191,7 @@ const data = [
     Id: "6",
     Type: "App",
     appName: "Chatbot",
-    appLogo: "https://images.squarespace-cdn.com/content/v1/60069f64dfad4a364923e2c4/6bf4fe9c-517e-41cd-b9de-f2c10eb7f35d/dashboard-lim-squarespace_social_sharing_logo-2.png",
+   appLogo: require("../Assets/sentiLogo.jpg"),
     AppCoverPic: "https://cdn.dribbble.com/users/2492784/screenshots/9519661/illustration_4x.png",
     AppScreenShot: [],
     AppType: "Accelerator | Data Science",
@@ -200,9 +200,9 @@ const data = [
   },
   {
     Id: "7",
-    Type: "Dashboard",
+    Type: "App",
     appName: "Cloudera Manager",
-    appLogo: "https://images.squarespace-cdn.com/content/v1/60069f64dfad4a364923e2c4/6bf4fe9c-517e-41cd-b9de-f2c10eb7f35d/dashboard-lim-squarespace_social_sharing_logo-2.png",
+    appLogo: "https://assets.website-files.com/614d05f4bda1ab1492212e04/617088580c9e47967640b799_icon-black-whitebg-whitespaced.jpg",
     AppCoverPic: "https://imgproxy.epicpxls.com/3Cu8ta4_rmJzF2Uiby76mmwPsvwtGiaqoIzuSGRJrKQ/rs:fill:800:600:0/g:no/aHR0cHM6Ly9pdGVt/cy5lcGljcHhscy5j/b20vdXBsb2Fkcy9w/aG90by9hYmM1NmNl/Yjk0NTgyNTIxMGI0/OTQ3MTFhYjE2NDAx/NQ.jpg",
     AppScreenShot: [],
     AppType: "Accelerator | Dashboard",
@@ -211,14 +211,25 @@ const data = [
   },
   {
     Id: "8",
-    Type: "Dashboard",
+    Type: "App",
     appName: "Nifi ingestion tool",
-    appLogo: "https://images.squarespace-cdn.com/content/v1/60069f64dfad4a364923e2c4/6bf4fe9c-517e-41cd-b9de-f2c10eb7f35d/dashboard-lim-squarespace_social_sharing_logo-2.png",
+    appLogo: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQt-avOv5Evf8-4BYlrPdWdW4Q6XytlTJwPqoWlgqcrkyW2sbIqCkJWyC68JwsbrLXnj3U&usqp=CAU",
     AppCoverPic: "https://imgproxy.epicpxls.com/-yc4n9fCLAEcWjh1OtcHpwbs6jniZyBXBbge6WEvXec/rs:fill:800:600:0/g:no/aHR0cHM6Ly9pdGVt/cy5lcGljcHhscy5j/b20vdXBsb2Fkcy9w/aG90by9hMWZhNTY4/OTMxNzA0NDNiNWE5/ZWNkNjBlNDhhMzdi/Mw.jpg",
     AppScreenShot: [],
     AppType: "Accelerator | Dashboard",
     AppDescription: "",
     AppUrl: "https://172.31.47.27:8443/nifi/"
+  },
+  {
+    Id: "19",
+    Type: "App",
+    appName: "Predictive Maintenance Application",
+     appLogo:"https://assets.website-files.com/614d05f4bda1ab1492212e04/617088580c9e47967640b799_icon-black-whitebg-whitespaced.jpg",
+    AppCoverPic: "https://cdn.dribbble.com/users/1985402/screenshots/8568532/thumbnail_4x.jpg",
+    AppScreenShot: [],
+    AppType: "Accelerator | Dashboard",
+    AppDescription: "",
+    AppUrl: "https://kaartech.jp10.hcs.cloud.sap/sap/fpa/ui/tenants/e7d29/bo/story/3E5002042909C8C2C44762E3155B85B5"
   },
   {
     Id: "20",
@@ -374,16 +385,6 @@ const data = [
     AppDescription: "",
     AppUrl: "https://kaartech.jp10.hcs.cloud.sap/sap/fpa/ui/tenants/e7d29/bo/story/AC901A042908E3E8E4E257F8B4317A8B"
   },
-  {
-    Id: "19",
-    Type: "Dashboard",
-    appName: "Exploratory Data Analysis Dashboard",
-    appLogo: "https://images.squarespace-cdn.com/content/v1/60069f64dfad4a364923e2c4/6bf4fe9c-517e-41cd-b9de-f2c10eb7f35d/dashboard-lim-squarespace_social_sharing_logo-2.png",
-    AppCoverPic: "https://imgproxy.epicpxls.com/3Cu8ta4_rmJzF2Uiby76mmwPsvwtGiaqoIzuSGRJrKQ/rs:fill:800:600:0/g:no/aHR0cHM6Ly9pdGVt/cy5lcGljcHhscy5j/b20vdXBsb2Fkcy9w/aG90by9hYmM1NmNl/Yjk0NTgyNTIxMGI0/OTQ3MTFhYjE2NDAx/NQ.jpg",
-    AppScreenShot: [],
-    AppType: "Accelerator | Dashboard",
-    AppDescription: "",
-    AppUrl: "https://kaartech.jp10.hcs.cloud.sap/sap/fpa/ui/tenants/e7d29/bo/story/3E5002042909C8C2C44762E3155B85B5"
-  },
+  
 ]
 export default data;
